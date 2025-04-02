@@ -1,0 +1,4 @@
+node_modules
+plugins/*
+zips/*
+themes/amazon-underworld/node_modules
