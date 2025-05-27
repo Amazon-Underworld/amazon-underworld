@@ -3,4 +3,4 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 CDIR=$( pwd )
 cd $DIR/../themes
 rm -f ../zips/amazon-underworld.zip
-zip -r ../zips/amazon-underworld.zip amazon-underworld -x "amazon-underworld/node_modules/*"
+zip -r ../zips/amazon-underworld.zip amazon-underworld -x "amazon-underworld/node_modules/*" -x "amazon-underworld/library/blocks/v2/node_modules/*"
