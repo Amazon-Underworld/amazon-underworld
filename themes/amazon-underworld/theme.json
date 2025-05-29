@@ -11,47 +11,32 @@
                 {
                     "name": "Primary pure",
                     "slug": "primary-pure",
-                    "color": "#1DACE4"
+                    "color": "#48441D"
                 },
                 {
                     "name": "Primary light",
                     "slug": "primary-light",
-                    "color": "#C2ECFB"
+                    "color": "#5D5E32"
                 },
                 {
                     "name": "Primary dark",
                     "slug": "primary-dark",
-                    "color": "#007CB8"
+                    "color": "#1F2201"
                 },
                 {
                     "name": "Secondary pure",
                     "slug": "secondary-pure",
-                    "color": "#333333"
+                    "color": "#374D2C"
                 },
                 {
                     "name": "Secondary light",
                     "slug": "secondary-light",
-                    "color": "#C9C9C9"
+                    "color": "#2E2B12"
                 },
                 {
                     "name": "Secondary dark",
                     "slug": "secondary-dark",
-                    "color": "#111111"
-                },
-                {
-                    "name": "Highlight pure",
-                    "slug": "highlight-pure",
-                    "color": "#CCCC33"
-                },
-                {
-                    "name": "Highlight light",
-                    "slug": "highlight-light",
-                    "color": "#FFFF68"
-                },
-                {
-                    "name": "Highlight dark",
-                    "slug": "highlight-dark",
-                    "color": "#59631E"
+                    "color": "#3F3C16"
                 },
                 {
                     "name": "Low Pure",
@@ -71,47 +56,47 @@
                 {
                     "name": "High pure",
                     "slug": "high-pure",
-                    "color": "#FFFFFF"
+                    "color": "#F8F3EB"
                 },
                 {
                     "name": "High light",
                     "slug": "high-light",
-                    "color": "#F5F5F5"
+                    "color": "#E9E1D3"
                 },
                 {
                     "name": "High dark",
                     "slug": "high-dark",
-                    "color": "#DDDDDD"
+                    "color": "#C2BA7E "
                 },
                 {
                     "name": "Warning pure",
                     "slug": "warning-pure",
-                    "color": "#FF358B"
+                    "color": "#E9581A"
                 },
                 {
                     "name": "Warning light",
                     "slug": "warning-light",
-                    "color": "#FF72BB"
+                    "color": "#C77B5B"
                 },
                 {
                     "name": "Warning dark",
                     "slug": "warning-dark",
-                    "color": "#C6005E"
+                    "color": "#744835"
                 },
                 {
                     "name": "Helper pure",
                     "slug": "helper-pure",
-                    "color": "#29D9C2"
+                    "color": "#AF97CC"
                 },
                 {
                     "name": "Helper light",
                     "slug": "helper-light",
-                    "color": "#70FFF5"
+                    "color": "#a6a6a6"
                 },
                 {
                     "name": "Helper dark",
                     "slug": "helper-dark",
-                    "color": "#00A792"
+                    "color": "#42394D"
                 }
             ]
         },
@@ -166,17 +151,17 @@
                 {
                     "name": "Primary",
                     "slug": "primary",
-                    "fontFamily": "'Open Sans', sans-serif"
+                    "fontFamily": "Bull 5"
                 },
                 {
                     "name": "System",
                     "slug": "secondary",
-                    "fontFamily": "system-ui, sans-serif"
+                    "fontFamily": "Bull 5, mono"
                 },
                 {
                     "name": "Title",
                     "slug": "heading",
-                    "fontFamily": "'Montserrat', sans-serif"
+                    "fontFamily": "Hershey, sans-serif"
                 }
             ]
         },
