@@ -1,0 +1,26 @@
+.policy-papers {
+
+    &__date {
+        color: #C2BD99 !important;
+    }
+
+    .wp-block-cover {
+        &__background {
+            background-color: #F8F3EB !important;
+        }
+    }
+
+    .wp-block-heading {
+        padding: 0 20px;
+    }
+
+    .wp-block-heading,
+    .wp-element-caption,
+    p {
+        color: #48441D;
+    }
+
+    .wp-block-group.is-vertical {
+        max-width: 355px;
+    }
+}
