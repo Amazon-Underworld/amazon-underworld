@@ -151,17 +151,22 @@
                 {
                     "name": "Primary",
                     "slug": "primary",
-                    "fontFamily": "Bull 5"
+                    "fontFamily": "'Bull 5', sans-serif"
                 },
                 {
                     "name": "System",
                     "slug": "secondary",
-                    "fontFamily": "Bull 5, mono"
+                    "fontFamily": "'Bull 5 Mono', monospace"
                 },
                 {
                     "name": "Title",
                     "slug": "heading",
-                    "fontFamily": "Hershey, sans-serif"
+                    "fontFamily": "'Hershey Serif', serif"
+                },
+                {
+                    "name": "Helper",
+                    "slug": "helper",
+                    "fontFamily": "'Bull 5 Typewriter', monospace"
                 }
             ]
         },
