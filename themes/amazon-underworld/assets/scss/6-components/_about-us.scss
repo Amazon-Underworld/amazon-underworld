@@ -1,0 +1,23 @@
+.about-us {
+    padding: 0 !important;
+
+    .wp-block-cover {
+        &__background {
+            background-color: #1F2201 !important;
+        }
+    }
+
+    .wp-block-group {
+        padding: 25px 20px;
+
+        p,
+        .wp-block-heading-bigger {
+            color: #E9E1D3 !important;
+        }
+
+        .wp-block-heading {
+            color: #C2BD99;
+        }
+    }
+
+}
