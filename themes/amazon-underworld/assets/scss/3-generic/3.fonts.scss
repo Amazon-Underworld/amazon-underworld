@@ -1,8 +1,8 @@
 @font-face {
-    font-family: 'Bull 5';
+    font-family: 'Bull 5 Mono';
     font-display: swap;
     font-weight: 500;
-    src: url('#{$path--assets}/fonts/Bull-5-Mono-Medium.woff') format(truetype);
+    src: url('#{$path--assets}/fonts/Bull-5-Mono-Medium.woff') format(woff);
 }
 
 @font-face {
@@ -10,21 +10,21 @@
     font-display: swap;
     font-weight: 400;
     font-style: italic;
-    src: url('#{$path--assets}/fonts/Bull-5-Regular-Italic.woff') format(truetype);
+    src: url('#{$path--assets}/fonts/Bull-5-Regular-Italic.woff') format(woff);
 }
 
 @font-face {
     font-family: 'Bull 5';
     font-display: swap;
     font-weight: 400;
-    src: url('#{$path--assets}/fonts/Bull-5-Regular.woff') format(truetype);
+    src: url('#{$path--assets}/fonts/Bull-5-Regular.woff') format(woff);
 }
 
 @font-face {
     font-family: 'Bull 5 Typewriter';
     font-display: swap;
     font-weight: 400;
-    src: url('#{$path--assets}/fonts/Bull-5-Typewriter-Regular.woff') format(truetype);
+    src: url('#{$path--assets}/fonts/Bull-5-Typewriter-Regular.woff') format(woff);
 }
 
 @font-face {
@@ -32,19 +32,19 @@
     font-display: swap;
     font-weight: 400;
     font-style: italic;
-    src: url('#{$path--assets}/fonts/Hershey-AU-Italic.woff') format(truetype);
+    src: url('#{$path--assets}/fonts/Hershey-AU-Italic.woff') format(woff);
 }
 
 @font-face {
-    font-family: 'Hershey';
+    font-family: 'Hershey Sans';
     font-display: swap;
     font-weight: 400;
-    src: url('#{$path--assets}/fonts/Hershey-AU-Sans.woff') format(truetype);
+    src: url('#{$path--assets}/fonts/Hershey-AU-Sans.woff') format(woff);
 }
 
 @font-face {
-    font-family: 'Hershey';
+    font-family: 'Hershey Serif';
     font-display: swap;
     font-weight: 400;
-    src: url('#{$path--assets}/fonts/Hershey-AU-Serif.woff') format(truetype);
+    src: url('#{$path--assets}/fonts/Hershey-AU-Serif.woff') format(woff);
 }
