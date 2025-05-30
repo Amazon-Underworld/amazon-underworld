@@ -9,26 +9,8 @@
 </head>
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-
-    <div class="pre-header">
-        <div class="container container--wide">
-            <div class="pre-header__content">
-                <div class="main-header__social-content">
-                    <?= the_social_networks_menu( false ); ?>
-                </div>
-                <div class="acessibilidade">
-                    <a href="#"><iconify-icon icon="material-symbols-light:contrast"></iconify-icon></a>
-                    <a href="#"><iconify-icon icon="mdi:format-font-size-increase"></iconify-icon></a>
-                    <a href="#"><iconify-icon icon="mdi:format-font-size-decrease"></iconify-icon></a>
-                    <a href="#"><iconify-icon icon="bi:volume-down-fill"></iconify-icon></a>
-                    <a href="#"><iconify-icon icon="fa:print"></iconify-icon></a>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <header x-data="{ menuOpen: false, searchOpen: false }" class="main-header main-header-lateral" :class="{ 'main-header-lateral--menu-open': menuOpen, 'main-header-lateral--search-open': searchOpen }">
-        <div class="container container--wide">
+        <div class="container container--x-wide">
 			<div class="main-header-lateral__content">
                 <button type="button" class="main-header__toggle-menu main-header-lateral__toggle-menu" aria-label="<?= __('Toggle menu visibility', 'hacklabr') ?>" @click="menuOpen = !menuOpen">
                     <svg class="hamburger" :class="{ 'hamburger--open': menuOpen }" role="img" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -44,7 +26,7 @@
                         <?php the_custom_logo(); ?>
                     <?php else: ?>
                         <a href="<?= home_url() ?>">
-                            <img src="<?= get_template_directory_uri() ?>/assets/images/logo.png" width="200" alt="<?= get_bloginfo( 'name' ) ?>">
+                            <img src="<?= get_template_directory_uri() ?>/assets/images/logo.svg" alt="<?= get_bloginfo( 'name' ) ?>">
                         </a>
                     <?php endif; ?>
 				</div>
@@ -56,8 +38,14 @@
                 <div class="main-header-lateral__search" x-init="$watch('searchOpen', (isOpen) => isOpen && document.querySelector('#search').focus())">
                     <?php get_search_form(); ?>
                     <button type="button" class="main-header__toggle-search main-header-lateral__toggle-search" aria-label="<?= __( 'Toggle search form visibility', 'hacklabr' ) ?>" @click="searchOpen = !searchOpen">
-                        <iconify-icon icon="fa-solid:search"></iconify-icon>
+                        <img src="<?= get_template_directory_uri() ?>/assets/images/search-icon.svg" alt="Search">
                     </button>
+                </div>
+
+                <div class="main-header-lateral__language-selector">
+                    <div class="wpml-language-switcher">
+                        <?php do_action('wpml_add_language_selector');?>
+                    </div>
                 </div>
 
                 <?php do_action( 'hacklabr/header/menus-end' ); ?>

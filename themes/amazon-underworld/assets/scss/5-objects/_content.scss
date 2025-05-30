@@ -3,15 +3,6 @@
 .content {
     $breakpoint--wide: $grid--wide + 2 * $padding--large;
     $breakpoint--normal: $grid--normal + 2 * $padding--medium;
-
-    display: grid;
-    grid-template-columns:
-        [start] 1fr
-        [wide-start left-start] #{math.div($grid--wide - $grid--normal, 2)}
-        [center-start left-end] #{$grid--normal}
-        [right-start center-end] #{math.div($grid--wide - $grid--normal, 2)}
-        [right-end wide-end] 1fr
-        [end];
     max-width: 100%;
     padding-inline: 0;
     width: 100vw;
