@@ -1,26 +1,60 @@
 .policy-papers {
+    padding-bottom: 42px !important;
+
+    &__caption {
+        font-family: $font-family--heading;
+        font-size: $font-size--large;
+    }
+
+    &__text {
+        font-family: $font-family--primary;
+        font-size: $font-size--medium;
+    }
 
     &__date {
-        color: #C2BD99 !important;
+        color: $color--primary-pure !important;
+        font-family: $font-family--secondary;
+        font-size: $font-size--small;
+
+        @include mobile {
+            font-size: $font-size--x-small;
+        }
     }
+
 
     .wp-block-cover {
         &__background {
-            background-color: #F8F3EB !important;
+            background-color: $color--high-pure !important;
+        }
+    }
+
+    .wp-block-image {
+        margin-top: 44px !important;
+
+        @include mobile {
+            margin-top: 21px !important;
         }
     }
 
     .wp-block-heading {
         padding: 0 20px;
+        font-size: $font-size--large;
+        font-family: $font-family--secondary;
+        font-weight: 400;
+
+        @include mobile {
+            font-size: $font-size--x-small;
+            margin-bottom: 22px;
+        }
     }
 
     .wp-block-heading,
-    .wp-element-caption,
     p {
-        color: #48441D;
+        color: $color--primary-pure;
     }
 
     .wp-block-group.is-vertical {
         max-width: 355px;
+        padding: 0 15px;
     }
 }
