@@ -11,6 +11,7 @@
     }
 
     &--open {
+        color: $color--primary-medium !important;
 
         rect:nth-of-type(1) {
             transform: rotate(45deg) translateY(5px);

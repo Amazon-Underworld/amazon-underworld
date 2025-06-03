@@ -1,15 +1,24 @@
 .main-header-lateral {
-
+    transition: $transition--default;
     &__content {
         align-items: center;
         display: flex;
         justify-content: space-between;
         min-height: size(80);
         padding: $padding--medium;
+        @include mobile{
+            padding-inline: 0;
+        }
     }
 
     &__toggle-menu {
         display: none;
+        width: 1.875rem;
+        height: 1.875rem;
+
+        .hamburger{
+            color: $color--high-light;
+        }
 
         @include tablet {
             display: block;
@@ -17,10 +26,15 @@
     }
 
     &__logo {
-
         img {
-            height: 30px;
+            height: 1.875rem;
             width: auto;
+            @include mobile{
+                max-width: 9.4rem;
+            }
+        }
+        @include mobile{
+            width: 70%;
         }
     }
 
@@ -29,28 +43,34 @@
         gap: $gap--medium;
         position: relative;
 
+        @include mobile{
+            display: none;
+        }
         form {
             position: absolute;
             right: 0;
             top: 0;
         }
-
         input[type="submit"] {
             @include sr-only;
         }
         input[type="text"] {
+            transition: $transition--default;
             background-color: transparent;
             outline-style: solid;
             outline-color: $color--high-light;
-            outline-width: 2px;
+            outline-width: 1px;
             border: none;
-            border-radius: 64px;
-            width: 32px;
-            height: 32px;
+            border-radius: 4rem;
+            width: 2rem;
+            height: 2rem;
         }
     }
 
     &__desktop-content {
+        display: flex;
+        justify-content: center;
+        width: 80%;
 
         @include tablet {
             display: none;
@@ -103,21 +123,143 @@
     }
 
     &__mobile-content {
+        transition: $transition--default;
         display: none;
+        min-height: 29rem;
+        form{
+            border-top: solid 1px $color--high-light;
+            border-bottom: solid 1px $color--high-light;
+            margin-inline: $margin--medium;
+            padding: $padding--x-small 0 $padding--medium;
+            text-transform: uppercase;
+            opacity: 0.5;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: $gap--x-small;
+
+            label{
+                color: $color--high-pure;
+                font-size: $font-size--x-small;
+                font-family: $font-family--secondary;
+                width: 100%;
+                display: block;
+            }
+            input[type="text"] {
+                transition: $transition--default;
+                background-color: transparent;
+                border: none;
+                color: $color--high-pure;
+
+                &::placeholder{
+                    text-transform: uppercase;
+                    font-family: $font-family--heading;
+                    opacity: 1;
+                    color: $color--high-pure;
+                }
+                &:focus-visible{
+                    outline: none;
+                }
+            }
+            button{
+                width: 2.1875rem;
+                height: 2.1875rem;
+                background-color: transparent;
+                border: solid 1px $color--high-light;
+                border-radius: 4.375rem;
+                display: flex;
+                justify-content: center;
+                align-items: center ;
+            }
+        }
+        .social-menu{
+            padding: $padding--x-small 0 $padding--medium;
+            gap: $gap--medium;
+            &__icon{
+                color: $color--high-light;
+            }
+        }
+        .follow-us{
+            display: block;
+            width: 100%;
+            font-family: $font-family--secondary;
+            text-transform: uppercase;
+            opacity: 0.5;
+            color: $color--high-pure;
+            border-top: solid 1px $color--high-pure;
+            padding: $padding--x-small 0;
+            font-size: $font-size--x-small;
+        }
+    }
+
+    &__mobile-social{
+        padding-inline: $padding--medium;
+    }
+
+    &__menu-mobile{
+        padding: $padding--medium 0;
+        ul, li{
+            list-style: none;
+            color: $color--high-pure;
+            font-family: $font-family--secondary;
+            text-transform: uppercase;
+            transition: $transition--default;
+        }
+        >ul{
+            padding-inline-start: $padding--medium;
+        }
+        .sub-menu{
+            display: none;
+            padding-inline-start: 0;
+        }
+        .menu-item-has-children{
+            .submenu-toggle{
+                padding-inline: $padding--x-small;
+                transition: $transition--default;
+            }
+            &.open{
+                .submenu-toggle{
+                    transform: rotateX(180deg);
+                }
+                .sub-menu{
+                    display: block;
+                }
+            }
+        }
+
+
     }
 
     &--menu-open {
-
+        background-color: $color--primary-medium !important;
+        min-height: 34.375rem;
         .main-header-lateral__mobile-content {
-            display: block;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+        }
+        .main-header-lateral__toggle-menu{
+            background-color: $color--high-pure;
+            border-radius: 3.75rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &.submenu-open{
+            .menu{
+                >.menu-item{
+                    &:not(.open){
+                        opacity: 0.5;
+                    }
+                }
+            }
         }
     }
 
     &--search-open {
-
         .main-header-lateral__search form {
             input[type="text"]{
-                width: 150px;
+                width: 9.5rem;
             }
         }
 
@@ -130,13 +272,131 @@
     }
 
     &__language-selector{
-        max-width: 60px;
         .wpml-language-switcher{
-            max-width: 60px;
+            max-width: 3.75rem;
+            @include mobile{
+                max-width: 3.125rem;
+            }
             .wpml-ls{
                 &-item-toggle{
-                    border-radius: 8px;
+                    border-radius: .5rem;
                     background-color: transparent;
+                }
+                &-item{
+                    >a{
+                        background-color: transparent !important;
+                        color: $color--high-pure;
+                        font-family: $font-family--secondary;
+                        :hover{
+                            color: $color--high-pure !important;
+                        }
+                        @include mobile{
+                            font-size: $font-size--x-small;
+                            &::after{
+                                right: 5px;
+                            }
+                        }
+                    }
+                    :hover{
+                        background-color: transparent !important;
+                    }
+                }
+                &-sub-menu{
+                    a{
+                        background-color: transparent !important;
+                    }
+                }
+            }
+
+            &.open{
+                @include tablet{
+                    .wpml-ls-sub-menu{
+                        visibility: visible !important;
+                    }
+                }
+            }
+        }
+    }
+
+    // Main-header template-part/shortcode style
+    &-secondary{
+        background-color: $color--high-pure;
+        position: sticky !important;
+        box-shadow: $box-shadow--default;
+        &__menu-desktop{
+            li{
+                color: $color--primary-pure !important;
+            }
+        }
+
+        &__language-selector{
+            .wpml-language-switcher{
+                .wpml-ls{
+                    &-item-toggle{
+                        transition: $transition--default;
+                        border-radius: .5rem;
+                        background-color: transparent;
+                        border-color: $color--primary-pure;
+                    }
+                    &-item{
+                        a{
+                            transition:  $transition--default;
+                            background-color: $color--high-pure !important;
+                            color: $color--primary-pure;
+                            :hover{
+                                color: $color--primary-pure !important;
+                            }
+                        }
+                        :hover{
+                            background-color: transparent !important;
+                        }
+                    }
+                    &-sub-menu{
+                        a{
+                            background-color: $color--high-pure !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__logo{
+            transition: $transition--default;
+        }
+
+        &__search{
+            input[type="text"]{
+                outline-color: $color--primary-pure;
+            }
+        }
+
+        &__toggle-menu {
+            .hamburger{
+                color: $color--primary-pure;
+            }
+        }
+
+        .sub-menu{
+            background-color: $color--high-pure;
+        }
+
+        &.main-header-lateral--menu-open{
+            .main-header-lateral__logo{
+                img{
+                    filter: invert(65%) hue-rotate(340deg) brightness(150%);
+                }
+            }
+
+            .wpml-language-switcher{
+                .wpml-ls{
+                    &-item-toggle{
+                        border-color: $color--high-pure;
+                    }
+                    &-item{
+                        a{
+                            color: $color--high-pure;
+                        }
+                    }
                 }
             }
         }

@@ -348,11 +348,6 @@ class Assets {
 				'global' => true,
 			],
 
-			'copy-url' => [
-                'file' => 'copy-url.js',
-                'global' => true,
-			],
-
 			'anchor-sidebar'     => [
 				'file' => 'anchor-sidebar.js',
 				'preload_callback' => function () {
@@ -360,9 +355,9 @@ class Assets {
 				}
 			],
 
-            'tabs' => [
-                'file' => 'tabs.js',
-                'global' => true,
+			'menu' => [
+				'file'   => 'menu.js',
+				'global' => true,
 			],
  		];
 
