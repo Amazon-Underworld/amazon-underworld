@@ -237,3 +237,11 @@ function archive_filter_posts( $query ) {
     }
 }
 add_action( 'pre_get_posts', 'archive_filter_posts' );
+
+function get_main_header(){
+    ob_start();
+    get_template_part('template-parts/main-header');
+    return ob_get_clean();
+}
+
+add_shortcode('main-header', 'get_main_header');
