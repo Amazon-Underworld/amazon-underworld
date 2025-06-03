@@ -19,6 +19,11 @@
                     "color": "#5D5E32"
                 },
                 {
+                    "name": "Primary medium",
+                    "slug": "primary-medium",
+                    "color": "#292407"
+                },
+                {
                     "name": "Primary dark",
                     "slug": "primary-dark",
                     "color": "#1F2201"
@@ -162,6 +167,11 @@
                     "name": "Title",
                     "slug": "heading",
                     "fontFamily": "'Hershey Serif', serif"
+                },
+                {
+                    "name": "Title Secondary",
+                    "slug": "heading-secondary",
+                    "fontFamily": "'Hershey Sans', sans-serif"
                 },
                 {
                     "name": "Helper",
