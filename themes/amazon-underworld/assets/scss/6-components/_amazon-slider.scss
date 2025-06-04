@@ -1,4 +1,6 @@
 .amazon-slider-wrapper-frontend {
+    padding-bottom: 48px;
+
     .amazon-tiny-slider-container {
         .amazon-slide-link {
             text-decoration: none;
@@ -15,6 +17,21 @@
                 padding: 6px 9px;
                 background-color: $color--high-dark;
                 border-radius: 5px;
+
+                &.category-slug--opiniao,
+                &.category-slug--opinion {
+                    background-color: $color--high-dark;
+                }
+
+                &.category-slug--artigo,
+                &.category-slug--article {
+                    background-color: $color--warning-light;
+                }
+
+                &.category-slug--cronica,
+                &.category-slug--chronicle {
+                    background-color: $color--helper-pure;
+                }
             }
 
             .amazon-slide-title {
