@@ -5,6 +5,10 @@
         <div class="main-footer__widgets container">
             <?php dynamic_sidebar('footer_widgets') ?>
         </div>
+        <div class="main-footer__copyright">
+            <span><?=_e('© 2025 AMAZON UNDERWORLD', 'hacklabr'); ?></span>
+            <?php get_template_part('template-parts/site-by-hacklab');?>
+        </div>
     </footer>
 <?php endif; ?>
 <?php wp_footer() ?>

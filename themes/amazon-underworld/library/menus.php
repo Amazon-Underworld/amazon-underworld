@@ -4,6 +4,8 @@ namespace hacklabr;
 
 function register_menus() {
     register_nav_menu( 'main-menu', __( 'Main menu', 'hacklabr' ) );
+    register_nav_menu( 'footer-menu', __( 'Footer menu', 'hacklabr' ) );
+    register_nav_menu( 'privacy-menu', __( 'Privacy menu', 'hacklabr' ) );
     register_nav_menu( 'social-networks', __( 'Social networks', 'hacklabr' ) );
 }
 
