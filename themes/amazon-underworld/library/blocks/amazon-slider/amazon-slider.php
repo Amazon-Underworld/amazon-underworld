@@ -70,10 +70,37 @@ function render_amazon_slider_callback( $attributes ) {
                 $image_url    = get_the_post_thumbnail_url( $current_post_id, 'large' );
                 $image_alt    = get_post_meta( get_post_thumbnail_id( $current_post_id ), '_wp_attachment_image_alt', true ) ?: get_the_title( $current_post_id );
 
-                $categories = get_the_category( $current_post_id );
-                $category_display = '';
-                if ( ! empty( $categories ) ) {
-                    $category_display = esc_html( $categories[0]->name );
+                $all_post_categories = get_the_category( $current_post_id );
+                $category_display_name = '';
+                $category_css_class = '';
+
+                $infoamazonia_slug_reference = 'infoamazonia';
+
+                if ( ! empty( $all_post_categories ) ) {
+                    $chosen_category_object = null;
+                    $other_category_temp_object = null;
+                    $infoamazonia_object = null;
+
+                    foreach ( $all_post_categories as $cat_obj ) {
+                        if ( strtolower( $cat_obj->slug ) === $infoamazonia_slug_reference ) {
+                            $infoamazonia_object = $cat_obj;
+                        } elseif ( !$other_category_temp_object ) {
+                            $other_category_temp_object = $cat_obj;
+                        }
+                    }
+
+                    if ( $other_category_temp_object ) {
+                        $chosen_category_object = $other_category_temp_object;
+                    } elseif ( $infoamazonia_object ) {
+                        $chosen_category_object = $infoamazonia_object;
+                    } elseif (!empty($all_post_categories)) {
+                        $chosen_category_object = $all_post_categories[0];
+                    }
+
+                    if ( $chosen_category_object ) {
+                        $category_display_name = esc_html( $chosen_category_object->name );
+                        $category_css_class = 'category-slug--' . esc_attr( $chosen_category_object->slug );
+                    }
                 }
 
                 $title        = get_the_title( $current_post_id );
@@ -92,8 +119,8 @@ function render_amazon_slider_callback( $attributes ) {
                             <?php endif; ?>
                         </div>
                         <div class="amazon-slide-content">
-                            <?php if ( $category_display ) : ?>
-                                <span class="amazon-slide-category"><?php echo $category_display; ?></span>
+                            <?php if ( $category_display_name ) : ?>
+                                <span class="amazon-slide-category <?php echo $category_css_class; ?>"><?php echo $category_display_name; ?></span>
                             <?php endif; ?>
                             <h3 class="amazon-slide-title"><?php echo esc_html( $title ); ?></h3>
                             <?php if ( $author ) :  ?>
