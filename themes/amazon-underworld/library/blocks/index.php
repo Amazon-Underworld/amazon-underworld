@@ -16,6 +16,9 @@ function get_blocks_list () {
         'read-more' => null,
         'video-playlist' => [
            'render_callback' => 'hacklabr\\render_video_playlist_callback',
+        ],
+        'amazon-slider' => [
+            'render_callback' => 'hacklabr\\render_amazon_slider_callback',
         ]
     ];
 }

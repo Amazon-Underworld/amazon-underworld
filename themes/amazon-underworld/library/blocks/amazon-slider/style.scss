@@ -1,0 +1,60 @@
+.wp-block-hacklabr-amazon-slider {
+    .amazon-slider-wrapper-frontend {
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    .amazon-tiny-slider-container {
+        display: flex;
+        align-items: center;
+        padding-left: 153px;
+
+        @media (max-width: 768px) {
+            padding-left: 0;
+        }
+
+        .amazon-slide-item {
+            box-sizing: border-box;
+        }
+    }
+
+    .amazon-slider-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .amazon-slider-prev,
+        .amazon-slider-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            background-color: #f8f3eb;
+
+
+            &:disabled {
+                opacity: 0.4;
+                cursor: not-allowed;
+            }
+        }
+        .amazon-slider-prev {
+            left: 0;
+            margin-right: 15px;
+
+            img {
+                transform: scaleX(-1);
+            }
+        }
+
+        .amazon-slider-next {
+            right: 0;
+        }
+    }
+}
+
