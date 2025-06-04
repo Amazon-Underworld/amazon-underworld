@@ -1,0 +1,23 @@
+.content-block {
+    .wp-element-button {
+        background-color: $color--high-light;
+        border-width: 0;
+        color: $color--primary-pure;
+        font-family: $font-family--secondary;
+        font-size: $font-size--small;
+        line-height: inherit;
+        padding: 10px 18px;
+
+        @include mobile {
+            background-color: transparent;
+        }
+    }
+
+    .wp-block-heading {
+        font-family: $font-family--secondary;
+        font-size: $font-size--large;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: $color--primary-pure;
+    }
+}

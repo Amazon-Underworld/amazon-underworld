@@ -1,0 +1,42 @@
+.amazon-slider-wrapper-frontend {
+    .amazon-tiny-slider-container {
+        .amazon-slide-link {
+            text-decoration: none;
+        }
+
+        .amazon-slide-content {
+            margin-top: 10px;
+
+            .amazon-slide-category {
+                font-size: $font-size--x-small;
+                color: $color--primary-pure;
+                font-family: $font-family--secondary;
+                text-transform: uppercase;
+                padding: 6px 9px;
+                background-color: $color--high-dark;
+                border-radius: 5px;
+            }
+
+            .amazon-slide-title {
+                font-size: 30px;
+                font-family: $font-family--heading;
+                color: $color--primary-pure;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin: 10px 0;
+            }
+
+            .amazon-slide-author {
+                font-size: $font-size--x-small;
+                font-family: $font-family--secondary;
+                color: $color--primary-light;
+                text-transform: uppercase;
+            }
+
+        }
+
+        .amazon-slide-item {
+            padding-right: 10px !important;
+        }
+    }
+}
