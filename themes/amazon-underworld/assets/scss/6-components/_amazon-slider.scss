@@ -6,6 +6,31 @@
             text-decoration: none;
         }
 
+        .amazon-slide-image-container {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+                background-color: transparent;
+                mix-blend-mode: color;
+                border-radius: 5px;
+            }
+
+            .amazon-slide-image {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: brightness(0.7);
+            }
+        }
+
         .amazon-slide-content {
             margin-top: 10px;
 
@@ -15,23 +40,8 @@
                 font-family: $font-family--secondary;
                 text-transform: uppercase;
                 padding: 6px 9px;
-                background-color: $color--high-dark;
                 border-radius: 5px;
 
-                &.category-slug--opiniao,
-                &.category-slug--opinion {
-                    background-color: $color--high-dark;
-                }
-
-                &.category-slug--artigo,
-                &.category-slug--article {
-                    background-color: $color--warning-light;
-                }
-
-                &.category-slug--cronica,
-                &.category-slug--chronicle {
-                    background-color: $color--helper-pure;
-                }
             }
 
             .amazon-slide-title {
@@ -54,6 +64,37 @@
 
         .amazon-slide-item {
             padding-right: 10px !important;
+
+            &.category-slug--opiniao,
+            &.category-slug--opinion {
+                .amazon-slide-content .amazon-slide-category {
+                    background-color: $color--high-dark;
+                }
+                .amazon-slide-image-container::after {
+                    background-color: $color--primary-light;
+                }
+            }
+
+            &.category-slug--artigo,
+            &.category-slug--article {
+                .amazon-slide-content .amazon-slide-category {
+                    background-color: $color--warning-light;
+                }
+                .amazon-slide-image-container::after {
+                    background-color: $color--warning-dark;
+                }
+            }
+
+            &.category-slug--cronica,
+            &.category-slug--chronicle {
+                .amazon-slide-content .amazon-slide-category {
+                    background-color: $color--helper-pure;
+                }
+                .amazon-slide-image-container::after {
+                    background-color: $color--helper-dark;
+                }
+            }
         }
+
     }
 }
