@@ -109,7 +109,7 @@ function render_amazon_slider_callback( $attributes ) {
                     $author = get_the_author_meta( 'display_name', get_post_field( 'post_author', $current_post_id ) );
                 }
                 ?>
-                <div class="amazon-slide-item">
+                <div class="amazon-slide-item <?php echo esc_attr( $category_css_class ); ?>">
                     <a href="<?php echo esc_url( $external_url ); ?>" target="_blank" rel="noopener noreferrer" class="amazon-slide-link">
                         <div class="amazon-slide-image-container">
                             <?php if ( $image_url ) : ?>
