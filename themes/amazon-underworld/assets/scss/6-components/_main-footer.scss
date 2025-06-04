@@ -22,6 +22,11 @@
 
     &__widget:first-of-type{
         padding-bottom: calc($padding--large * 4);
+        .wp-block-image{
+            img{
+                mix-blend-mode: screen;
+            }
+        }
         @include mobile{
             padding-bottom: calc($padding--x-large + $padding--medium);
         }
