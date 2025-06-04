@@ -1,15 +1,23 @@
 .site-by-hacklab {
-    background-color: $color--low-pure;
+    background-color: transparent;
     color: $color--high-pure;
-
+    display: flex;
+    font-family: $font-family--secondary;
+    width: fit-content;
+    gap: $gap--x-small;
+    font-size: $font-size--small;
     a {
         display: block;
         width: 100%;
         text-align: end;
         text-decoration: none;
+    }
+    span {
+       // text-transform: uppercase;
+        text-wrap: nowrap;
+    }
 
-        span {
-            color: #CA0C25;
-        }
+    @include mobile{
+        font-size: $font-size--x-small;
     }
 }

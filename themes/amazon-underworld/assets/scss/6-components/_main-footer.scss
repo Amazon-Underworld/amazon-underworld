@@ -1,21 +1,98 @@
 .main-footer {
-    background-color: $color--primary-dark;
+    background-color: $color--secondary-light;
     padding-bottom: $padding--large;
     padding-top: $padding--xx-large;
 
     @include mobile {
         padding-top: $padding--x-large;
+        padding-bottom: $padding--medium;
     }
 
     &__widgets {
         max-width: $grid--wide;
 
         @include mobile {
-            padding-inline: $padding--x-large;
+            // padding-inline: $padding--x-large;
         }
 
         .wp-block-heading {
             margin-block: $margin--small;
+        }
+    }
+
+    &__widget:first-of-type{
+        padding-bottom: calc($padding--large * 4);
+        @include mobile{
+            padding-bottom: calc($padding--x-large + $padding--medium);
+        }
+    }
+    &__widget:nth-of-type(3){
+        p{
+            border-top: solid 1px $color--high-pure;
+        }
+    }
+
+    &__widget{
+        p{
+            opacity: 0.5;
+
+            @include mobile{
+                font-size: $font-size--x-small !important;
+                &:not(.no-border){
+                    border-top: solid 1px $color--high-pure;
+                    padding-top: $padding--small;
+                }
+            }
+        }
+        .social-network-columns{
+            gap: $gap--medium !important;
+            margin-block-start: $margin--small;
+        }
+        .widget_nav_menu{
+            margin-block-start: $margin--small;
+            .menu{
+                padding-inline-start: 0;
+                li{
+                    font-family: $font-family--secondary;
+                    font-size: $font-size--small;
+                    list-style: none;
+                    text-transform: uppercase;
+                    color: $color--high-pure;
+                    a{
+                        text-decoration: none;
+                    }
+                    @include mobile{
+                        font-size: $font-size--x-small;
+                    }
+                }
+            }
+        }
+
+        @include mobile{
+            .wp-block-column{
+                padding-left: 0 !important;
+            }
+        }
+    }
+
+    &__copyright{
+        display: flex;
+        justify-content: space-between;
+        max-width: $grid--wide;
+        margin-inline: auto;
+        padding-inline: $padding--medium;
+        span{
+            font-size: $font-size--small;
+            color: $color--high-pure;
+            font-family: $font-family--secondary;
+            @include mobile{
+                font-size: $font-size--x-small;
+            }
+        }
+        @include mobile{
+            flex-flow: column;
+            gap: $gap--medium;
+            padding-top: $padding--medium;
         }
     }
 }

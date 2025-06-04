@@ -26,18 +26,22 @@
                     <?= wp_nav_menu(['theme_location' => 'main-menu', 'container' => 'nav', 'menu_class' => 'menu', 'container_class' => 'main-header-lateral__menu-desktop']) ?>
                 </div>
 
-                <div class="main-header-lateral__search" x-init="$watch('searchOpen', (isOpen) => isOpen && document.querySelector('#search').focus())">
-                    <?php get_search_form(); ?>
-                    <button type="button" class="main-header__toggle-search main-header-lateral__toggle-search" aria-label="<?= __( 'Toggle search form visibility', 'hacklabr' ) ?>" @click="searchOpen = !searchOpen">
-                        <img src="<?= get_template_directory_uri() ?>/assets/images/search-icon.svg" alt="Search">
-                    </button>
-                </div>
+                <div class="main-header-lateral__helper-content">
 
-                <div class="main-header-lateral__language-selector">
-                    <div class="wpml-language-switcher">
-                        <?php do_action('wpml_add_language_selector');?>
+                    <div class="main-header-lateral__search" x-init="$watch('searchOpen', (isOpen) => isOpen && document.querySelector('#search').focus())">
+                        <?php get_search_form(); ?>
+                        <button type="button" class="main-header__toggle-search main-header-lateral__toggle-search" aria-label="<?= __( 'Toggle search form visibility', 'hacklabr' ) ?>" @click="searchOpen = !searchOpen">
+                            <img src="<?= get_template_directory_uri() ?>/assets/images/search-icon.svg" alt="Search">
+                        </button>
+                    </div>
+
+                    <div class="main-header-lateral__language-selector">
+                        <div class="wpml-language-switcher">
+                            <?php do_action('wpml_add_language_selector');?>
+                        </div>
                     </div>
                 </div>
+
                 <button type="button" class="main-header__toggle-menu main-header-lateral__toggle-menu" aria-label="<?= __('Toggle menu visibility', 'hacklabr') ?>" @click="menuOpen = !menuOpen">
                     <svg class="hamburger" :class="{ 'hamburger--open': menuOpen }" role="img" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg">
                         <title>Exibir menu</title>
