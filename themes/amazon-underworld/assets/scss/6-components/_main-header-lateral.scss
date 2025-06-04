@@ -70,10 +70,20 @@
     &__desktop-content {
         display: flex;
         justify-content: center;
-        width: 80%;
 
         @include tablet {
             display: none;
+        }
+    }
+
+    &__helper-content{
+        display: flex;
+        gap: $gap--medium;
+        min-width: 15%;
+        justify-content: flex-end;
+
+        @media (max-width: 1441px) {
+            width: 19%;
         }
     }
 
@@ -254,6 +264,12 @@
                 }
             }
         }
+        .wpml-language-switcher.open{
+            .wpml-ls-item a{
+                background-color: $color--primary-medium !important;
+            }
+        }
+
     }
 
     &--search-open {
@@ -378,6 +394,9 @@
 
         .sub-menu{
             background-color: $color--high-pure;
+            @include tablet{
+                background-color: transparent;
+            }
         }
 
         &.main-header-lateral--menu-open{
@@ -394,6 +413,7 @@
                     }
                     &-item{
                         a{
+                            background-color: $color--primary-medium !important;
                             color: $color--high-pure;
                         }
                     }
