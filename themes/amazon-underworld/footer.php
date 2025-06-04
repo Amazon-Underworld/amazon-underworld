@@ -7,7 +7,6 @@
         </div>
         <div class="main-footer__copyright">
             <span><?=_e('© 2025 AMAZON UNDERWORLD', 'hacklabr'); ?></span>
-            <?php get_template_part('template-parts/site-by-hacklab');?>
         </div>
     </footer>
 <?php endif; ?>
