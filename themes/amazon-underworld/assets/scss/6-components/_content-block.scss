@@ -1,6 +1,10 @@
 .content-block {
     padding-top: unset !important;
 
+    @include mobile {
+        padding-top: 15px !important;
+    }
+
     .wp-element-button {
         background-color: $color--high-light;
         border-width: 0;

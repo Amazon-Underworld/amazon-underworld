@@ -1,16 +1,20 @@
 .banner-block {
     padding: unset !important;
 
+    @include mobile {
+        border-bottom: 2px solid $color--hight-light !important;
+    }
+
     .wp-block-cover__inner-container {
         display: flex;
         flex-direction: column;
         height: 100%;
         width: 100%;
-        padding: 10px !important;
+        padding: 20px !important;
     }
 
     .wp-block-cover__image-background {
-        padding: 10px !important;
+        padding: 20px !important;
         background-color: $color--high-pure;
     }
 
@@ -20,7 +24,6 @@
         justify-content: center;
         gap: 0 !important;
         margin-top: 20px !important;
-        z-index: 2;
 
         @include mobile {
             flex-direction: column-reverse;
@@ -73,7 +76,6 @@
             justify-content: center;
             align-items: flex-end;
             flex-grow: 1;
-            z-index: 1;
 
             img {
                 position: relative;
