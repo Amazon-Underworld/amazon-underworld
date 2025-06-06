@@ -6,10 +6,19 @@
                 margin-inline: auto;
                 top: 25%;
                 width: 40%;
+                @include mobile{
+                    width: 90%;
+                }
                 .entry-title{
                     text-transform: uppercase;
                     text-align: center;
                     font-size: $font-size--xx-large;
+                    @include mobile{
+                        font-size: 25px;
+                        a{
+                            -webkit-line-clamp: 4;
+                        }
+                    }
                 }
                 .cat-links{
                     text-align: center;
@@ -31,6 +40,11 @@
         }
 
     }
+    .swiper-slide{
+        @include mobile{
+            height: 570px !important;
+        }
+    }
     .swiper-button{
         display: none !important;
     }
@@ -41,20 +55,61 @@
         align-items: center;
 
         .swiper-pagination-bullet{
-            background-color: white !important;
+            background-color: transparent !important;
             height: 41px !important;
-            width: 41px !important;
+            max-width: 270px !important;
+            width: fit-content !important;
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
-            // background-image: url('http://localhost/wp-content/uploads/2023/08/httpsinfoamazonia.orgwp-contentuploads202308card_9.jpg') !important;
+            display: flex;
+            padding-inline-start: $padding--medium;
+            border-left: solid 1px $color--high-light;
+            border-radius: 0;
+
+            @include mobile{
+                border-left: none;
+                background-color: $color--high-light !important;
+                height: 3px !important;
+                width: 20% !important;
+                opacity: 1 !important;
+                padding: 0 !important;
+
+                &-active{
+                    background-color: $color--warning-pure !important;
+                    height: 5px !important;
+                }
+            }
 
             .dot{
                 &-thumb{
                     height: 41px;
                     width: 41px;
+                    @include mobile{
+                        display: none;
+                    }
                 }
+                &-title{
+                    color: $color--high-light;
+                    // text-transform: capitalize;
+                    font-family: $font-family--primary;
+                    font-size: $font-size--medium;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 2;
+                    overflow: hidden;
+                    text-align: left;
+                    padding-inline-start: $padding--small;
+                    @include mobile{
+                        display: none;
+                    }
+                }
+
             }
+
+        }
+        :first-child{
+            border-left: none !important;
         }
     }
 }
