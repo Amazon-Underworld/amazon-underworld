@@ -41,6 +41,8 @@
 
     }
     .swiper-slide{
+        width: 100vw !important;
+        max-height: 945px !important;
         @include mobile{
             height: 570px !important;
         }
@@ -67,6 +69,10 @@
             border-left: solid 1px $color--high-light;
             border-radius: 0;
 
+            &:focus{
+                box-shadow: none !important;
+            }
+
             @include mobile{
                 border-left: none;
                 background-color: $color--high-light !important;
@@ -79,6 +85,7 @@
                     background-color: $color--warning-pure !important;
                     height: 5px !important;
                 }
+
             }
 
             .dot{

@@ -321,6 +321,9 @@
                     a{
                         background-color: transparent !important;
                     }
+                    @include mobile{
+                        visibility: hidden !important;
+                    }
                 }
             }
 
