@@ -4,7 +4,6 @@
     & > h2 {
         margin-bottom: $margin--medium;
         font-size: $font-size--xx-large;
-        font-weight: $font-weight--bold;
     }
 
     & > h3 {
@@ -31,6 +30,16 @@
 
         & > .wp-block-cover + .wp-block-cover {
             margin-top: 0;
+        }
+    }
+}
+
+.home{
+    .post-content{
+        .wp-block-heading{
+            &.alignfull{
+                padding-inline-start: $padding--large;
+            }
         }
     }
 }
