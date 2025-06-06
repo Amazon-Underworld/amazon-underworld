@@ -1,0 +1,46 @@
+.page-map{
+    .wp-block-column:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .wp-block-heading {
+            font-family: $font-family--heading;
+            font-size: 50px;
+            line-height: 1.2;
+        }
+
+        p {
+            font-family: $font-family--primary;
+            font-size: $font-size--medium;
+            line-height: 1.5;
+        }
+
+        .wp-block-buttons {
+            font-family: $font-family--secondary;
+            font-size: $font-size--small;
+            text-transform: uppercase;
+        }
+    }
+
+    &.hide-in-mobile {
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &.hide-in-desktop {
+        .wp-block-heading {
+            font-size: 25px;
+        }
+
+        .wp-block-buttons {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        @include desktop {
+            display: none;
+        }
+    }
+}
