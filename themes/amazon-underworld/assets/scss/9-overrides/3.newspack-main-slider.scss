@@ -1,0 +1,60 @@
+.wp-block-newspack-blocks-carousel.main-slider{
+    .swiper-wrapper{
+        .post{
+            .entry-wrapper{
+                background-color: transparent;
+                margin-inline: auto;
+                top: 25%;
+                width: 40%;
+                .entry-title{
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-size: $font-size--xx-large;
+                }
+                .cat-links{
+                    text-align: center;
+                    font-size: $font-size--small;
+                    text-transform: uppercase;
+                    font-family: $font-family--secondary;
+                    margin-bottom: $margin--large;
+                }
+                .entry-meta{
+                    margin-top: $margin--large;
+                }
+                .byline{
+                    margin-inline: auto;
+                    text-transform: uppercase;
+                    font-family: $font-family--secondary;
+                    font-size: $font-size--small;
+                }
+            }
+        }
+
+    }
+    .swiper-button{
+        display: none !important;
+    }
+    .swiper-pagination-bullets{
+        position: absolute !important;
+        z-index: 99 !important;
+        bottom: 2rem !important;
+        align-items: center;
+
+        .swiper-pagination-bullet{
+            background-color: white !important;
+            height: 41px !important;
+            width: 41px !important;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            // background-image: url('http://localhost/wp-content/uploads/2023/08/httpsinfoamazonia.orgwp-contentuploads202308card_9.jpg') !important;
+
+            .dot{
+                &-thumb{
+                    height: 41px;
+                    width: 41px;
+                }
+            }
+        }
+    }
+}
