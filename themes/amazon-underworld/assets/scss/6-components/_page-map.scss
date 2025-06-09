@@ -1,6 +1,6 @@
 .page-map {
     .wp-block-columns {
-        padding-top: 43px;
+        padding-top: 65px;
     }
 
     .wp-block-column:first-child {
@@ -45,7 +45,7 @@
             width: 100%;
         }
 
-        @include desktop {
+        @media (min-width: 769px) {
             display: none;
         }
     }
