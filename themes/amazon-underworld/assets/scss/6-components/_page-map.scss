@@ -1,4 +1,8 @@
-.page-map{
+.page-map {
+    .wp-block-columns {
+        padding-top: 43px;
+    }
+
     .wp-block-column:first-child {
         display: flex;
         flex-direction: column;
