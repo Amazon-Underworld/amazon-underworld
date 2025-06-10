@@ -260,6 +260,7 @@
         }
 
         &__content{
+            grid-template-columns: auto auto auto;
             @include mobile{
                 grid-template-columns: 1fr;
                 gap: $gap--medium;
@@ -269,6 +270,8 @@
         .post-card{
             padding: $padding--xx-large 0;
             border-left: solid 1px #d5d0c2;
+            max-width: 40%;
+            margin-inline: auto;
             @include mobile{
                 padding: $padding--medium 0 $padding--large;
                 border-left: none;
