@@ -364,6 +364,11 @@ class Assets {
 				'file'   => 'main-slider.js',
 				'global' => true,
 			],
+
+            'modal-our-methodology' => [
+                'file'   => 'modal-our-methodology.js',
+                'global' => true,
+            ],
  		];
 
 		$js_files = apply_filters('js_files_before_output', $js_files);
