@@ -17,7 +17,7 @@
                         <?php the_custom_logo(); ?>
                     <?php else: ?>
                         <a href="<?= home_url() ?>">
-                            <img src="<?= get_template_directory_uri() ?>/assets/images/logo.svg" alt="<?= get_bloginfo( 'name' ) ?>">
+                            <img src="<?= get_template_directory_uri() ?>/assets/images/logo-pos.svg" alt="<?= get_bloginfo( 'name' ) ?>">
                         </a>
                     <?php endif; ?>
 				</div>
@@ -31,7 +31,7 @@
                     <div class="main-header-lateral__search" x-init="$watch('searchOpen', (isOpen) => isOpen && document.querySelector('#search').focus())">
                         <?php get_search_form(); ?>
                         <button type="button" class="main-header__toggle-search main-header-lateral__toggle-search" aria-label="<?= __( 'Toggle search form visibility', 'hacklabr' ) ?>" @click="searchOpen = !searchOpen">
-                            <img src="<?= get_template_directory_uri() ?>/assets/images/search-icon.svg" alt="Search">
+                            <img src="<?= get_template_directory_uri() ?>/assets/images/search-icon-pos.svg" alt="Search">
                         </button>
                     </div>
 

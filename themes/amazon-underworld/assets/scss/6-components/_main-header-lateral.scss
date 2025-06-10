@@ -21,7 +21,15 @@
         }
 
         @include tablet {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    &__toggle-search{
+        img{
+            filter: invert(65%) hue-rotate(195deg) brightness(150%);
         }
     }
 
@@ -29,6 +37,8 @@
         img {
             height: 1.875rem;
             width: auto;
+            filter: invert(65%) hue-rotate(195deg) brightness(150%);
+
             @include mobile{
                 max-width: 9.4rem;
             }
@@ -381,6 +391,9 @@
 
         &__logo{
             transition: $transition--default;
+            img{
+                filter: none;
+            }
         }
 
         &__search{
@@ -430,7 +443,7 @@
     .main-header-lateral{
         &__logo{
             img{
-                filter: invert(80%) hue-rotate(180deg);
+                filter: none;
             }
         }
         &__menu-desktop{
@@ -443,11 +456,57 @@
                 outline-color: $color--primary-pure;
             }
         }
+        &__toggle-menu{
+            background-color: $color--primary-pure;
+            border-radius: 60px;
+        }
         &__toggle-search{
             img{
-                filter: invert(100%);
+                filter: none;
             }
        }
+       &__language-selector{
+            .wpml-language-switcher{
+                .wpml-ls{
+                    &-item{
+                        >a{
+                            color: $color--primary-pure;
+                            border-color: $color--primary-pure;
+                            :hover{
+                                color: $color--primary-pure !important;
+                            }
+                        }
+
+                    }
+                }
+
+                &.open{
+                    @include tablet{
+                        .wpml-ls-sub-menu{
+                            visibility: visible !important;
+                        }
+                    }
+                }
+            }
+
+        }
+        &--menu-open{
+            .main-header-lateral__logo img, .main-header-lateral__toggle-search{
+                filter: invert(65%) hue-rotate(195deg) brightness(150%);
+            }
+            .main-header-lateral__language-selector{
+                .wpml-language-switcher .wpml-ls-item>a{
+                    color: $color--high-pure;
+                    border-color: $color--high-pure;
+                    :hover{
+                        color: $color--high-pure !important;
+                    }
+                }
+            }
+            .main-header-lateral__toggle-menu{
+                background-color: $color--high-pure;
+            }
+        }
 
     }
 }
