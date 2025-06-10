@@ -17,6 +17,17 @@ $modifiers = implode(' ', $modifiers);
 $categories = get_the_category();
 ?>
 <article id="post-ID-<?php the_ID(); ?>" class="post-card <?=$modifiers?>">
+
+    <div class="post-card__meta">
+        <?php if (!$hide_author): ?>
+        <div class="post-card__author">
+            <?php the_author(); ?>
+        </div>
+        <?php endif; ?>
+        <time class="post-card__date">
+            <?php echo get_the_date('j F Y'); ?>
+        </time>
+    </div>
     <header class="post-card__image">
         <a href="<?php the_permalink();?>" aria-label="<?= esc_attr(get_the_title()) ?>">
             <?php if (has_post_thumbnail()): ?>
@@ -42,27 +53,9 @@ $categories = get_the_category();
             <a href="<?php the_permalink();?>"><?php the_title();?></a>
         </h3>
 
-        <?php if (!$hide_author || !$hide_date): ?>
-        <div class="post-card__meta">
-            <?php if (!$hide_author): ?>
-            <div class="post-card__author">
-                <?php the_author(); ?>
-            </div>
-            <?php endif; ?>
-
-            <?php if (!$hide_date): ?>
-            <time class="post-card__date">
-                <?php echo get_the_date(); ?>
-            </time>
-            <?php endif; ?>
-        </div>
-        <?php endif; ?>
-
-        <?php if (!$hide_excerpt): ?>
         <div class="post-card__excerpt">
             <?= get_the_excerpt(); ?>
         </div>
-        <?php endif; ?>
     </main>
 </article>
 

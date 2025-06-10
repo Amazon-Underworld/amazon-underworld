@@ -425,3 +425,29 @@
         }
     }
 }
+
+.single{
+    .main-header-lateral{
+        &__logo{
+            img{
+                filter: invert(80%) hue-rotate(180deg);
+            }
+        }
+        &__menu-desktop{
+            li{
+                color: $color--primary-pure;
+            }
+        }
+        &__search{
+            input[type="text"] {
+                outline-color: $color--primary-pure;
+            }
+        }
+        &__toggle-search{
+            img{
+                filter: invert(100%);
+            }
+       }
+
+    }
+}
