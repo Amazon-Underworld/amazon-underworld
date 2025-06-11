@@ -408,6 +408,12 @@
             }
         }
 
+        &__toggle-search{
+            img{
+                filter: none;
+            }
+        }
+
         .sub-menu{
             background-color: $color--high-pure;
             @include tablet{

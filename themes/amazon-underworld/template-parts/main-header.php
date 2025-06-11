@@ -18,7 +18,7 @@
                 <div class="main-header-lateral__helper-content">
                     <div class="main-header-lateral__search main-header-lateral-secondary__search" x-init="$watch('searchOpen', (isOpen) => isOpen && document.querySelector('#search').focus())">
                         <?php get_search_form(); ?>
-                        <button type="button" class="main-header__toggle-search main-header-lateral__toggle-search" aria-label="<?= __( 'Toggle search form visibility', 'hacklabr' ) ?>" @click="searchOpen = !searchOpen">
+                        <button type="button" class="main-header__toggle-search main-header-lateral-secondary__toggle-search" aria-label="<?= __( 'Toggle search form visibility', 'hacklabr' ) ?>" @click="searchOpen = !searchOpen">
                             <img src="<?= get_template_directory_uri() ?>/assets/images/search-icon-pos.svg" alt="Search">
                         </button>
                     </div>
