@@ -9,10 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function openModal() {
+        document.body.classList.add('modal-is-open');
         modal.style.display = 'flex';
     }
 
     function closeModal() {
+        document.body.classList.remove('modal-is-open');
         modal.style.display = 'none';
     }
 
