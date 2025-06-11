@@ -57,8 +57,11 @@
             "image title"
             "image text-content";
 
-        overflow-y: auto;
         padding-right: 15px;
+
+        @media (max-width: 1200px) {
+            overflow-y: auto;
+        }
 
     }
 
