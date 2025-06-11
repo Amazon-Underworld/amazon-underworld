@@ -1,4 +1,4 @@
-.modal-overlay {
+.modal-our-methodology {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -10,60 +10,119 @@
     background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
-}
-
-.modal-content {
-    background-color: $color--primary-dark;
-    color: $color--high-pure;
-    margin: auto;
-    padding: 180px 126px;
-    max-width: 1686px;
-    width: 100%;
-    position: relative;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
+    margin-top: 50px;
 
 
-.close-our-methodology {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    padding: 10px 24px;
-    border-radius: 60px;
-    background-color: $color--high-light;
-    color: $color--primary-pure;
-    font-family: $font-family--secondary;
-    font-size: $font-size--small;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
-}
-
-.modal-body {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 137px;
-    align-items: center;
-}
-
-.column-text h2 {
-    margin-top: 0;
-    color: $color--high-pure;
-}
-
-.column-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-}
-
-
-@include mobile {
-    .modal-body {
-        grid-template-columns: 1fr;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: $color--primary-dark;
+        color: $color--high-pure;
+        margin: auto;
+        padding: clamp(30px, 7vw, 100px);
+        max-width: 1686px;
+        max-height: 954px;
+        width: 90vw;
+        height: 90vh;
+        position: relative;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     }
 
-    .modal-content {
-        padding: 20px;
+    .close-our-methodology {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        padding: 10px 24px;
+        border-radius: 60px;
+        background-color: $color--high-light;
+        color: $color--primary-pure;
+        font-family: $font-family--secondary;
+        font-size: $font-size--small;
+        font-weight: 500;
+        letter-spacing: -0.7px;
+        text-transform: uppercase;
+        border: none;
+        cursor: pointer;
+    }
+
+    &__body {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0px clamp(20px, 7vw, 80px);
+
+        grid-template-areas:
+            "image title"
+            "image text-content";
+
+        overflow-y: auto;
+        padding-right: 15px;
+
+    }
+
+    .modal-title {
+        grid-area: title;
+        margin-top: 0;
+        color: $color--high-pure;
+        align-self: end;
+    }
+
+    .column-text {
+        grid-area: text-content;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        p {
+            line-height: 125%;
+            letter-spacing: -0.16px;
+        }
+    }
+
+    .column-image {
+        grid-area: image;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+    }
+
+    @include mobile {
+        &__body {
+            grid-template-columns: 1fr;
+            overflow-y: auto;
+            grid-template-areas: none;
+            gap: 18px;
+            padding-right: 0;
+        }
+
+        &__content {
+            padding: clamp(15px, 2vw, 30px);
+            align-items: flex-end;
+            gap: 47px;
+        }
+
+        .close-our-methodology {
+            position: unset;
+        }
+
+        .modal-title,
+        .column-image,
+        .column-text {
+            grid-area: unset;
+        }
+
+        .modal-title {
+            font-size: 25px;
+        }
+
+        .column-image img {
+            height: auto;
+        }
     }
 }
