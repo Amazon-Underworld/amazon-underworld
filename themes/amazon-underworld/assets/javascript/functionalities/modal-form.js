@@ -9,13 +9,16 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function openModal() {
-        modal.style.display = 'flex';
+        console.log('clicou no botao open');
         header.style.zIndex = '0';
+        setTimeout(()=>{
+            modal.style.display = 'flex';
+        }, 200);
     }
 
     function closeModal() {
-        modal.style.display = 'none';
         header.style.zIndex = '2';
+        modal.style.display = 'none';
     }
 
     btnOpen.forEach(button => {
