@@ -63,17 +63,13 @@ body.page-map {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0px clamp(20px, 7vw, 80px);
+        overflow-y: auto;
 
         grid-template-areas:
             "image title"
             "image text-content";
 
         padding-right: 15px;
-
-        @media (max-width: 1200px) {
-            overflow-y: auto;
-        }
-
     }
 
     .modal-title {
