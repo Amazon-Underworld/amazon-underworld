@@ -17,16 +17,16 @@ $post_url_en = apply_filters( 'wpml_permalink', $post_url, 'en');
 
 <div class="policy-paper-app">
     <div class="post-aside">
-        <header class="post-header container">
-            <div class="post-header__meta post-header__meta-mobile">
-                <p class="post-header__date"><?= get_the_date('j F Y') ?></p>
-                <h1 class="post-header__title"> <?php the_title(); ?> </h1>
+        <header class="post-header-pp container">
+            <div class="post-header-pp__meta post-header-pp__meta-mobile">
+                <p class="post-header-pp__date"><?= get_the_date('j F Y') ?></p>
+                <h1 class="post-header-pp__title"> <?php the_title(); ?> </h1>
             </div>
-            <div class="post-header__featured-image">
+            <div class="post-header-pp__featured-image">
                 <?= get_the_post_thumbnail(null, 'post-thumbnail',['class'=>'post-header__featured-img']); ?>
             </div>
 
-            <div class="post-header__download">
+            <div class="post-header-pp__download">
                 <?php
                     if(!empty($download)){
                         $download_link = $download['guid'];
@@ -37,7 +37,7 @@ $post_url_en = apply_filters( 'wpml_permalink', $post_url, 'en');
                 ?>
             </div>
 
-            <div class="post-header__language-selector">
+            <div class="post-header-pp__language-selector">
                 <span class="selector">
                     <a href="<?php $post_url_es; ?>">
                         <?php _e('Español', 'hacklabr');?>
@@ -57,7 +57,7 @@ $post_url_en = apply_filters( 'wpml_permalink', $post_url, 'en');
         </header>
 
         <div class="post-footer post-footer__desktop">
-            <div class="post-header__tags">
+            <div class="post-header-pp__tags">
                 <span><?= _e('Tags', 'hacklabr');?></span>
                     <?php
                     if(!empty($tags)){
@@ -77,16 +77,16 @@ $post_url_en = apply_filters( 'wpml_permalink', $post_url, 'en');
 
 
     <main class="post-content content content--normal">
-        <div class="post-header__meta post-header__meta-desktop container">
-            <p class="post-header__date"><?= get_the_date('j F Y') ?></p>
-            <h1 class="post-header__title"> <?php the_title(); ?> </h1>
+        <div class="post-header-pp__meta post-header__meta-desktop container">
+            <p class="post-header-pp__date"><?= get_the_date('j F Y') ?></p>
+            <h1 class="post-header-pp__title"> <?php the_title(); ?> </h1>
         </div>
 
         <?php the_content() ?>
     </main>
 
     <div class="post-footer post-footer__mobile">
-            <div class="post-header__tags">
+            <div class="post-header-pp__tags">
                 <span><?= _e('Tags', 'hacklabr');?></span>
                     <?php
                     if(!empty($tags)){
