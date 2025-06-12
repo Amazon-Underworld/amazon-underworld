@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('modal-form');
     const btnOpen = document.querySelectorAll('.open-form a');
-    console.log(btnOpen)
     const btnClose = document.querySelector('.close-form');
+    const header = document.querySelector('.main-header-lateral');
 
     if (!modal || btnOpen.length === 0 || !btnClose) {
         return;
@@ -10,16 +10,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function openModal() {
         modal.style.display = 'flex';
+        header.style.zIndex = '0';
     }
 
     function closeModal() {
         modal.style.display = 'none';
+        header.style.zIndex = '2';
     }
 
     btnOpen.forEach(button => {
         button.addEventListener('click', (event) => {
             event.preventDefault();
-            console.log(button);
             openModal();
         });
     });
@@ -27,8 +28,10 @@ document.addEventListener('DOMContentLoaded', function () {
     btnClose.addEventListener('click', closeModal);
 
     window.addEventListener('click', function (event) {
-        if (event.target === modal) {
-            closeModal();
+        if (!event.target.closest('.wp-block-column')) {
+            if (!event.target.closest('.close-form')) {
+                closeModal();
+            }
         }
     });
 
