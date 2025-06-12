@@ -29,7 +29,7 @@
 
     &__toggle-search{
         img{
-            filter: invert(65%) hue-rotate(195deg) brightness(150%);
+            filter: invert(100%) hue-rotate(230deg) brightness(150%);
         }
     }
 
@@ -37,7 +37,7 @@
         img {
             height: 1.875rem;
             width: auto;
-            filter: invert(65%) hue-rotate(195deg) brightness(150%);
+            filter: invert(100%) hue-rotate(230deg) brightness(150%);
 
             @include mobile{
                 max-width: 9.4rem;
@@ -424,7 +424,7 @@
         &.main-header-lateral--menu-open{
             .main-header-lateral__logo{
                 img{
-                    filter: invert(65%) hue-rotate(340deg) brightness(150%);
+                    filter: invert(100%) hue-rotate(230deg) brightness(150%);
                 }
             }
 
@@ -445,7 +445,7 @@
     }
 }
 
-.single{
+.single-policy-paper{
     .main-header-lateral{
         &__logo{
             img{
