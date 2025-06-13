@@ -6,6 +6,7 @@
     max-width: 100%;
     padding-inline: 0;
     width: 100vw;
+    display: grid;
 
     & > :not(.alignfull) {
         padding-inline: $padding--large;
@@ -64,12 +65,12 @@
     }
 
     .alignwide {
-        grid-column: wide-start / wide-end;
-        grid-template-columns: subgrid;
+        // grid-column: wide-start / wide-end;
+        // grid-template-columns: subgrid;
     }
 
     .alignfull {
-        grid-column: start / end;
-        grid-template-columns: subgrid;
+        // grid-column: start / end;
+        // grid-template-columns: subgrid;
     }
 }

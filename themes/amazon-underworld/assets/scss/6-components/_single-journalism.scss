@@ -138,15 +138,12 @@
             }
         }
         .post-grid {
-            display: grid;
-            grid-template-columns: auto auto;
             gap: calc($gap--large * 2);
-            padding-top: calc($padding--large * 4);
+            padding-top: calc($padding--large * 2);
             padding-bottom: calc($padding--large * 2);
 
             @include mobile{
-                display: flex;
-                flex-flow: column;
+
                 padding-top: $padding--large;
                 padding-bottom: $padding--medium;
                 gap: $gap--medium;
@@ -157,12 +154,14 @@
                 z-index: 0;
                 padding: $padding--large;
                 padding-right: 0;
-                display: flex;
-                flex-flow: column;
+                display: grid;
+                grid-template-columns: auto auto;
                 justify-content: space-between;
                 max-height: 5%;
-                width: 233px;
+                width: 100%;
                 @include mobile{
+                    display: flex;
+                    flex-flow: column;
                     max-width: 100%;
                     max-height: unset;
                     padding: $padding--medium;
@@ -182,6 +181,7 @@
                 .share-links{
                     display: flex;
                     flex-flow: column;
+                    padding-top: calc($padding--large * 5);
                     @include mobile{
                         display: none;
                     }
@@ -217,19 +217,24 @@
             .post-content{
                 position: relative;
                 z-index: 1;
-                max-width: 70%;
+                max-width: $grid--normal;
+                margin-inline: auto;
                 display: flex;
                 flex-flow: column;
                 align-items: center;
-                grid-area: 1 / 2 / span 1 / span 2;
+                padding-top: 0;
 
                 @include mobile{
                     max-width: 100%;
                     width: 100%;
                     padding-top: 0;
+                    margin-top: 0;
                 }
                 &__intro{
-                    width: 80%;
+                    max-width: $grid--wide;
+                    width: 90%;
+                    margin-inline: auto;
+                    padding-inline-end: $padding--x-large;
                     font-family: $font-family--heading;
                     font-size: 40px;
                     color: $color--primary-pure;
@@ -240,8 +245,8 @@
                     @include mobile{
                         width: 100%;
                         font-size: 20px;
-                        padding-inline: $padding--medium;
                         margin-bottom: $margin--medium;
+                        padding-top: $padding--large;
                     }
 
                     &::first-letter{
@@ -255,11 +260,6 @@
             }
 
             .content{
-                max-width: 75%;
-                @include mobile{
-                    max-width: 100%;
-                    margin-top: 0;
-                }
                 .wp-block-heading, p{
                     letter-spacing: -3%;
                     margin-top: $margin--small;
@@ -293,8 +293,8 @@
                     }
                 }
                 .alignfull{
-                    width: 101vw;
-                    margin-inline-start: calc(50% - 52vw);
+                    width: 100vw;
+
                     @include mobile{
                         margin-inline-start: 0;
                     }
@@ -302,8 +302,11 @@
                 .alignwide{
                     max-width: $grid--wide;
                     width: 150%;
-                    margin-inline-start: -10%;
+                    @include mobile{
+                        width: 100%;
+                    }
                 }
+
                 blockquote{
                     padding: $padding--medium 0;
                     @include mobile{

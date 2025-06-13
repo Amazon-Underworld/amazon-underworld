@@ -45,12 +45,9 @@ echo do_shortcode('[main-header]')
         <div class="post-aside__meta container">
             <p class="post-aside__date"><?= get_the_date('j F Y') ?></p>
             <p class="post-aside__author"><?php _e('By ', 'hacklabr') ?><?= get_the_author() ?></p>
-
+            <?php get_template_part('template-parts/share-links', null, ['link'=>get_the_permalink()]) ?>
         </div>
-        <?php get_template_part('template-parts/share-links', null, ['link'=>get_the_permalink()]) ?>
         <?php // get_template_part('template-parts/content/related-posts') ?>
-    </aside>
-    <div class="post-content">
         <?php
         if( $intro ){ ?>
             <p class="post-content__intro"><?php echo $intro[0] ;?></p>
@@ -61,9 +58,11 @@ echo do_shortcode('[main-header]')
             <p class="post-content__intro"><?= get_the_excerpt() ?></p>
         <?php endif;
         } ?>
-        <div class="content content--normal">
-            <?php the_content() ?>
+    </aside>
+    <div class="post-content content content--normal">
+        <?php the_content() ?>
     </div>
+
 </main>
 
 <div class="post-footer">
