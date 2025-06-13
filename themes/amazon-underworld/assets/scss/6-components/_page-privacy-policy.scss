@@ -1,6 +1,8 @@
-.privacy-policy {
+body.page-privacy-policy {
     background-color: $color--high-pure;
+}
 
+.privacy-policy {
     &.container {
         max-width: 822px;
     }
