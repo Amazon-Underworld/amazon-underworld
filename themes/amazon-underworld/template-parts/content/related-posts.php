@@ -27,7 +27,11 @@ if ( $related_posts->have_posts() ) : ?>
 
 <div class="related-posts container container--wide">
     <h2 class="related-posts__title">
-        <?php _e('Explore more ' . $post_type_obj->label, 'hacklabr') ?></h2>
+        <?php if($post_type === 'post'){
+            _e('Explore more content', 'hacklabr') ?></h2>
+        <?php } else {
+            _e('Explore more ' . $post_type_obj->label, 'hacklabr') ?></h2>
+        <?php } ?>
         <div class="related-posts__content">
             <?php while( $related_posts->have_posts() ) :
                 $related_posts->the_post();
