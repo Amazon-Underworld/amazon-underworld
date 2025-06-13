@@ -1,4 +1,9 @@
 <?php
+/**
+ * Template Name: Layout Mapa Customizado
+ * Template Post Type: page
+ */
+
 get_header();
 ?>
     <div class="container">
