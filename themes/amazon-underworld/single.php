@@ -11,27 +11,29 @@ $categories = get_the_category();
 $excerpt = !empty( $post->post_excerpt ) ? wp_kses_post( $post->post_excerpt ) : '';
 $terms = get_the_terms($post_id, 'category');
 $intro = pods_field('intro');
+$tags = get_tags();
+$post_url = get_permalink(get_the_ID());
 
 if(has_term('opinion', 'category', $post_id)){ ?>
-    <header class="post-header post-header__opinion container">
+    <header id="post-header" class="post-header post-header__opinion container">
         <?php get_template_part('template-parts/title/post-header'); ?>
     </header>
 <?php }
 
 elseif(has_term('article', 'category', $post_id)){ ?>
-    <header class="post-header post-header__article container">
+    <header id="post-header"  class="post-header post-header__article container">
         <?php get_template_part('template-parts/title/post-header'); ?>
     </header>
 <?php }
 
 elseif(has_term('chronicle', 'category', $post_id)){ ?>
-    <header class="post-header post-header__chronicle container">
+    <header id="post-header"  class="post-header post-header__chronicle container">
         <?php get_template_part('template-parts/title/post-header'); ?>
     </header>
 <?php }
 
 else{ ?>
-    <header class="post-header container">
+    <header id="post-header" class="post-header post-header__no-term container">
         <?php get_template_part('template-parts/title/post-header'); ?>
     </header>
 <?php }
@@ -43,10 +45,9 @@ echo do_shortcode('[main-header]')
         <div class="post-aside__meta container">
             <p class="post-aside__date"><?= get_the_date('j F Y') ?></p>
             <p class="post-aside__author"><?php _e('By ', 'hacklabr') ?><?= get_the_author() ?></p>
+            <?php get_template_part('template-parts/share-links', null, ['link'=>get_the_permalink()]) ?>
         </div>
-        <?php get_template_part('template-parts/share-links', null, ['link'=>get_the_permalink()]) ?>
-    </aside>
-    <div class="post-content">
+        <?php // get_template_part('template-parts/content/related-posts') ?>
         <?php
         if( $intro ){ ?>
             <p class="post-content__intro"><?php echo $intro[0] ;?></p>
@@ -57,11 +58,40 @@ echo do_shortcode('[main-header]')
             <p class="post-content__intro"><?= get_the_excerpt() ?></p>
         <?php endif;
         } ?>
-        <div class="content content--normal">
-            <?php the_content() ?>
+    </aside>
+    <div class="post-content content content--normal">
+        <?php the_content() ?>
     </div>
+
 </main>
 
+<div class="post-footer">
+    <div class="post-footer__heading">
+        <div class="post-footer__tags">
+            <?php
+            if(!empty($tags)){ ?>
+                <span><?= _e('Tags', 'hacklabr');?></span>
+                <?php foreach($tags as $tag){ ?>
+                    <a class="tag tag--<?= $tag->slug ?>" href="<?= get_term_link($tag, 'tag') ?>">
+                    <?= $tag->name ?>
+                </a>
+                <?php
+                }
+            }
+            ?>
+
+        </div>
+        <?php get_template_part('template-parts/share-links', null, ['link'=>get_the_permalink()]) ?>
+    </div>
+
+    <div class="post-footer__close">
+        <p> <?php _e('Amazon Underworld es una investigación conjunta de InfoAmazonia (Brasil), Armando.Info (Venezuela) y La Liga Contra el Silencio (Colombia). El trabajo se realiza en colaboración con la Red de Investigaciones de la Selva Tropical del Pulitzer Center y está financiado por la Open Society Foundation y la Oficina de Asuntos Exteriores y del Commonwealth del Reino Unido y por la International Union for Conservation of Nature (IUCN NL).', 'hacklabr')?> </p>
+        <a href="#post-header"><button type="button" class="post-footer__back-to-top"> <?= _e('Go to top', 'hacklabr')?></button></a>
+    </div>
+</div>
+
 <?php get_template_part('template-parts/content/related-posts') ?>
+
+
 
 <?php get_footer();

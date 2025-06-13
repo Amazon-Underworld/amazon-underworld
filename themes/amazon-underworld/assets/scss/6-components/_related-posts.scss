@@ -1,26 +1,95 @@
 .related-posts{
+    border-top: solid 1px #d5d0c2;
+    padding-top: $padding--medium;
+    max-width: $grid--x-wide;
     &__title{
-        border-top: $border-width--small solid $color--high-dark;
-        color: $color--primary-dark;
-        font-weight: $font-weight--bold;
-        margin-top: $margin--large;
-        padding-bottom: $padding--xx-large;
-        padding-top: $padding--x-large;
+        font-family: $font-family--heading;
+        font-weight: $font-weight--regular;
+        text-transform: uppercase;
+        font-size: 35px;
+        letter-spacing: -1%;
+        line-height: 1;
+        color: $color--primary-pure;
+        @include mobile{
+            padding: $padding--medium $padding--large $padding--small $padding--medium;
+            font-size: 25px;
+        }
     }
 
     &__content{
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
         gap: $gap--large;
+        grid-template-columns: 1fr 1fr 1fr;
+        @include mobile{
+            grid-template-columns: 1fr;
+            gap: $gap--medium;
+        }
     }
 
     .post-card{
+        padding: $padding--xx-large 0;
+        border-left: solid 1px #d5d0c2;
+        margin-inline: auto;
+        @include mobile{
+            padding: $padding--medium 0 $padding--large;
+            border-left: none;
+            border-bottom: solid 1px #d5d0c2;
+            width: 90%;
+            margin-inline: auto;
+
+            &:last-of-type{
+                border-bottom: none;
+            }
+        }
         &__author, &__date, &__excerpt{
             display: none;
         }
 
         &__title{
-            font-size: $font-size--x-large;
+            text-align: center;
+            color: $color--primary-pure;
+            font-size: 20px;
+            letter-spacing: -2%;
+            line-height: 1.2;
+            margin-inline: auto;
+            @include mobile{
+                width: 90%;
+            }
+        }
+        &__date{
+            display: flex;
+            font-family: $font-family--secondary;
+            text-transform: uppercase;
+            font-size: $font-size--small;
+            letter-spacing: -5%;
+            line-height: 1;
+            color: $color--primary-pure;
+            opacity: 0.5;
+            width: fit-content;
+            margin-inline: auto ;
+            margin-bottom: $margin--large;
+        }
+
+        &__excerpt{
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 4;
+            overflow: hidden;
+            text-align: center;
+            font-size: $font-size--medium;
+            letter-spacing: -1%;
+            line-height: 1.25;
+            color: $color--primary-pure;
+            width: 50%;
+            margin-inline: auto;
+            @include mobile{
+                width: 85%;
+                -webkit-line-clamp: 5;
+            }
         }
     }
 }
+
+
+
+

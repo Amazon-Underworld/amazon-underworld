@@ -18,12 +18,17 @@
 
         .hamburger{
             color: $color--high-light;
+            @include mobile{
+                color:  #181818;
+            }
         }
 
         @include tablet {
             display: flex;
             align-items: center;
             justify-content: center;
+            background-color: $color--high-pure;
+            border-radius: 60px;
         }
     }
 
@@ -351,7 +356,8 @@
     &-secondary{
         background-color: $color--high-pure;
         position: sticky !important;
-        box-shadow: $box-shadow--default;
+        z-index: 2;
+        box-shadow: $box-shadow--light;
         &__menu-desktop{
             li{
                 color: $color--primary-pure !important;
@@ -405,6 +411,14 @@
         &__toggle-menu {
             .hamburger{
                 color: $color--primary-pure;
+                @include mobile{
+                    color: $color--high-pure;
+                }
+            }
+
+            @include mobile{
+                background-color: $color--primary-pure;
+                border-radius: 60px;
             }
         }
 

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Template Name: Layout Política de Privacidade
+ * Template Post Type: page
+ */
+
 get_header();
 ?>
     <div class="privacy-policy container">

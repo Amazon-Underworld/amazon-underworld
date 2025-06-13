@@ -9,7 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function openModal() {
-        console.log('clicou no botao open');
         header.style.zIndex = '0';
         setTimeout(()=>{
             modal.style.display = 'flex';
