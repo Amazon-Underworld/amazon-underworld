@@ -27,11 +27,11 @@
     &__logo{
         padding-bottom: calc($padding--large * 4);
         padding-top: $padding--large;
-        .wp-block-image{
-            img{
-                mix-blend-mode: screen;
-            }
+
+        img{
+            mix-blend-mode: screen;
         }
+
         @include mobile{
             padding-bottom: calc($padding--x-large + $padding--medium);
         }
