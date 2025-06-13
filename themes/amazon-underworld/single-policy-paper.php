@@ -31,7 +31,7 @@ $post_url_en = apply_filters( 'wpml_permalink', $post_url, 'en');
                     if(!empty($download)){
                         $download_link = $download['guid'];
                         ?>
-                        <button type="button" type="submit" onclick="window.open('<?= $download_link ?> ')"><?= _e('Download this paper');?></button>
+                        <button type="button" type="submit" onclick="window.open('<?= $download_link ?> ')"><?= _e('Download this paper', 'hacklabr');?></button>
                     <?php
                     }
                 ?>
