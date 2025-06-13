@@ -1,9 +1,18 @@
 .tag {
-    border: $border-width--medium solid $color--low-pure;
-    border-radius: $border-radius--medium;
     line-height: $line-height--normal;
-    padding: $padding--x-small $padding--small;
     text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    background-color: $color--high-dark;
+    color: $color--primary-pure;
+    font-family: $font-family--primary;
+    font-size: $font-size--x-small;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -1%;
+    padding: $padding--x-small $padding--small;
+    font-weight: $font-weight--medium;
+
 
     &:is(a) {
         cursor: pointer;
@@ -11,19 +20,19 @@
 
     // Styles
 
-    &--solid {
-        background-color: var(--hl-tag-color, $color--low-pure);
-        border-color: var(--hl-tag-color, $color--low-pure);
-        color: $color--high-pure;
+    // &--solid {
+    //     background-color: var(--hl-tag-color, $color--low-pure);
+    //     border-color: var(--hl-tag-color, $color--low-pure);
+    //     color: $color--high-pure;
 
-        &:is(a) {
+    //     &:is(a) {
 
-            &:active, &:hover {
-                background-color: $color--high-pure;
-                color: var(--hl-tag-color, $color--low-pure);
-            }
-        }
-    }
+    //         &:active, &:hover {
+    //             background-color: $color--high-pure;
+    //             color: var(--hl-tag-color, $color--low-pure);
+    //         }
+    //     }
+    // }
 
     &--outline {
         background-color: transparent;

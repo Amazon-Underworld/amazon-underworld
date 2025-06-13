@@ -58,17 +58,17 @@ $post_url_en = apply_filters( 'wpml_permalink', $post_url, 'en');
 
         <div class="post-footer post-footer__desktop">
             <div class="post-header-pp__tags">
-                <span><?= _e('Tags', 'hacklabr');?></span>
+            <?php
+                if(!empty($tags)){ ?>
+                    <span><?= _e('Tags', 'hacklabr');?></span>
+                    <?php foreach($tags as $tag){ ?>
+                        <a class="tag tag--<?= $tag->slug ?>" href="<?= get_term_link($tag, 'tag') ?>">
+                        <?= $tag->name ?>
+                    </a>
                     <?php
-                    if(!empty($tags)){
-                        foreach($tags as $tag){ ?>
-                            <a class="tag tag--<?= $tag->slug ?>" href="<?= get_term_link($tag, 'tag') ?>">
-                            <?= $tag->name ?>
-                        </a>
-                        <?php
-                        }
                     }
-                    ?>
+                }
+            ?>
             </div>
 
             <?php get_template_part('template-parts/share-links', null, ['link'=>get_the_permalink()]) ?>
