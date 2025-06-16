@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hacklabr 0.9.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/amazon-underworld\n"
-"POT-Creation-Date: 2025-06-13T17:09:14+00:00\n"
-"PO-Revision-Date: 2025-06-16 07:37-0300\n"
+"POT-Creation-Date: 2025-06-16T10:59:51+00:00\n"
+"PO-Revision-Date: 2025-06-16 08:03-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -110,6 +110,9 @@ msgstr ""
 #: dist/blocks/card-header/editor.js:29
 #: library/blocks/banner-with-image/editor.js:28
 #: library/blocks/shared/SelectImage.js:32
+#: dist/blocks/banner-with-image/editor.js:96
+#: dist/blocks/banner-with-image/editor.js:145
+#: dist/blocks/card-header/editor.js:83
 msgid "Image"
 msgstr "Imagen"
 
@@ -252,6 +255,14 @@ msgstr "Página con anclajes"
 msgid "Sections"
 msgstr "Secciones"
 
+#. Template Name of the theme
+msgid "Layout Mapa Customizado"
+msgstr ""
+
+#. Template Name of the theme
+msgid "Layout Política de Privacidade"
+msgstr ""
+
 #: single-policy-paper.php:34
 msgid "Download this paper"
 msgstr "Descargar este archivo"
@@ -268,13 +279,32 @@ msgstr "English"
 msgid "Português"
 msgstr "Português"
 
-#: single-policy-paper.php:61 single-policy-paper.php:90
+#: single-policy-paper.php:63 single-policy-paper.php:90 single.php:73
 msgid "Tags"
 msgstr "Tags"
 
-#: single.php:45 template-parts/title/post-header.php:31
+#: single.php:47 template-parts/title/post-header.php:31
 msgid "By "
 msgstr "Por "
+
+#: single.php:88
+msgid ""
+"Amazon Underworld is a joint investigation by InfoAmazonia (Brazil), Armando."
+"Info (Venezuela), and La Liga Contra el Silencio (Colombia). The work is in "
+"collaboration with the Pulitzer Center`s Rainforest Research Network and is "
+"funded by the Open Society Foundation, the UK Foreign and Commonwealth "
+"Office, and the International Union for Conservation of Nature (IUCN NL)."
+msgstr ""
+"Amazon Underworld es una investigación conjunta de InfoAmazonia (Brasil), "
+"Armando.Info (Venezuela) y La Liga Contra el Silencio (Colombia). El trabajo "
+"se realiza en colaboración con la Red de Investigaciones de la Selva "
+"Tropical del Pulitzer Center y está financiado por la Open Society "
+"Foundation y la Oficina de Asuntos Exteriores y del Commonwealth del Reino "
+"Unido y por la International Union for Conservation of Nature (IUCN NL)."
+
+#: single.php:89
+msgid "Go to top"
+msgstr "Ir arriba"
 
 #. Template Name of the theme
 msgid "Component Inventory"
@@ -296,7 +326,11 @@ msgstr ""
 "Lo sentimos, pero no encontramos nada que coincida con tus criterios de "
 "búsqueda. Inténtalo de nuevo con otras palabras clave."
 
-#: template-parts/content/related-posts.php:30
+#: template-parts/content/related-posts.php:31
+msgid "Explore more content"
+msgstr "Explora más contenido"
+
+#: template-parts/content/related-posts.php:33
 msgid "Explore more "
 msgstr "Explorar más "
 
@@ -326,16 +360,19 @@ msgstr "Autor"
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:35
+#: dist/blocks/amazon-slider/editor.js:103
 msgid "Content Source Settings"
 msgstr "Configuración de fuente de contenido"
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:38
+#: dist/blocks/amazon-slider/editor.js:106
 msgid "Category Slugs (comma-separated)"
 msgstr "Slugs de categoría (separados por comas)"
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:41
+#: dist/blocks/amazon-slider/editor.js:109
 msgid ""
 "Enter one or more category slugs, separated by commas (e.g., \"news,"
 "events\")."
@@ -345,51 +382,61 @@ msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:46
+#: dist/blocks/amazon-slider/editor.js:114
 msgid "Number of Posts"
 msgstr "Número de publicaciones"
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:55
+#: dist/blocks/amazon-slider/editor.js:123
 msgid "Order By"
 msgstr "Ordenar por"
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:58
+#: dist/blocks/amazon-slider/editor.js:126
 msgid "Date"
 msgstr "Fecha"
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:59
+#: dist/blocks/amazon-slider/editor.js:127
 msgid "Title"
 msgstr "Título"
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:60
+#: dist/blocks/amazon-slider/editor.js:128
 msgid "Random"
 msgstr "Aleatorio"
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:67
+#: dist/blocks/amazon-slider/editor.js:135
 msgid "Order"
 msgstr "Orden"
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:70
+#: dist/blocks/amazon-slider/editor.js:138
 msgid "Descending (DESC)"
 msgstr "Descendente (DESC)"
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:71
+#: dist/blocks/amazon-slider/editor.js:139
 msgid "Ascending (ASC)"
 msgstr "Ascendente (ASC)"
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:78
+#: dist/blocks/amazon-slider/editor.js:146
 msgid "External Link Custom Field Name"
 msgstr "Nombre del campo personalizado de enlace externo"
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:81
+#: dist/blocks/amazon-slider/editor.js:149
 msgid ""
 "E.g., infoamazonia_redirect_url. This field on each post must contain the "
 "full external URL."
@@ -399,11 +446,13 @@ msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:86
+#: dist/blocks/amazon-slider/editor.js:154
 msgid "Display Author Meta Key"
 msgstr "Mostrar clave meta del autor"
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:89
+#: dist/blocks/amazon-slider/editor.js:157
 msgid ""
 "E.g., displayed_author_name. This field on each post must contain the author "
 "name to display."
@@ -413,26 +462,31 @@ msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:94
+#: dist/blocks/amazon-slider/editor.js:162
 msgid "Slider Layout Settings"
 msgstr "Configuración del diseño del slider"
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:97
+#: dist/blocks/amazon-slider/editor.js:165
 msgid "Infinite Loop"
 msgstr "Bucle infinito"
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:104
+#: dist/blocks/amazon-slider/editor.js:172
 msgid "Slides Per View (Desktop)"
 msgstr "Diapositivas por vista (Escritorio)"
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:112
+#: dist/blocks/amazon-slider/editor.js:180
 msgid "Slides Per View (Tablet)"
 msgstr "Diapositivas por vista (tableta)"
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:120
+#: dist/blocks/amazon-slider/editor.js:188
 msgid "Slides Per View (Mobile)"
 msgstr "Diapositivas por vista (móvil)"
 
@@ -440,6 +494,8 @@ msgstr "Diapositivas por vista (móvil)"
 #: dist/blocks/card-header/editor.js:19
 #: library/blocks/banner-with-image/editor.js:11
 #: library/blocks/card-header/editor.js:11
+#: dist/blocks/banner-with-image/editor.js:128
+#: dist/blocks/card-header/editor.js:115
 msgid "Header content"
 msgstr "Contenido del encabezado"
 
@@ -456,6 +512,8 @@ msgstr "Contenido del encabezado"
 #: library/blocks/v2/src/latest-horizontal-posts/edit.js:168
 #: library/blocks/v2/src/latest-vertical-posts/edit.js:165
 #: library/blocks/v2/src/opportunities-from-mapas-culturais/edit.js:55
+#: dist/blocks/banner-with-image/editor.js:142
+#: dist/blocks/card-header/editor.js:142 dist/blocks/posts-grid/editor.js:1824
 #: library/blocks/v2/build/events-from-mapas-culturais/index.js:55
 #: library/blocks/v2/build/latest-horizontal-posts/index.js:360
 #: library/blocks/v2/build/latest-vertical-posts/index.js:357
@@ -465,52 +523,67 @@ msgstr "Layout"
 
 #: dist/blocks/banner-with-image/editor.js:39
 #: dist/blocks/card-header/editor.js:29 library/blocks/shared/SelectImage.js:15
+#: dist/blocks/banner-with-image/editor.js:79
+#: dist/blocks/card-header/editor.js:66
 msgid "Change image"
 msgstr "Cambiar imagen"
 
 #: dist/blocks/banner-with-image/editor.js:39
 #: dist/blocks/card-header/editor.js:29 library/blocks/shared/SelectImage.js:18
+#: dist/blocks/banner-with-image/editor.js:82
+#: dist/blocks/card-header/editor.js:69
 msgid "Remove image"
 msgstr "Quitar imagen"
 
 #: dist/blocks/banner-with-image/editor.js:39
 #: dist/blocks/card-header/editor.js:29 library/blocks/shared/SelectImage.js:24
+#: dist/blocks/banner-with-image/editor.js:88
+#: dist/blocks/card-header/editor.js:75
 msgid "Select image"
 msgstr "Seleccionar imagen"
 
 #: dist/blocks/card-body/editor.js:19 library/blocks/card-body/editor.js:8
+#: dist/blocks/card-body/editor.js:58
 msgid "Body content"
 msgstr "Contenido del body"
 
 #: dist/blocks/card-header/editor.js:19 library/blocks/card-header/editor.js:41
+#: dist/blocks/card-header/editor.js:145
 msgid "Background image"
 msgstr "Imagen de fondo"
 
 #: dist/blocks/posts-grid/editor.js:19 library/blocks/posts-grid/editor.js:39
+#: dist/blocks/posts-grid/editor.js:1841
 msgid "Grid columns"
 msgstr "Columnas de grid"
 
 #: dist/blocks/posts-grid/editor.js:19 library/blocks/posts-grid/editor.js:48
+#: dist/blocks/posts-grid/editor.js:1850
 msgid "Grid rows"
 msgstr "Filas de grid"
 
 #: dist/blocks/posts-grid/editor.js:19 library/blocks/posts-grid/editor.js:57
+#: dist/blocks/posts-grid/editor.js:1859
 msgid "Grid gap"
 msgstr "Espacio de grid"
 
 #: dist/blocks/posts-grid/editor.js:19 library/blocks/posts-grid/editor.js:65
+#: dist/blocks/posts-grid/editor.js:1867
 msgid "Hide author"
 msgstr "Ocultar autor"
 
 #: dist/blocks/posts-grid/editor.js:19 library/blocks/posts-grid/editor.js:73
+#: dist/blocks/posts-grid/editor.js:1875
 msgid "Hide categories"
 msgstr "Ocultar categorías"
 
 #: dist/blocks/posts-grid/editor.js:19 library/blocks/posts-grid/editor.js:81
+#: dist/blocks/posts-grid/editor.js:1883
 msgid "Hide date"
 msgstr "Ocultar fecha"
 
 #: dist/blocks/posts-grid/editor.js:19 library/blocks/posts-grid/editor.js:89
+#: dist/blocks/posts-grid/editor.js:1891
 msgid "Hide excerpt"
 msgstr "Ocultar extracto"
 
@@ -519,12 +592,14 @@ msgstr "Ocultar extracto"
 #: library/blocks/v2/build/latest-vertical-posts/index.js:623
 #: library/blocks/v2/src/latest-horizontal-posts/edit.js:268
 #: library/blocks/v2/src/latest-vertical-posts/edit.js:355
+#: dist/blocks/posts-grid/editor.js:1498
 #: library/blocks/v2/build/latest-horizontal-posts/index.js:460
 #: library/blocks/v2/build/latest-vertical-posts/index.js:547
 msgid "Query"
 msgstr "Consulta"
 
 #: dist/blocks/posts-grid/editor.js:30 library/blocks/shared/QueryPanel.js:35
+#: dist/blocks/posts-grid/editor.js:1522
 msgid "Show children posts?"
 msgstr "¿Mostrar publicaciones hijas?"
 
@@ -533,6 +608,7 @@ msgstr "¿Mostrar publicaciones hijas?"
 #: library/blocks/v2/build/latest-vertical-posts/index.js:730
 #: library/blocks/v2/src/latest-horizontal-posts/edit.js:489
 #: library/blocks/v2/src/latest-vertical-posts/edit.js:513
+#: dist/blocks/posts-grid/editor.js:1566
 #: library/blocks/v2/build/latest-horizontal-posts/index.js:681
 #: library/blocks/v2/build/latest-vertical-posts/index.js:705
 msgid "Filter posts to not display"
@@ -540,17 +616,20 @@ msgstr "Filtrar publicaciones para no mostrarlas"
 
 #: dist/blocks/posts-grid/editor.js:41
 #: library/blocks/shared/SelectCardModel.js:21
+#: dist/blocks/posts-grid/editor.js:1628
 msgid "Card model"
 msgstr "Plantilla de card"
 
 #: dist/blocks/posts-grid/editor.js:41
 #: library/blocks/shared/SelectCardModel.js:26
+#: dist/blocks/posts-grid/editor.js:1633
 msgctxt "card"
 msgid "Default model"
 msgstr "Modelo estándar"
 
 #: dist/blocks/posts-grid/editor.js:52
 #: library/blocks/shared/SelectCardModifier.js:29
+#: dist/blocks/posts-grid/editor.js:1674
 msgid "Card modifier"
 msgstr "Modificador de card"
 
@@ -563,6 +642,7 @@ msgstr "Modificador de card"
 #: library/blocks/v2/src/latest-horizontal-posts/edit.js:527
 #: library/blocks/v2/src/latest-vertical-posts/edit.js:465
 #: library/blocks/v2/src/latest-vertical-posts/edit.js:551
+#: dist/blocks/posts-grid/editor.js:1341
 #: library/blocks/v2/build/latest-horizontal-posts/index.js:615
 #: library/blocks/v2/build/latest-horizontal-posts/index.js:719
 #: library/blocks/v2/build/latest-vertical-posts/index.js:657
@@ -579,6 +659,7 @@ msgstr "O"
 #: library/blocks/v2/src/latest-horizontal-posts/edit.js:531
 #: library/blocks/v2/src/latest-vertical-posts/edit.js:469
 #: library/blocks/v2/src/latest-vertical-posts/edit.js:555
+#: dist/blocks/posts-grid/editor.js:1342
 #: library/blocks/v2/build/latest-horizontal-posts/index.js:619
 #: library/blocks/v2/build/latest-horizontal-posts/index.js:723
 #: library/blocks/v2/build/latest-vertical-posts/index.js:661
@@ -595,6 +676,7 @@ msgstr "Y"
 #: library/blocks/v2/src/latest-horizontal-posts/edit.js:523
 #: library/blocks/v2/src/latest-vertical-posts/edit.js:461
 #: library/blocks/v2/src/latest-vertical-posts/edit.js:547
+#: dist/blocks/posts-grid/editor.js:1345
 #: library/blocks/v2/build/latest-horizontal-posts/index.js:611
 #: library/blocks/v2/build/latest-horizontal-posts/index.js:715
 #: library/blocks/v2/build/latest-vertical-posts/index.js:653
@@ -604,77 +686,93 @@ msgstr "Comparar términos"
 
 #: dist/blocks/posts-grid/editor.js:74
 #: library/blocks/shared/SelectPostType.js:21
+#: dist/blocks/posts-grid/editor.js:1377
 msgid "Post type"
 msgstr "Tipo de post"
 
 #: dist/blocks/posts-grid/editor.js:74
 #: library/blocks/shared/SelectPostType.js:26
+#: dist/blocks/posts-grid/editor.js:1382
 msgid "No post type"
 msgstr "Nenhum tipo de post"
 
 #: dist/blocks/posts-grid/editor.js:85 library/blocks/shared/SelectSize.js:7
+#: dist/blocks/posts-grid/editor.js:1737
 msgctxt "size"
 msgid "Large"
 msgstr "Grande"
 
 #: dist/blocks/posts-grid/editor.js:85 library/blocks/shared/SelectSize.js:8
+#: dist/blocks/posts-grid/editor.js:1738
 msgctxt "size"
 msgid "Medium"
 msgstr "Medio"
 
 #: dist/blocks/posts-grid/editor.js:85 library/blocks/shared/SelectSize.js:9
+#: dist/blocks/posts-grid/editor.js:1739
 msgctxt "size"
 msgid "Small"
 msgstr "Pequeño"
 
 #: dist/blocks/posts-grid/editor.js:85 library/blocks/shared/SelectSize.js:10
+#: dist/blocks/posts-grid/editor.js:1740
 msgctxt "size"
 msgid "Extra Large"
 msgstr "Extra grande"
 
 #: dist/blocks/posts-grid/editor.js:85 library/blocks/shared/SelectSize.js:11
+#: dist/blocks/posts-grid/editor.js:1741
 msgctxt "size"
 msgid "Extra Small"
 msgstr "Extra pequeño"
 
 #: dist/blocks/posts-grid/editor.js:85 library/blocks/shared/SelectSize.js:59
+#: dist/blocks/posts-grid/editor.js:1789
 msgid "Size"
 msgstr "Tamaño"
 
 #: dist/blocks/posts-grid/editor.js:96
 #: library/blocks/shared/SelectTaxonomy.js:21
+#: dist/blocks/posts-grid/editor.js:1415
 msgid "Taxonomy"
 msgstr "Taxonomía"
 
 #: dist/blocks/posts-grid/editor.js:96
 #: library/blocks/shared/SelectTaxonomy.js:26
+#: dist/blocks/posts-grid/editor.js:1420
 msgid "No taxonomy"
 msgstr "En taxonomía"
 
 #: dist/blocks/posts-grid/editor.js:107 library/blocks/shared/SelectTerms.js:9
+#: dist/blocks/posts-grid/editor.js:1442
 msgid "Terms"
 msgstr "Términos"
 
 #: dist/blocks/read-more/editor.js:19 library/blocks/read-more/editor.js:14
+#: dist/blocks/read-more/editor.js:66
 msgid "Full text"
 msgstr "Texto completo"
 
 #: dist/blocks/read-more/editor.js:19 library/blocks/read-more/editor.js:34
+#: dist/blocks/read-more/editor.js:86
 msgid "Lines shown"
 msgstr "Líneas mostradas"
 
 #: dist/blocks/read-more/editor.js:19 dist/blocks/read-more/index.js:19
 #: library/blocks/read-more/editor.js:53 library/blocks/read-more/index.js:15
+#: dist/blocks/read-more/editor.js:105 dist/blocks/read-more/index.js:16
 msgid "Read less"
 msgstr "Leer menos"
 
 #: dist/blocks/read-more/editor.js:19 dist/blocks/read-more/index.js:19
 #: library/blocks/read-more/editor.js:53 library/blocks/read-more/editor.js:71
-#: library/blocks/read-more/index.js:12
+#: library/blocks/read-more/index.js:12 dist/blocks/read-more/editor.js:105
+#: dist/blocks/read-more/editor.js:123 dist/blocks/read-more/index.js:13
 msgid "Read more"
 msgstr "Leer más"
 
 #: dist/js/functionalities/gutenberg.js:29
+#: dist/js/functionalities/gutenberg.js:2510
 msgid "Iconify ID"
 msgstr "ID Iconify"
 

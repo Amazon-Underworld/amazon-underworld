@@ -85,7 +85,7 @@ echo do_shortcode('[main-header]')
     </div>
 
     <div class="post-footer__close">
-        <p> <?php _e('Amazon Underworld es una investigación conjunta de InfoAmazonia (Brasil), Armando.Info (Venezuela) y La Liga Contra el Silencio (Colombia). El trabajo se realiza en colaboración con la Red de Investigaciones de la Selva Tropical del Pulitzer Center y está financiado por la Open Society Foundation y la Oficina de Asuntos Exteriores y del Commonwealth del Reino Unido y por la International Union for Conservation of Nature (IUCN NL).', 'hacklabr')?> </p>
+        <p> <?php _e('Amazon Underworld is a joint investigation by InfoAmazonia (Brazil), Armando.Info (Venezuela), and La Liga Contra el Silencio (Colombia). The work is in collaboration with the Pulitzer Center`s Rainforest Research Network and is funded by the Open Society Foundation, the UK Foreign and Commonwealth Office, and the International Union for Conservation of Nature (IUCN NL).', 'hacklabr')?> </p>
         <a href="#post-header"><button type="button" class="post-footer__back-to-top"> <?= _e('Go to top', 'hacklabr')?></button></a>
     </div>
 </div>

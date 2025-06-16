@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-06-16T10:44:31+00:00\n"
+"POT-Creation-Date: 2025-06-16T10:59:51+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: hacklabr\n"
@@ -285,7 +285,7 @@ msgid "By "
 msgstr ""
 
 #: single.php:88
-msgid "Amazon Underworld es una investigación conjunta de InfoAmazonia (Brasil), Armando.Info (Venezuela) y La Liga Contra el Silencio (Colombia). El trabajo se realiza en colaboración con la Red de Investigaciones de la Selva Tropical del Pulitzer Center y está financiado por la Open Society Foundation y la Oficina de Asuntos Exteriores y del Commonwealth del Reino Unido y por la International Union for Conservation of Nature (IUCN NL)."
+msgid "Amazon Underworld is a joint investigation by InfoAmazonia (Brazil), Armando.Info (Venezuela), and La Liga Contra el Silencio (Colombia). The work is in collaboration with the Pulitzer Center`s Rainforest Research Network and is funded by the Open Society Foundation, the UK Foreign and Commonwealth Office, and the International Union for Conservation of Nature (IUCN NL)."
 msgstr ""
 
 #: single.php:89
