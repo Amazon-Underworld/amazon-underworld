@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: hacklabr 0.9.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/amazon-underworld\n"
 "POT-Creation-Date: 2025-06-13T17:09:14+00:00\n"
-"PO-Revision-Date: 2025-06-13 18:06-0300\n"
+"PO-Revision-Date: 2025-06-16 07:37-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -1363,74 +1363,74 @@ msgstr "Advertencia escura"
 #: theme.json
 msgctxt "Color name"
 msgid "Helper pure"
-msgstr ""
+msgstr "Ayuda pura"
 
 #: theme.json
 msgctxt "Color name"
 msgid "Helper light"
-msgstr ""
+msgstr "Ayuda clara"
 
 #: theme.json
 msgctxt "Color name"
 msgid "Helper dark"
-msgstr ""
+msgstr "Ayuda escura"
 
 #: theme.json
 msgctxt "Font size name"
 msgid "Huge"
-msgstr ""
+msgstr "Enorme"
 
 #: theme.json
 msgctxt "Font size name"
 msgid "Extra big"
-msgstr ""
+msgstr "Extra grande"
 
 #: theme.json
 msgctxt "Font size name"
 msgid "Very large"
-msgstr ""
+msgstr "Muy grande"
 
 #: theme.json
 msgctxt "Font size name"
 msgid "Big"
-msgstr ""
+msgstr "Grande"
 
 #: theme.json
 msgctxt "Font size name"
 msgid "Average"
-msgstr ""
+msgstr "Promedio"
 
 #: theme.json
 msgctxt "Font size name"
 msgid "Small"
-msgstr ""
+msgstr "Pequeño"
 
 #: theme.json
 msgctxt "Font size name"
 msgid "Too small"
-msgstr ""
+msgstr "Demasiado pequeño"
 
 #: theme.json
 msgctxt "Font family name"
 msgid "Primary"
-msgstr ""
+msgstr "Primaria"
 
 #: theme.json
 msgctxt "Font family name"
 msgid "System"
-msgstr ""
+msgstr "Sistema"
 
 #: theme.json
 msgctxt "Font family name"
 msgid "Title"
-msgstr ""
+msgstr "Título"
 
 #: theme.json
 msgctxt "Font family name"
 msgid "Title Secondary"
-msgstr ""
+msgstr "Título Secundario"
 
 #: theme.json
 msgctxt "Font family name"
 msgid "Helper"
-msgstr ""
+msgstr "Ayudante"
