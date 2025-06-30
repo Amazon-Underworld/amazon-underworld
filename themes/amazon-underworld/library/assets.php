@@ -362,7 +362,9 @@ class Assets {
 
             'change-menu' => [
 				'file'   => 'change-menu.js',
-				'global' => true,
+				'preload_callback' => function () {
+					return is_front_page() || is_singular();
+				}
 			],
 
             'main-slider' => [
