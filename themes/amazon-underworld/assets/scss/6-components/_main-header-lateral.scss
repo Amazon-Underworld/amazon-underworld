@@ -1,4 +1,6 @@
 .main-header-lateral {
+    position: relative;
+    z-index: 10;
     transition: $transition--default;
     &__content {
         align-items: center;
