@@ -360,6 +360,11 @@ class Assets {
 				'global' => true,
 			],
 
+            'change-menu' => [
+				'file'   => 'change-menu.js',
+				'global' => true,
+			],
+
             'main-slider' => [
 				'file'   => 'main-slider.js',
 				'global' => true,
