@@ -1,12 +1,11 @@
 <?php get_header(); ?>
 <div class="error-404">
-        <h1>
-            <span class="error"><?php _e('error', 'hacklabr') ?></span>
-            <span class="num">404</span>
-        </h1>
-
-        <p><?php _e('Page not found', 'hacklabr') ?></p>
-        <a href="<?= home_url() ?>" class="button"> <span><?php _e('Return to home page', 'hacklabr') ?></span> </a>
+    <div class="error-404__message-box">
+        <p class="error-label"><?php _e('ERROR 404', 'hacklabr') ?></p>
+        <h1 class="page-not-found-title"><?php _e('PAGE NOT FOUND', 'hacklabr') ?></h1>
+        <p class="not-found-description"><?php _e('Lo sentimos, no hemos encontrado resultados que coincidan con tu criterio de búsqueda', 'hacklabr') ?></p>
+        <a href="<?= home_url() ?>" class="button"> <span><?php _e('IR A LA HOME', 'hacklabr') ?></span> </a>
     </div>
+</div>
 
 <?php get_footer(); ?>
