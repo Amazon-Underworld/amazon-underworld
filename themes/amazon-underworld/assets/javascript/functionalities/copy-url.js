@@ -9,20 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 e.preventDefault();
                 const content = window.location.href;
                 const wrapper = copy.parentElement.parentElement;
+                const alert =  wrapper.querySelector('#alert');
 
-                console.log(wrapper);
                 navigator.clipboard.writeText(content)
                     .then(() => {
-                        wrapper.querySelector('#alert').textContent = "Link copied successfully!";
+                       alert.textContent = "Link copied successfully!";
                     })
                     .catch(err => {
-                        document.getElementById('alert').textContent = "Something went wrong.";
+                        alert.textContent = "Something went wrong.";
                     });
 
-                document.getElementById('alert').classList.remove("hide");
+                alert.classList.remove("hide");
                 setTimeout(function () {
-                    document.getElementById('alert').classList.add("hide");
-                    document.querySelector('#alert').textContent = "";
+                    alert.classList.add("hide");
+                    alert.textContent = "";
                 }, 1000);
             });
         })
