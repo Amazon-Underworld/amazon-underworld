@@ -1,4 +1,6 @@
 .main-header-lateral {
+    position: relative;
+    z-index: 10;
     transition: $transition--default;
     &__content {
         align-items: center;
@@ -531,4 +533,33 @@
         }
 
     }
+}
+
+.main-header-lateral__content {
+    transition: opacity 0.3s ease;
+    z-index: 20;
+    position: relative;
+  }
+
+  .main-header-lateral-secondary__content {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: #f8f3ec;
+  }
+
+  .main-header-lateral-secondary__content.is-visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    z-index: 30;
+  }
+.main-header-lateral__content {
+    transition: opacity 0.3s ease;
 }

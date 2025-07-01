@@ -360,6 +360,13 @@ class Assets {
 				'global' => true,
 			],
 
+            'change-menu' => [
+				'file'   => 'change-menu.js',
+				'preload_callback' => function () {
+					return is_front_page() || is_singular();
+				}
+			],
+
             'main-slider' => [
 				'file'   => 'main-slider.js',
 				'global' => true,

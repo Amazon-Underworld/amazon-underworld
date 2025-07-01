@@ -15,6 +15,8 @@ $close_text = pods_field('closing_text');
 $tags = get_tags();
 $post_url = get_permalink(get_the_ID());
 
+echo do_shortcode('[main-header]');
+
 if(has_term('opinion', 'category', $post_id)){ ?>
     <header id="post-header" class="post-header post-header__opinion container">
         <?php get_template_part('template-parts/title/post-header'); ?>
@@ -38,7 +40,7 @@ else{ ?>
         <?php get_template_part('template-parts/title/post-header'); ?>
     </header>
 <?php }
-echo do_shortcode('[main-header]')
+
 ?>
 
 <main class="post-grid">

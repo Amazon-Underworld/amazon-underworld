@@ -50,3 +50,20 @@
         }
     }
 }
+
+.post-header__no-term{
+    background: $color--secondary-light !important;
+    position: relative;
+    z-index: 10;
+    .post-header__title,
+    .post-header__author-name,
+    .post-header__date{
+        color: $color--high-pure !important;
+    }
+}
+.post-header__chronicle,
+.post-header__article,
+.post-header__opinion{
+    position: relative;
+    z-index: 10;
+}

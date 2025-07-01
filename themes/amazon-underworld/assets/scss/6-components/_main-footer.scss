@@ -82,22 +82,26 @@
 
     &__copyright{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         max-width: $grid--wide;
         margin-inline: auto;
         padding-inline: $padding--medium;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+        white-space: nowrap;
         span{
-            font-size: $font-size--small;
             color: $color--high-pure;
             font-family: $font-family--secondary;
+            display: flex;
+
             @include mobile{
-                font-size: $font-size--x-small;
+                font-size: size(9);
             }
-        }
-        @include mobile{
-            flex-flow: column;
-            gap: $gap--medium;
-            padding-top: $padding--medium;
+            a{
+                margin-left: .5rem;
+                cursor: pointer;
+            }
         }
     }
 }

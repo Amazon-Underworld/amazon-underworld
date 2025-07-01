@@ -1,4 +1,6 @@
 .wp-block-newspack-blocks-carousel.main-slider{
+    position: relative;
+    z-index: 9;
     .swiper-wrapper{
         .post{
             .entry-wrapper{
