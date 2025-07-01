@@ -459,8 +459,10 @@
     }
 }
 
-.single-policy-paper{
+.single-policy-paper, .page-privacy-policy, .page-politica-de-privacidade, .page-politica-de-privacidad{
     .main-header-lateral{
+        background-color: $color--high-pure;
+        position: sticky;
         &__logo{
             img{
                 filter: none;
