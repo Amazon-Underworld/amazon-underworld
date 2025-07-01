@@ -2,17 +2,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const primaryMenu = document.querySelector('.main-header-lateral__content:not(.main-header-lateral-secondary__content)');
     const secondaryMenu = document.querySelector('.main-header-lateral-secondary__content');
 
-    if (secondaryMenu) {
-      secondaryMenu.style.display = 'none';
-    }
+    if (!primaryMenu || !secondaryMenu) return;
+
+    secondaryMenu.classList.remove('is-visible');
+    primaryMenu.style.opacity = '1';
 
     function toggleMenus() {
       if (window.scrollY > 100) {
-        if (primaryMenu) primaryMenu.style.display = 'none';
-        if (secondaryMenu) secondaryMenu.style.display = 'flex';
+        primaryMenu.style.opacity = '0';
+        secondaryMenu.classList.add('is-visible');
       } else {
-        if (primaryMenu) primaryMenu.style.display = 'flex';
-        if (secondaryMenu) secondaryMenu.style.display = 'none';
+        primaryMenu.style.opacity = '1';
+        secondaryMenu.classList.remove('is-visible');
       }
     }
 
