@@ -17,7 +17,7 @@ $terms = get_the_terms($post_id, 'category');
                 if(!empty($categories)){
                     foreach($categories as $category){
                         if($category->slug != 'infoamazonia'){ ?>
-                        <a class="tag tag--<?= $category->slug ?>" href="<?= get_term_link($category, 'tag') ?>">
+                        <a class="tag tag--<?= $category->slug ?>">
                         <?= $category->name ?>
                         </a>
                     <?php }

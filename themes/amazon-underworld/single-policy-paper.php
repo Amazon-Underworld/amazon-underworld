@@ -62,7 +62,7 @@ $post_url_en = apply_filters( 'wpml_permalink', $post_url, 'en');
                 if(!empty($tags)){ ?>
                     <span><?= _e('Tags', 'hacklabr');?></span>
                     <?php foreach($tags as $tag){ ?>
-                        <a class="tag tag--<?= $tag->slug ?>" href="<?= get_term_link($tag, 'tag') ?>">
+                        <a class="tag tag--<?= $tag->slug ?>">
                         <?= $tag->name ?>
                     </a>
                     <?php
@@ -91,7 +91,7 @@ $post_url_en = apply_filters( 'wpml_permalink', $post_url, 'en');
                     <?php
                     if(!empty($tags)){
                         foreach($tags as $tag){ ?>
-                            <a class="tag tag--<?= $tag->slug ?>" href="<?= get_term_link($tag, 'tag') ?>">
+                            <a class="tag tag--<?= $tag->slug ?>">
                             <?= $tag->name ?>
                         </a>
                         <?php
