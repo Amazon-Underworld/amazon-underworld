@@ -37,6 +37,7 @@
 @import '6-components/archive-header';
 @import '6-components/banner-block';
 @import '6-components/card';
+@import '6-components/columns-data-block';
 @import '6-components/content-sidebar';
 @import '6-components/content-block';
 @import '6-components/home-map';
@@ -44,6 +45,7 @@
 @import '6-components/main-header';
 @import '6-components/main-header-lateral';
 @import '6-components/main-footer';
+@import '6-components/map-card';
 @import '6-components/modal-form';
 @import '6-components/modal-our-methodology';
 @import '6-components/newsletter-block';
@@ -57,6 +59,7 @@
 @import '6-components/pre-header';
 @import '6-components/related-posts';
 @import '6-components/share-links';
+@import '6-components/side-notes';
 @import '6-components/single-journalism';
 @import '6-components/single-policy-paper';
 @import '6-components/social-menu';
@@ -75,3 +78,5 @@
 @import '9-overrides/2.coblocks';
 @import '9-overrides/3.newspack-main-slider';
 @import '9-overrides/4.webstories-carousel';
+@import '9-overrides/5.gutenberg';
+@import '9-overrides/6.jeo';

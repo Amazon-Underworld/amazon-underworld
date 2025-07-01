@@ -11,6 +11,7 @@ $categories = get_the_category();
 $excerpt = !empty( $post->post_excerpt ) ? wp_kses_post( $post->post_excerpt ) : '';
 $terms = get_the_terms($post_id, 'category');
 $intro = pods_field('intro');
+$close_text = pods_field('closing_text');
 $tags = get_tags();
 $post_url = get_permalink(get_the_ID());
 
@@ -47,19 +48,20 @@ echo do_shortcode('[main-header]')
             <p class="post-aside__author"><?php _e('By ', 'hacklabr') ?><?= get_the_author() ?></p>
             <?php get_template_part('template-parts/share-links', null, ['link'=>get_the_permalink()]) ?>
         </div>
-        <?php // get_template_part('template-parts/content/related-posts') ?>
+        <?php  get_template_part('template-parts/content/related-posts-float') ?>
+
+    </aside>
+    <div class="post-content content content--normal">
         <?php
         if( $intro ){ ?>
-            <p class="post-content__intro"><?php echo $intro[0] ;?></p>
+            <h2 class="post-content__intro alignwide"><?php echo $intro[0] ;?></h2>
         <?php
         }
         else{
             if( $excerpt ) : ?>
-            <p class="post-content__intro"><?= get_the_excerpt() ?></p>
+            <h2 class="post-content__intro alignwide"><?= get_the_excerpt() ?></h2>
         <?php endif;
         } ?>
-    </aside>
-    <div class="post-content content content--normal">
         <?php the_content() ?>
     </div>
 
@@ -72,7 +74,7 @@ echo do_shortcode('[main-header]')
             if(!empty($tags)){ ?>
                 <span><?= _e('Tags', 'hacklabr');?></span>
                 <?php foreach($tags as $tag){ ?>
-                    <a class="tag tag--<?= $tag->slug ?>" href="<?= get_term_link($tag, 'tag') ?>">
+                    <a class="tag tag--<?= $tag->slug ?>">
                     <?= $tag->name ?>
                 </a>
                 <?php
@@ -85,7 +87,13 @@ echo do_shortcode('[main-header]')
     </div>
 
     <div class="post-footer__close">
-        <p> <?php _e('Amazon Underworld is a joint investigation by InfoAmazonia (Brazil), Armando.Info (Venezuela), and La Liga Contra el Silencio (Colombia). The work is in collaboration with the Pulitzer Center`s Rainforest Research Network and is funded by the Open Society Foundation, the UK Foreign and Commonwealth Office, and the International Union for Conservation of Nature (IUCN NL).', 'hacklabr')?> </p>
+        <?php if(!empty($close_text[0])){ ?>
+            <p> <?=_e($close_text[0]); ?> </p>
+        <?php
+        } else { ?>
+            <p> <?= _e('Amazon Underworld is a joint investigation by InfoAmazonia (Brazil), Armando.Info (Venezuela), and La Liga Contra el Silencio (Colombia). The work is in collaboration with the Pulitzer Center`s Rainforest Research Network and is funded by the Open Society Foundation, the UK Foreign and Commonwealth Office, and the International Union for Conservation of Nature (IUCN NL).', 'hacklabr')?> </p>
+        <?php }
+        ?>
         <a href="#post-header"><button type="button" class="post-footer__back-to-top"> <?= _e('Go to top', 'hacklabr')?></button></a>
     </div>
 </div>

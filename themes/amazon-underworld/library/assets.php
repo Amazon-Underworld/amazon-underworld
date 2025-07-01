@@ -374,6 +374,11 @@ class Assets {
                 'file'   => 'modal-form.js',
                 'global' => true,
             ],
+
+            'copy-url' => [
+                'file'   => 'copy-url.js',
+                'global' => true,
+            ],
  		];
 
 		$js_files = apply_filters('js_files_before_output', $js_files);
