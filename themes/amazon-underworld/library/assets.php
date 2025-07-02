@@ -386,6 +386,12 @@ class Assets {
                 'file'   => 'copy-url.js',
                 'global' => true,
             ],
+
+            'carousel-block-override' => [
+                'file' => 'carousel-block-override.js',
+                'global' => true,
+				'deps' => ['jquery', 'carousel-block-slick-script'],
+			],
  		];
 
 		$js_files = apply_filters('js_files_before_output', $js_files);

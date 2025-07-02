@@ -28,6 +28,7 @@
                     text-transform: uppercase;
                     font-family: $font-family--secondary;
                     margin-bottom: $margin--large;
+                    font-weight: 400 !important;
                 }
                 .entry-meta{
                     margin-top: $margin--large;
@@ -37,6 +38,7 @@
                     text-transform: uppercase;
                     font-family: $font-family--secondary;
                     font-size: $font-size--small;
+                    font-weight: 400 !important;
                 }
             }
         }

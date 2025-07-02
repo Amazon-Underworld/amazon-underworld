@@ -48,9 +48,11 @@
                 font-size: 30px;
                 font-family: $font-family--heading;
                 color: $color--primary-pure;
-                font-weight: 700;
+                font-weight: 400;
                 text-transform: uppercase;
                 margin: 10px 0;
+                letter-spacing: -1%;
+                line-height: 1;
             }
 
             .amazon-slide-author {
