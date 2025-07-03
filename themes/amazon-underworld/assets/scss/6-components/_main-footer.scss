@@ -93,6 +93,11 @@
         span{
             color: $color--high-pure;
             font-family: $font-family--secondary;
+            font-size: $font-size--x-small;
+            font-weight: 500;
+            line-height: 100%;
+            letter-spacing: -0.12px;
+            text-transform: uppercase;
             display: flex;
 
             @include mobile{
