@@ -56,7 +56,8 @@
     }
 
     &__search {
-        display: flex;
+        // display: flex;
+        display: none;
         gap: $gap--medium;
         position: relative;
 
