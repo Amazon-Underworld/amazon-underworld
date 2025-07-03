@@ -18,6 +18,9 @@
         .wp-block-heading:not(.has-text-color), p:not(.has-text-color){
             color: $color--primary-pure;
         }
+        .card{
+            border: solid 1px  #d0cbc0;
+        }
         .wp-block-hacklabr-card{
             border: solid 1px  #d0cbc0;
             min-height: 370px;

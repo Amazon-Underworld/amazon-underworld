@@ -1,0 +1,64 @@
+.card-modal{
+    background-color: $color--secondary-light;
+    width: 100vw;
+    margin-inline-start: calc(50% - 50vw);
+    position: absolute;
+    z-index: 99;
+    padding: 8rem $padding--x-large ;
+
+    &__body{
+        background-color: $color--high-pure;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        max-width: $grid--normal;
+        margin-inline: auto;
+        padding: $padding--medium $padding--x-large;
+        border-radius: 20px;
+    }
+
+    &__img{
+        max-width: fit-content;
+    }
+
+    &__infos{
+        width: 100%;
+    }
+
+    &__close{
+        align-self: flex-start;
+    }
+}
+
+#author-modal{
+    display: none;
+    inset: 0;
+    transition: all .4s ease-in-out;
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    &.open{
+        display: flex;
+    }
+}
+
+.modal-author{
+    width: 100%;
+}
+
+.close-modal{
+    transition: all .4s ease-in-out;
+    margin-right: -2rem;
+    background-image: url('#{$path--assets}/images/close-modal.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 2rem;
+    height: 2rem;
+    align-self: flex-end;
+
+    &.open{
+        display: block;
+    }
+}

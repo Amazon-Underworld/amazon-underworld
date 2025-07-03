@@ -124,3 +124,33 @@
         }
     }
 }
+
+.wp-block-newspack-blocks-author-profile{
+    &__bio{
+        text-transform: uppercase;
+        width: 75%;
+        margin-inline: auto;
+
+        h3{
+            letter-spacing: -1%;
+            font-size: 30px;
+            a{
+                text-decoration: none;
+            }
+        }
+
+        p{
+            font-family: $font-family--secondary;
+            font-size: $font-size--small;
+            letter-spacing: -5%;
+            line-height: 1;
+            display: flex;
+            flex-flow: column;
+            a{
+                text-decoration: none;
+                opacity: 0.5;
+                padding-top: $padding--large;
+            }
+        }
+    }
+}

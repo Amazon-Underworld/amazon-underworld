@@ -46,6 +46,7 @@
 @import '6-components/main-header';
 @import '6-components/main-header-lateral';
 @import '6-components/main-footer';
+@import '6-components/modal-author';
 @import '6-components/modal-form';
 @import '6-components/modal-our-methodology';
 @import '6-components/newsletter-block';
@@ -77,7 +78,7 @@
 // OVERRIDES
 @import '9-overrides/1.wordpress';
 @import '9-overrides/2.coblocks';
-@import '9-overrides/3.newspack-main-slider';
+@import '9-overrides/3.newspack';
 @import '9-overrides/4.webstories-carousel';
 @import '9-overrides/5.gutenberg';
 @import '9-overrides/6.jeo';
