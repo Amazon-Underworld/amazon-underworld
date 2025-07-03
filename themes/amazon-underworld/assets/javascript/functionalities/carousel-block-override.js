@@ -32,14 +32,22 @@ document.addEventListener('DOMContentLoaded', function () {
         carousel.setAttribute('data-slick', JSON.stringify(slickSettings));
 		jQuery(carousel).slick(slickSettings);
 
-		jQuery(carousel).slick('slickSetOption', {
-			cssEase: 'linear',
-            slidesToShow: 4.2,
+        if(carousel.classList.contains('cards-slider')){
+            jQuery(carousel).slick('slickSetOption', {
+                cssEase: 'linear',
+                slidesToShow: 4.2,
 
-		}, true);
+            }, true);
+        }
 
-        console.log(carousel);
+        if(carousel.classList.contains('logos-carousel')){
+            jQuery(carousel).slick('slickSetOption', {
+                speed: 5000,
+                cssEase: 'linear',
+                slidesToShow: 8.2,
 
+            }, true);
+        }
 
     });
 });

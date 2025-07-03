@@ -20,7 +20,7 @@
         }
         .wp-block-hacklabr-card{
             border: solid 1px  #d0cbc0;
-            max-height: 370px;
+            min-height: 370px;
             max-width: 370px;
             aspect-ratio: 1 / 1;
 
@@ -36,7 +36,7 @@
                 gap: 0;
                 padding: $padding--large $padding--large $padding--small;
 
-                >:last-child{
+                >:nth-child(4){
                     padding-top: calc($padding--x-large * 2);
                     margin-bottom: 0;
                 }
