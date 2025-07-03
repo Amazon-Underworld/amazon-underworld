@@ -2,8 +2,8 @@
     .layers-selection >.layer-selection-title,
     .legend-container {
         .legends-title {
-            background: #ffffff;
-            color: $color--low-light;
+            background: #ffffff !important;
+            color: $color--low-light !important;
             border-bottom: 1px solid #b0b2b4;
 
             .text-icon {
@@ -13,7 +13,7 @@
 
                 .text {
                     text-transform: uppercase;
-                    font-family: $font-family--heading;
+                    font-family: $font-family--primary;
                 }
             }
 
@@ -25,14 +25,14 @@
     }
 
     .layers-selection {
-        min-width: 290px;
-        max-width: 290px;
-        opacity: 0.8;
+        min-width: 290px !important;
+        max-width: 290px !important;
+        opacity: 0.8 !important;
 
         .layers-wrapper {
             a {
                 color: $color--low-light;
-                font-family: $font-family--heading;
+                font-family: $font-family--primary;
             }
 
             a::before {
@@ -44,15 +44,15 @@
     }
 
     .legend-container {
-        min-width: 290px;
-        max-width: 290px;
+        min-width: 290px !important;
+        max-width: 290px !important;
         opacity: 0.8;
 
         .hideable-content {
             .legends-wrapper {
                 .simple-color-container {
                     .simple-color-item {
-                        font-family: $font-family--heading;
+                        font-family: $font-family--primary;
                         color: $color--low-light;
                     }
 
