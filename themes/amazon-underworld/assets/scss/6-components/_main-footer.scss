@@ -82,11 +82,12 @@
 
     &__copyright{
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         max-width: $grid--wide;
         margin-inline: auto;
         padding-inline: $padding--medium;
         flex-wrap: wrap;
+        gap: 1.5rem;
         align-items: center;
         text-align: center;
         white-space: nowrap;
@@ -107,6 +108,10 @@
                 margin-left: .5rem;
                 cursor: pointer;
             }
+        }
+
+        .font-copyright {
+            margin-right: 150px !important;
         }
     }
 }
