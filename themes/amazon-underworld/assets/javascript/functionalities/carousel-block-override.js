@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
             jQuery(carousel).slick('slickSetOption', {
                 speed: 5000,
                 cssEase: 'linear',
-                slidesToShow: 8.2,
+                slidesToShow: 7.2,
 
             }, true);
         }

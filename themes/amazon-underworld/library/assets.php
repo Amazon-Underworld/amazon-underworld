@@ -392,6 +392,11 @@ class Assets {
                 'global' => true,
 				'deps' => ['jquery', 'carousel-block-slick-script'],
 			],
+
+            'modal-author-profile' => [
+                'file' => 'modal-author-profile.js',
+                'global' => true,
+			],
  		];
 
 		$js_files = apply_filters('js_files_before_output', $js_files);
