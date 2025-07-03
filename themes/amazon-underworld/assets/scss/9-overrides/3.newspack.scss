@@ -6,19 +6,33 @@
             .entry-wrapper{
                 background-color: transparent;
                 margin-inline: auto;
-                top: 30%;
-                width: 40%;
+                top: 22%;
+                width: 743px;
                 @include mobile{
                     width: 90%;
                 }
                 .entry-title{
                     text-transform: uppercase;
                     text-align: center;
-                    font-size: 50px;
+                    // font-size: $font-size--xx-large;
+
+                    @media only screen and (min-width: 782px) {
+                        font-size: unset !important;
+                    }
+
+                    a {
+                        display: flex !important;
+                        height: fit-content !important;
+                        -webkit-line-clamp: unset !important;
+                        max-height: unset !important;
+                        font-size: 50px;
+                    }
+
                     @include mobile{
                         font-size: 25px;
                         a{
                             -webkit-line-clamp: 4;
+                            font-size: 25px !important;
                         }
                     }
                 }
