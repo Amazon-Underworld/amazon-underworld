@@ -1,0 +1,70 @@
+.jeomap {
+    .layers-selection >.layer-selection-title,
+    .legend-container {
+        .legends-title {
+            background: #ffffff;
+            color: $color--low-light;
+            border-bottom: 1px solid #b0b2b4;
+
+            .text-icon {
+                .layer-icon, .legend-icon {
+                    display: none;
+                }
+
+                .text {
+                    text-transform: uppercase;
+                    font-family: $font-family--heading;
+                }
+            }
+
+            .arrow-icon {
+                filter: unset;
+            }
+        }
+
+    }
+
+    .layers-selection {
+        min-width: 290px;
+        max-width: 290px;
+        opacity: 0.8;
+
+        .layers-wrapper {
+            a {
+                color: $color--low-light;
+                font-family: $font-family--heading;
+            }
+
+            a::before {
+                color: $color--low-light;
+                border: 1px solid;
+                border-radius: unset;
+            }
+        }
+    }
+
+    .legend-container {
+        min-width: 290px;
+        max-width: 290px;
+        opacity: 0.8;
+
+        .hideable-content {
+            .legends-wrapper {
+                .simple-color-container {
+                    .simple-color-item {
+                        font-family: $font-family--heading;
+                        color: $color--low-light;
+                    }
+
+                    .simple-color-item-box {
+                        min-width: 16px;
+                        width: 16px;
+                        height: 16px;
+                        border-radius: unset;
+                    }
+                }
+            }
+        }
+    }
+
+}
