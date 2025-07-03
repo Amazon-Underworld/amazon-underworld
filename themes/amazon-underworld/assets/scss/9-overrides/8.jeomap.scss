@@ -3,8 +3,9 @@
     .legend-container {
         .legends-title {
             background: #ffffff !important;
-            color: $color--low-light !important;
-            border-bottom: 1px solid #b0b2b4;
+            color: $color--low-dark !important;
+            border-bottom: 1px solid $color--low-dark !important;
+            font-size: $font-size--small;
 
             .text-icon {
                 .layer-icon, .legend-icon {
@@ -32,12 +33,13 @@
 
         .layers-wrapper {
             a {
-                color: $color--low-light;
-                font-family: $font-family--primary;
+                color: $color--low-dark;
+                font-family: $font-family--heading;
+                border-bottom: 1px solid $color--low-dark !important;
             }
 
             a::before {
-                color: $color--low-light;
+                color: $color--low-dark;
                 border: 1px solid;
                 border-radius: unset;
             }
@@ -51,10 +53,17 @@
 
         .hideable-content {
             .legends-wrapper {
+                margin: 0 0 0 10px !important;
+                padding-top: 7px !important;
+
+                > div {
+                    margin-bottom: 14px !important;
+                }
+
                 .simple-color-container {
                     .simple-color-item {
-                        font-family: $font-family--primary;
-                        color: $color--low-light;
+                        font-family: $font-family--heading;
+                        color: $color--low-dark;
                     }
 
                     .simple-color-item-box {
