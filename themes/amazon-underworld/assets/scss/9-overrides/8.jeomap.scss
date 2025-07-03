@@ -78,4 +78,32 @@
         }
     }
 
+    .jeo-popup__mouseover {
+        font-family: $font-family--heading !important;
+        opacity: 0.8 !important;
+
+        .mapboxgl-popup-content {
+            h3, p {
+                font-size: $font-size--small !important;
+                color: $color--low-dark !important;
+                font-weight: $font-weight--regular !important;
+            }
+
+            h3 {
+                padding: 7px 0 !important;
+                margin-bottom: 10px !important;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 1px;
+                    background-color: $color--low-dark !important;
+                }
+            }
+        }
+    }
+
 }
