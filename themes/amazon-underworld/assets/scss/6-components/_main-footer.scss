@@ -84,7 +84,6 @@
 
     &__copyright{
         display: flex;
-        justify-content: space-between;
         max-width: $grid--wide;
         margin-inline: auto;
         padding-inline: $padding--medium;
@@ -110,6 +109,11 @@
                 margin-left: .5rem;
                 cursor: pointer;
             }
+        }
+
+        .text-copyright {
+            flex-basis: 37.20%;
+            flex-shrink: 0;
         }
 
         .font-copyright {
