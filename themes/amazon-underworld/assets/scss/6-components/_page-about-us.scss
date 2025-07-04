@@ -52,8 +52,13 @@
                 font-size: 10px !important;
             }
         }
-        .card{
+        .wp-block-column.card{
             border: solid 1px  #d0cbc0;
+            aspect-ratio: 1 / 1;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            padding: $padding--small;
         }
         .wp-block-hacklabr-card{
             border: solid 1px  #d0cbc0;
@@ -92,6 +97,18 @@
                 font-family: $font-family--secondary;
             }
         }
+        .authors-block{
+            .wp-block-cover__inner-container{
+                >.wp-block-columns{
+                    @include mobile{
+                        display: grid !important;
+                        grid-template-columns: 1fr 1fr !important;
+                        row-gap: $gap--medium !important;
+                    }
+                }
+            }
+        }
+
         @include mobile{
             .is-center-mobile{
                 text-align: center !important;

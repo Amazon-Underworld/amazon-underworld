@@ -8,27 +8,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const slickSettings = JSON.parse(carousel.getAttribute('data-slick'));
 
-        // Adiciona configurações responsivas
-        slickSettings.responsive = [
-            {
-                breakpoint: 768, // Configurações para telas com largura menor ou igual a 768px
-                settings: {
-                    centerMode: true,
-                    centerPadding: '16px',
-                    slidesToShow: 1, // Exemplo: mostra 1 slide
-                },
-            },
-            {
-                breakpoint: 480, // Configurações para telas com largura menor ou igual a 480px
-                settings: {
-                    centerMode: true,
-                    centerPadding: '30px',
-                    slidesToShow: 1, // Exemplo: mostra 1 slide
-
-                },
-            },
-        ];
-
         carousel.setAttribute('data-slick', JSON.stringify(slickSettings));
 		jQuery(carousel).slick(slickSettings);
 
@@ -36,6 +15,16 @@ document.addEventListener('DOMContentLoaded', function () {
             jQuery(carousel).slick('slickSetOption', {
                 cssEase: 'linear',
                 slidesToShow: 4.2,
+                variableWidth: true,
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 1,
+                            centerMode: true,
+						}
+					}
+				]
 
             }, true);
         }
