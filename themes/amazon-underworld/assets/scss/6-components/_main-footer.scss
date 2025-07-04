@@ -134,4 +134,10 @@
             }
         }
     }
+
+    .wp-block-column.first-logo-column {
+        flex-grow: 0 !important;
+        width: auto;
+        flex-basis: auto !important;
+    }
 }
