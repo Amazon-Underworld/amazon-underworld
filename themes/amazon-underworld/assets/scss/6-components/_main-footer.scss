@@ -117,7 +117,7 @@
         }
     }
 
-    .wrap-on-mobile {
+    .wp-block-columns.wrap-on-mobile {
         @include mobile {
             flex-wrap: wrap !important;
             justify-content: center;
