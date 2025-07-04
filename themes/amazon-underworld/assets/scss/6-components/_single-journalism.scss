@@ -152,7 +152,7 @@
             .post-aside{
                 position: absolute;
                 z-index: 0;
-                padding: $padding--large;
+                padding-left: $padding--large;
                 padding-right: 0;
                 display: flex;
                 flex-flow: column;
@@ -182,7 +182,7 @@
                 .share-links{
                     display: flex;
                     flex-flow: column;
-                    padding-top: calc($padding--large * 6);
+
                     @include mobile{
                         display: none;
                     }
@@ -218,7 +218,7 @@
                     width: 130%;
                     border: none;
                     position: relative;
-                    top: calc(200vh + 100vw);
+                    // top: calc(200vh + 100vw);
                     @include mobile{
                         display: none;
                     }

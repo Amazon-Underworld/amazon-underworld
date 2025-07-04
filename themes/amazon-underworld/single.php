@@ -46,8 +46,7 @@ else{ ?>
 <main class="post-grid">
     <aside class="post-aside">
         <div class="post-aside__meta container">
-            <p class="post-aside__date"><?= get_the_date('j F Y') ?></p>
-            <p class="post-aside__author"><?php _e('By ', 'hacklabr') ?><?= get_the_author() ?></p>
+
             <?php get_template_part('template-parts/share-links', null, ['link'=>get_the_permalink()]) ?>
         </div>
         <?php  get_template_part('template-parts/content/related-posts-float') ?>

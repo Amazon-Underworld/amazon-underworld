@@ -28,7 +28,13 @@ $terms = get_the_terms($post_id, 'category');
 
             <h1 class="post-header__title"> <?php the_title(); ?> </h1>
             <div class="post-header__author container">
-                <p class="post-header__author-name"><?php _e('By ', 'hacklabr') ?><?= get_the_author() ?></p>
+                <p class="post-header__author-name"><?php _e('By ', 'hacklabr') ?>
+                <?php
+                if ( function_exists( 'coauthors_posts_links' ) ) {
+                    coauthors_posts_links();
+                } else {
+                    the_author_posts_link();
+                } ?></p>
             </div>
         </div>
 
