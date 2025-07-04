@@ -120,7 +120,19 @@
                     max-width: 500px;
                     margin-inline: auto;
                     margin-bottom: $margin--medium;
-
+                    p{
+                        color: #48441D;
+                        font-family: $font-family--secondary;
+                        font-size: size(14);
+                        font-weight: 500;
+                        letter-spacing: -0.7px;
+                        text-transform: uppercase;
+                        display: flex;
+                        align-items: center;
+                        gap: .3rem;
+                        margin-top: 1rem;
+                        margin-bottom: .5rem;
+                    }
                     button{
                         display: flex;
                         align-items: center;
@@ -145,16 +157,14 @@
                     max-width: fit-content;
                     margin-bottom: $margin--medium;
 
-                    .selector{
+                    button{
                         background-color: $color--primary-pure;
                         text-transform: uppercase;
                         font-family: $font-family--secondary;
                         color: $color--high-pure;
                         padding: $padding--small $padding--medium;
                         border-radius: 30px;
-                        a{
-                            text-decoration: none;
-                        }
+
                     }
 
                     @include mobile{
