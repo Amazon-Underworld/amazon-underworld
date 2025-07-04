@@ -8,6 +8,7 @@
     padding: 8rem $padding--x-large ;
     @include mobile{
         padding-inline: $padding--medium;
+        padding-top: $padding--medium;
     }
 
     &__body{
@@ -32,6 +33,8 @@
         @include mobile{
             img{
                 max-width: 230px !important;
+                height: auto;
+                aspect-ratio:  1 / 1;
             }
         }
     }
@@ -73,6 +76,7 @@
         letter-spacing: -1%;
         font-weight: 400;
         color: $color--primary-pure;
+        padding-top: $padding--medium;
         @include mobile{
             color: $color--high-pure;
         }
@@ -83,6 +87,7 @@
     }
 
     &__close{
+        display: none;
         align-self: flex-start;
         padding: $padding--small 0;
         text-transform: uppercase;
@@ -129,5 +134,12 @@
 
     &.open{
         display: block;
+    }
+
+    @include mobile{
+        background-image: url('#{$path--assets}/images/close-modal-mobile.svg');
+        width: 70px;
+        height: 35px;
+        margin-right: -1rem;
     }
 }
