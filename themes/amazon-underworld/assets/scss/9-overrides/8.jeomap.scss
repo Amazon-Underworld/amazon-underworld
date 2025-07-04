@@ -36,13 +36,16 @@
             a {
                 color: $color--low-dark;
                 font-family: $font-family--heading;
-                border-bottom: 1px solid $color--low-dark !important;
             }
 
             a::before {
                 color: $color--low-dark;
                 border: 1px solid;
                 border-radius: unset;
+            }
+
+            a:nth-of-type(-n + 2) {
+                border-bottom: 1px solid $color--low-dark !important;
             }
         }
     }
@@ -74,6 +77,21 @@
                         border-radius: unset;
                     }
                 }
+
+                [data-layer_id="sindicatos"],
+                [data-layer_id="ejercito-de-liberacion-nacional-eln"],
+                [data-layer_id="emc-farc"],
+                [data-layer_id="primeiro-comando-da-capital"],
+                [data-layer_id="comando-vermelho"],
+                [data-layer_id="segunda-marquetalia"],
+                [data-layer_id="todos-os-grupos-farc"],
+                [data-layer_id="au-others"] {
+                    padding-left: 40px !important;
+                }
+
+                [data-layer_id="comandos-de-la-frontera"] {
+                    padding-left: 70px !important;
+                }
             }
         }
     }
@@ -84,12 +102,12 @@
 
         .mapboxgl-popup-content {
             h3, p {
-                font-size: $font-size--small !important;
                 color: $color--low-dark !important;
-                font-weight: $font-weight--regular !important;
             }
 
             h3 {
+                font-size: 16px !important;
+                font-weight: 700 !important;
                 margin-bottom: 10px !important;
                 border-bottom: 1px solid $color--low-dark !important;
                 margin-left: -10px !important;
@@ -98,7 +116,16 @@
                 padding-right: 10px !important;
                 padding-bottom: 7px !important;
             }
+
+            p {
+                font-weight: $font-weight--regular !important;
+                font-size: 14px !important;
+            }
         }
+    }
+
+    .jeo-popup__mouseover * {
+        font-size: 14px !important;
     }
 
 }
