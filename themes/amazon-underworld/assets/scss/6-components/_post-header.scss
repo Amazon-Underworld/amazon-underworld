@@ -49,6 +49,9 @@
         &-name {
             font-size: $font-size--small;
             padding-top: $padding--x-small;
+            a{
+                text-decoration: none;
+            }
         }
     }
 }
