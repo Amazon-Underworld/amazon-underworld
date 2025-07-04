@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/amazon-underworld\n"
-"POT-Creation-Date: 2025-06-16T10:59:51+00:00\n"
-"PO-Revision-Date: 2025-06-16 08:00-0300\n"
+"POT-Creation-Date: 2025-07-04T18:38:48+00:00\n"
+"PO-Revision-Date: 2025-07-04 15:45-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -38,16 +38,34 @@ msgid "Hacklab"
 msgstr "Hacklab"
 
 #: 404.php:4
-msgid "error"
-msgstr "erro"
+msgid "ERROR 404"
+msgstr "ERROR 404"
 
-#: 404.php:8
-msgid "Page not found"
-msgstr "Página não encontrada"
+#: 404.php:5
+msgid "PAGE NOT FOUND"
+msgstr "PÁGINA NÃO ENCONTRADA"
 
-#: 404.php:9
-msgid "Return to home page"
-msgstr "Voltar para a página inicial"
+#: 404.php:6
+msgid "Sorry, we haven't found any results that match your search criteria."
+msgstr ""
+"Desculpe, não encontramos nenhum resultado que corresponda aos seus "
+"critérios de pesquisa."
+
+#: 404.php:7
+msgid "GO TO HOME"
+msgstr "IR PARA HOME"
+
+#: author.php:49
+msgid "Linkedin, "
+msgstr ""
+
+#: author.php:50
+msgid "Instagram, "
+msgstr ""
+
+#: author.php:51
+msgid "Facebook"
+msgstr ""
 
 #. translators: %s: Post title.
 #: comments.php:28
@@ -82,6 +100,10 @@ msgstr "Os comentários estão desativados"
 #: footer.php:9
 msgid "© 2025 AMAZON UNDERWORLD"
 msgstr "© 2025 AMAZON UNDERWORLD"
+
+#: footer.php:10
+msgid "WEB DESING BY RÉPLICA | OPEN SOURCE FONT BY "
+msgstr "DESING WEB POR RÉPLICA | FONTE DE CÓDIGO ABERTO POR "
 
 #: header-lateral.php:33 template-parts/main-header.php:21
 msgid "Toggle search form visibility"
@@ -279,15 +301,11 @@ msgstr "English"
 msgid "Português"
 msgstr "Português"
 
-#: single-policy-paper.php:63 single-policy-paper.php:90 single.php:73
+#: single-policy-paper.php:63 single-policy-paper.php:90 single.php:76
 msgid "Tags"
 msgstr "Tags"
 
-#: single.php:47 template-parts/title/post-header.php:31
-msgid "By "
-msgstr "Por "
-
-#: single.php:88
+#: single.php:95
 msgid ""
 "Amazon Underworld is a joint investigation by InfoAmazonia (Brazil), Armando."
 "Info (Venezuela), and La Liga Contra el Silencio (Colombia). The work is in "
@@ -302,13 +320,17 @@ msgstr ""
 "Relações Exteriores e da Commonwealth do Reino Unido e pela União "
 "Internacional para a Conservação da Natureza (IUCN NL)."
 
-#: single.php:89
+#: single.php:98
 msgid "Go to top"
 msgstr "Ir para o topo"
 
 #. Template Name of the theme
 msgid "Component Inventory"
 msgstr "Inventário de Componentes"
+
+#. Template Name of the theme
+msgid "About Us"
+msgstr ""
 
 #. Template Name of the theme
 msgid "Untitled pagebuilder"
@@ -326,10 +348,12 @@ msgstr ""
 "Desculpe, mas nada corresponde aos seus critérios de busca. Por favor, tente "
 "novamente com algumas palavras-chave diferentes."
 
+#: template-parts/content/related-posts-float.php:31
 #: template-parts/content/related-posts.php:31
 msgid "Explore more content"
 msgstr "Explorar mais conteúdo"
 
+#: template-parts/content/related-posts-float.php:33
 #: template-parts/content/related-posts.php:33
 msgid "Explore more "
 msgstr "Explorar mais "
@@ -357,6 +381,10 @@ msgstr " Resultados Encontrados"
 #: template-parts/title/author.php:6
 msgid "Author: %s"
 msgstr "Autor:%s"
+
+#: template-parts/title/post-header.php:31
+msgid "By "
+msgstr "Por "
 
 #: dist/blocks/amazon-slider/editor.js:19
 #: library/blocks/amazon-slider/editor.js:35
@@ -1529,9 +1557,26 @@ msgid "Title Secondary"
 msgstr "Título secundário"
 
 #: theme.json
+#, fuzzy
+#| msgctxt "Font family name"
+#| msgid "Helper"
+msgctxt "Font family name"
+msgid "Helper-title"
+msgstr "Ajuda"
+
+#: theme.json
 msgctxt "Font family name"
 msgid "Helper"
 msgstr "Ajuda"
+
+#~ msgid "error"
+#~ msgstr "erro"
+
+#~ msgid "Page not found"
+#~ msgstr "Página não encontrada"
+
+#~ msgid "Return to home page"
+#~ msgstr "Voltar para a página inicial"
 
 #~ msgid "Published in "
 #~ msgstr "Publicado em "
