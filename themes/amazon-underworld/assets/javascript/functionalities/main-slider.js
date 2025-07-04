@@ -1,56 +1,64 @@
 import { waitUntil } from '../shared/wait';
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
     waitUntil(() => document.querySelector('.swiper-initialized'), () => {
 
         const slider = document.querySelector('.wp-block-newspack-blocks-carousel.main-slider');
-
         const pagination = slider.querySelector('.swiper-pagination-bullets');
-        const dots = pagination.querySelectorAll('button');
-
         const wrapper = slider.querySelector('.swiper-wrapper');
-        const articles = wrapper.querySelectorAll('article');
 
-        const arrayPosts = Array.prototype.slice.call(articles);
-        const arrayDots = Array.prototype.slice.call(dots);
+        const articles = Array.from(wrapper.querySelectorAll('article'));
 
-        articles.forEach(article =>{
-            const indexPost = arrayPosts.indexOf(article);
-
+        function createThumbContent(article) {
             const thumb = article.querySelector('.post-thumbnail img');
             const title = article.querySelector('.entry-title a');
+
+            if (!thumb || !title) return null;
+
             const imageSrc = thumb.getAttribute('src');
             const width = thumb.getAttribute('width');
             const height = thumb.getAttribute('height');
             const alt = thumb.getAttribute('alt');
+            const textTitle = title.textContent;
 
-            const textTitle = title.innerHTML;
-            const minTitle = document.createElement('p');
-            minTitle.innerText = textTitle;
-            minTitle.classList.add('dot-title');
+            const img = document.createElement('img');
+            img.className = 'dot-thumb';
+            img.src = imageSrc;
+            img.width = width;
+            img.height = height;
+            img.alt = alt;
 
-            const miniatura = document.createElement('img');
-            miniatura.classList.add('dot-thumb');
-            miniatura.setAttribute('src', imageSrc);
-            miniatura.setAttribute('width', width);
-            miniatura.setAttribute('height', height);
-            miniatura.setAttribute('alt', alt);
+            const p = document.createElement('p');
+            p.className = 'dot-title';
+            p.textContent = textTitle;
 
-            dots.forEach(dot =>{
-                const indexDot = arrayDots.indexOf(dot);
-                if(indexDot == indexPost){
-                    addThumb(dot, miniatura, minTitle);
+            return { img, p };
+        }
+
+        function applyDotsContent() {
+            const dots = pagination.querySelectorAll('button');
+            dots.forEach((dot, index) => {
+                if (!dot.querySelector('img') && articles[index]) {
+                    const content = createThumbContent(articles[index]);
+                    if (content) {
+                        dot.appendChild(content.img);
+                        dot.appendChild(content.p);
+                    }
                 }
+            });
+        }
 
-            })
-        })
+        // Aplicação inicial
+        applyDotsContent();
 
-    }, 50, 5_000)
+        // Observer: reexecuta applyDotsContent sempre que os dots forem recriados
+        const observer = new MutationObserver(() => {
+            applyDotsContent();
+        });
 
-    function addThumb(elem, fig, text){
-        elem.appendChild(fig);
-        elem.appendChild(text);
-    }
+        observer.observe(pagination, { childList: true, subtree: true });
+
+    }, 50, 5000);
 
 });
