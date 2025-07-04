@@ -116,4 +116,22 @@
             opacity: 0.5;
         }
     }
+
+    .wrap-on-mobile {
+        @include mobile {
+            flex-wrap: wrap !important;
+            justify-content: center;
+
+            .wp-block-column {
+                flex-basis: 20%;
+                min-width: 90px;
+            }
+
+            .wp-block-image img {
+                max-width: 104px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
 }
