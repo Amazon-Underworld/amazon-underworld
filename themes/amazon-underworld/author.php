@@ -6,23 +6,38 @@ $bio = get_post_meta(get_queried_object_id(),'full_biography', true);
 $facebook =  get_post_meta(get_queried_object_id(),'facebook', true);
 $instagram =  get_post_meta(get_queried_object_id(),'instagram', true);
 $linkedin =  get_post_meta(get_queried_object_id(),'linkedin', true);
-$avatar =  get_avatar(get_queried_object_id(), 186);
+$avatar =  get_avatar(get_queried_object_id(), 365);
 $email = get_queried_object()->user_email;
 ?>
-</div>
-
 <div class="index-wrapper">
     <div class="content container">
         <?php
-            if(get_queried_object()->type === 'guest-author'){ ?>
+            get_template_part( 'template-parts/title/author' ); ?>
+            <main class="">
+                <?php
+                while ( have_posts() ) : the_post(); ?>
+                    <?php get_template_part( 'template-parts/content/post' ); ?>
+                <?php endwhile; ?>
+
+                <?php get_template_part( 'template-parts/content/pagination' ); ?>
+            </main>
+
+            <aside class="">
+                <?php dynamic_sidebar( 'sidebar-default' ) ?>
+            </aside>
+    </div><!-- /.container -->
+</div><!-- /.index-wrapper -->
+
+<?php if(get_queried_object()->type === 'guest-author'){ ?>
+</div>
                 <div class="card-modal alignfull">
-                    <div class="card-modal__body">
+                    <div class="card-modal__body" id="modal-card-body">
                     <button type="button" class="close-modal">
                     </button>
                         <figure class="card-modal__img">
                              <?php echo $avatar ?>
                         </figure>
-                        <h1> <?php  echo substr(get_the_archive_title(), strpos(get_the_archive_title(), ': ') + 2);?> </h1>
+                        <h1 class="card-modal__title"> <?php  echo substr(get_the_archive_title(), strpos(get_the_archive_title(), ': ') + 2);?> </h1>
                         <div class="card-modal__infos">
                             <p class="card-modal__description"><?php
                                 _e(get_queried_object()->description, 'hacklabr');?>
@@ -44,40 +59,6 @@ $email = get_queried_object()->user_email;
                         </div>
                     </div>
                 </div>
-                <main class="">
-                    <?php
-                    while ( have_posts() ) : the_post(); ?>
-                        <?php get_template_part( 'template-parts/content/post' ); ?>
-                    <?php endwhile; ?>
-
-                    <?php get_template_part( 'template-parts/content/pagination' ); ?>
-                </main>
-
-                <aside class="">
-                    <?php dynamic_sidebar( 'sidebar-default' ) ?>
-                </aside>
-
-            <?php }
-            else{
-                get_template_part( 'template-parts/title/author' ); ?>
-                <main class="">
-                    <?php
-                    while ( have_posts() ) : the_post(); ?>
-                        <?php get_template_part( 'template-parts/content/post' ); ?>
-                    <?php endwhile; ?>
-
-                    <?php get_template_part( 'template-parts/content/pagination' ); ?>
-                </main>
-
-                <aside class="">
-                    <?php dynamic_sidebar( 'sidebar-default' ) ?>
-                </aside>
-
-            <?php }
-        ?>
-
-
-    </div><!-- /.container -->
-</div><!-- /.index-wrapper -->
+            <?php } ?>
 
 <?php get_footer();

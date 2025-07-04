@@ -28,4 +28,17 @@
         display: flex;
         align-items: center;
     }
+
+    .slick-slide{
+        @include mobile{
+            min-width: fit-content;
+            width: fit-content !important;
+        }
+    }
+
+    &.logos-carousel{
+        .wp-block-cb-slide{
+            max-height: 70px;
+        }
+    }
 }
