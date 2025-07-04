@@ -1,6 +1,8 @@
 .main-footer {
     background-color: $color--secondary-light;
     padding-bottom: $padding--large;
+    position: relative;
+    z-index: 9;
 
     @include mobile {
         padding-bottom: $padding--medium;

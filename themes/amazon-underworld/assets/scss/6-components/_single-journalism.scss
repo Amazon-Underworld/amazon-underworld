@@ -218,7 +218,7 @@
                     width: 130%;
                     border: none;
                     position: relative;
-                    // top: calc(200vh + 100vw);
+                    top: 50vh;
                     @include mobile{
                         display: none;
                     }
