@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: hacklabr 0.9.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/amazon-underworld\n"
 "POT-Creation-Date: 2025-06-16T10:59:51+00:00\n"
-"PO-Revision-Date: 2025-06-16 08:03-0300\n"
+"PO-Revision-Date: 2025-07-04 12:19-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -344,7 +344,7 @@ msgstr "Escribe tu búsqueda"
 
 #: template-parts/share-links.php:2
 msgid "Share this:"
-msgstr "Comparte esto:"
+msgstr "Compartir:"
 
 #: template-parts/site-by-hacklab.php:2
 msgid "website by"
