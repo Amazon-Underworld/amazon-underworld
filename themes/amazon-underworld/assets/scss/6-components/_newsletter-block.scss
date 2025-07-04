@@ -34,10 +34,11 @@
     &__join-heading {
         font-family: $font-family--heading;
         font-size: 35px;
-        font-weight: $font-weight--bold;
+        font-weight: 500 !important;
         letter-spacing: -0.35px;
         text-transform: uppercase;
         margin-top: unset !important;
+        padding-top: 20px;
 
         @include mobile {
             font-size: $font-size--large;

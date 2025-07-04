@@ -1,0 +1,39 @@
+.wp-block-audio{
+    background-color: $color--high-pure;
+    height: 65px !important;
+    border-radius: 5px !important;
+    display: flex;
+    align-items: center;
+    audio::-webkit-media-controls-panel {
+        background-color: transparent !important;
+        border-radius: 10% !important;
+        height: 100% !important;
+    }
+    audio::-webkit-media-controls-play-button,
+    audio::-webkit-media-controls-pause-button {
+        // -webkit-appearance: none;
+        background-color: $color--high-pure !important;
+        outline-style: solid;
+        outline-width: 1px;
+        outline-color: $color--primary-pure;
+        color: $color--primary-pure !important;
+        border-radius: 50%;
+        width: 32px !important;
+        height: 32px !important;
+        opacity: 0.6 !important;
+    }
+
+    audio::-webkit-media-controls-current-time-display,
+    audio::-webkit-media-controls-time-remaining-display {
+        font-family: $font-family--secondary !important;
+        font-size: $font-size--small;
+        letter-spacing: -1%;
+        text-transform: uppercase;
+        color: $color--primary-pure !important;
+    }
+    audio::-webkit-media-controls-mute-button {
+        color: $color--primary-pure !important;
+        opacity: 0.6 !important;
+    }
+
+}

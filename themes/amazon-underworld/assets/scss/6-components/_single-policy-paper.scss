@@ -121,14 +121,6 @@
                     margin-inline: auto;
                     margin-bottom: $margin--medium;
 
-                    ::before{
-                        content: url('#{$path--assets}/images/download-icon.svg');
-                        display: flex;
-                        width: 22px;
-                        height: 22px;
-                        margin-inline-end: calc($margin--small / 2);
-                    }
-
                     button{
                         display: flex;
                         align-items: center;

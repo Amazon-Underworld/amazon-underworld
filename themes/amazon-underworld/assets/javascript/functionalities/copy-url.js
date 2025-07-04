@@ -1,25 +1,30 @@
 document.addEventListener("DOMContentLoaded", function () {
-    let copy = document.querySelector('.copy');
+    const copy = document.querySelectorAll('.copy');
 
     if (copy) {
-        copy.addEventListener('click', (e) => {
 
-            e.preventDefault();
+        copy.forEach(function(copy){
 
-            var content = document.getElementById('url').value;
-            navigator.clipboard.writeText(content)
-                .then(() => {
-                    document.querySelector('#alert').textContent = "Link copied successfully!";
-                })
-                .catch(err => {
-                    document.getElementById('alert').textContent = "Something went wrong.";
-                });
+            copy.addEventListener('click', (e) => {
+                e.preventDefault();
+                const content = window.location.href;
+                const wrapper = copy.parentElement.parentElement;
+                const alert =  wrapper.querySelector('#alert');
 
-            document.getElementById('alert').classList.remove("hide");
-            setTimeout(function () {
-                document.getElementById('alert').classList.add("hide");
-                document.querySelector('#alert').textContent = "";
-            }, 2000);
-        });
+                navigator.clipboard.writeText(content)
+                    .then(() => {
+                       alert.textContent = "Link copied successfully!";
+                    })
+                    .catch(err => {
+                        alert.textContent = "Something went wrong.";
+                    });
+
+                alert.classList.remove("hide");
+                setTimeout(function () {
+                    alert.classList.add("hide");
+                    alert.textContent = "";
+                }, 1000);
+            });
+        })
     }
 });

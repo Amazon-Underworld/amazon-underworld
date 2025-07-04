@@ -1,0 +1,104 @@
+.jeomap {
+    .layers-selection >.layer-selection-title,
+    .legend-container {
+        .legends-title {
+            background: #ffffff !important;
+            color: $color--low-dark !important;
+            border-bottom: 1px solid $color--low-dark !important;
+            font-size: $font-size--small;
+
+            .text-icon {
+                .layer-icon, .legend-icon {
+                    display: none;
+                }
+
+                .text {
+                    text-transform: uppercase;
+                    font-family: $font-family--primary;
+                    font-weight: $font-weight--regular;
+                    font-size: $font-size--small;
+                }
+            }
+
+            .arrow-icon {
+                filter: unset;
+            }
+        }
+
+    }
+
+    .layers-selection {
+        min-width: 290px !important;
+        max-width: 290px !important;
+        opacity: 0.8 !important;
+
+        .layers-wrapper {
+            a {
+                color: $color--low-dark;
+                font-family: $font-family--heading;
+                border-bottom: 1px solid $color--low-dark !important;
+            }
+
+            a::before {
+                color: $color--low-dark;
+                border: 1px solid;
+                border-radius: unset;
+            }
+        }
+    }
+
+    .legend-container {
+        min-width: 290px !important;
+        max-width: 290px !important;
+        opacity: 0.8;
+
+        .hideable-content {
+            .legends-wrapper {
+                margin: 0 0 0 10px !important;
+                padding-top: 7px !important;
+
+                > div {
+                    margin-bottom: 14px !important;
+                }
+
+                .simple-color-container {
+                    .simple-color-item {
+                        font-family: $font-family--heading;
+                        color: $color--low-dark;
+                    }
+
+                    .simple-color-item-box {
+                        min-width: 16px;
+                        width: 16px;
+                        height: 16px;
+                        border-radius: unset;
+                    }
+                }
+            }
+        }
+    }
+
+    .jeo-popup__mouseover {
+        font-family: $font-family--heading !important;
+        opacity: 0.9 !important;
+
+        .mapboxgl-popup-content {
+            h3, p {
+                font-size: $font-size--small !important;
+                color: $color--low-dark !important;
+                font-weight: $font-weight--regular !important;
+            }
+
+            h3 {
+                margin-bottom: 10px !important;
+                border-bottom: 1px solid $color--low-dark !important;
+                margin-left: -10px !important;
+                margin-right: -10px !important;
+                padding-left: 10px !important;
+                padding-right: 10px !important;
+                padding-bottom: 7px !important;
+            }
+        }
+    }
+
+}

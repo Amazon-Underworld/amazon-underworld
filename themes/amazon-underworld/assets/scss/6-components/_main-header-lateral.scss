@@ -56,7 +56,8 @@
     }
 
     &__search {
-        display: flex;
+        // display: flex;
+        display: none;
         gap: $gap--medium;
         position: relative;
 
@@ -115,7 +116,7 @@
         &>ul {
             align-items: center;
             display: flex;
-            gap: $gap--medium;
+            gap: 35px;
         }
 
         li {
@@ -461,8 +462,10 @@
     }
 }
 
-.single-policy-paper{
+.single-policy-paper, .page-template-page-privacy-policy{
     .main-header-lateral{
+        background-color: $color--high-pure;
+        position: sticky;
         &__logo{
             img{
                 filter: none;

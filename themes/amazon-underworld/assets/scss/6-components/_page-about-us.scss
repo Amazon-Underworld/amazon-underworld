@@ -1,0 +1,107 @@
+.page-template-template-page-about{
+    background-color: $color--high-pure;
+    .about-us{
+        max-width: $grid--x-wide;
+    }
+    .post-content{
+        max-width: 100%;
+        .alignfull, .alignwide{
+            width: unset;
+            margin-inline-start: 0;
+        }
+        .wp-block-group{
+            margin-inline: $margin--medium;
+            padding-bottom: $padding--xx-large;
+            border-bottom: solid 1px #d0cbc0;
+
+            @include mobile{
+                padding-bottom: $padding--large;
+            }
+        }
+        .wp-block-heading:not(.has-text-color), p:not(.has-text-color){
+            color: $color--primary-pure;
+        }
+        .wp-block-heading{
+            @include mobile{
+                font-size: 20px;
+            }
+        }
+        .wp-block-columns{
+            @include mobile{
+                gap: $gap--small;
+            }
+        }
+        .wp-block-cover:first-of-type{
+            .wp-block-heading{
+                @include mobile{
+                    font-size: 25px !important;
+                }
+            }
+            .wp-block-columns{
+                .wp-block-column{
+                    .wp-block-image{
+                        img{
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .section-name{
+            @include mobile{
+                font-size: 10px !important;
+            }
+        }
+        .card{
+            border: solid 1px  #d0cbc0;
+        }
+        .wp-block-hacklabr-card{
+            border: solid 1px  #d0cbc0;
+            min-height: 370px;
+            max-width: 370px;
+            aspect-ratio: 1 / 1;
+
+            &-header{
+                padding: $padding--small $padding--large $padding--x-large;
+            }
+
+            &-body{
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                gap: 0;
+                padding: $padding--large $padding--large $padding--small;
+
+                >:nth-child(4){
+                    padding-top: calc($padding--x-large * 2);
+                    margin-bottom: 0;
+                }
+            }
+            h5{
+                border: solid 1px #d0cbc0;
+                border-radius: 5px;
+                padding: $padding--small;
+                max-width: fit-content;
+                margin-inline: auto;
+                font-size: $font-size--x-small;
+            }
+            p{
+                font-size: $font-size--x-small;
+                text-transform: uppercase;
+                font-family: $font-family--secondary;
+            }
+        }
+        @include mobile{
+            .is-center-mobile{
+                text-align: center !important;
+            }
+            .is-left-mobile{
+                text-align: left !important;
+            }
+            .is-right-mobile{
+                text-align: right !important;
+            }
+        }
+    }
+}

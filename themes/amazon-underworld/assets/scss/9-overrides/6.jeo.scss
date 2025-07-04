@@ -1,0 +1,21 @@
+.single:not(.storymap-template-default){
+    .story-map-container{
+        .storymap-header{
+            display: none;
+        }
+        .light{
+            .title, p{
+                color: $color--primary-pure !important;
+            }
+        }
+        @include desktop{
+            .light{
+                background: linear-gradient(90deg,rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 100%);
+
+                .title, p{
+                    color: $color--high-light !important;
+                }
+            }
+        }
+    }
+}

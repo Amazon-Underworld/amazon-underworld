@@ -381,6 +381,22 @@ class Assets {
                 'file'   => 'modal-form.js',
                 'global' => true,
             ],
+
+            'copy-url' => [
+                'file'   => 'copy-url.js',
+                'global' => true,
+            ],
+
+            'carousel-block-override' => [
+                'file' => 'carousel-block-override.js',
+                'global' => true,
+				'deps' => ['jquery', 'carousel-block-slick-script'],
+			],
+
+            'modal-author-profile' => [
+                'file' => 'modal-author-profile.js',
+                'global' => true,
+			],
  		];
 
 		$js_files = apply_filters('js_files_before_output', $js_files);

@@ -2,11 +2,13 @@
     display: flex;
     gap: $gap--small;
     font-size: $font-size--small;
-
     &__icons {
         display: flex;
         gap: $gap--small;
+        align-items: center;
     }
-
+    #alert{
+        font-size: $font-size--x-small !important;
+    }
 
 }

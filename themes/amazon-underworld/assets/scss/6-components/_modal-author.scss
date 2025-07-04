@@ -1,0 +1,133 @@
+.card-modal{
+    background-color: $color--secondary-light;
+    width: 100vw;
+    margin-inline-start: calc(50% - 50vw);
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    padding: 8rem $padding--x-large ;
+    @include mobile{
+        padding-inline: $padding--medium;
+    }
+
+    &__body{
+        background-color: $color--high-pure;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        max-width: $grid--normal;
+        margin-inline: auto;
+        padding: $padding--medium $padding--x-large $padding--xx-large;
+        border-radius: 20px;
+        @include mobile{
+            background-color: $color--secondary-light;
+            width: 100%;
+            padding-inline: $padding--medium;
+        }
+    }
+
+    &__img{
+        max-width: fit-content;
+
+        @include mobile{
+            img{
+                max-width: 230px !important;
+            }
+        }
+    }
+
+    &__title{
+        text-align: left;
+        width: 100%;
+        font-size: 30px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: $color--primary-pure;
+        padding-top: $padding--medium;
+        @include mobile{
+            color: $color--high-pure;
+        }
+    }
+
+    &__infos{
+        width: 100%;
+        font-family: $font-family--secondary;
+        text-transform: uppercase;
+        color: $color--primary-pure;
+        @include mobile{
+            color: $color--high-pure;
+        }
+
+        a{
+            text-decoration: none;
+            font-size: $font-size--small;
+        }
+
+        p{
+            font-size: $font-size--small !important;
+        }
+    }
+
+    &__bio{
+        font-family: $font-family--primary;
+        letter-spacing: -1%;
+        font-weight: 400;
+        color: $color--primary-pure;
+        @include mobile{
+            color: $color--high-pure;
+        }
+
+        p{
+            font-size: 22px !important;
+        }
+    }
+
+    &__close{
+        align-self: flex-start;
+        padding: $padding--small 0;
+        text-transform: uppercase;
+        background-color: transparent;
+        font-family: $font-family--secondary;
+        font-size: $font-size--small;
+        color: $color--primary-pure;
+        @include mobile{
+            color: $color--high-pure;
+        }
+    }
+}
+
+#author-modal{
+    display: none;
+    inset: 0;
+    transition: all .4s ease-in-out;
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    height: 100vh;
+    transition: $transition--default;
+    &.open{
+        display: flex;
+    }
+}
+
+.modal-author{
+    width: 100%;
+}
+
+.close-modal{
+    transition: all .4s ease-in-out;
+    background-image: url('#{$path--assets}/images/close-modal.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 2rem;
+    height: 2rem;
+    margin-right: -2rem;
+    align-self: flex-end;
+    background-color: transparent;
+    transition: $transition--default;
+
+    &.open{
+        display: block;
+    }
+}

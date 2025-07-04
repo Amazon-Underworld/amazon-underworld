@@ -1,0 +1,44 @@
+.cb-carousel-block, .wp-block-cb-carousel{
+    &.alignfull{
+        width: 100vw !important;
+        margin-inline-start: -1rem !important;
+    }
+
+    .slick-arrow{
+        background-color: $color--primary-dark !important;
+        border-radius: 60px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before{
+            color: $color--high-pure !important;
+            font-size: 30px !important;
+            opacity: 1 !important;
+            border: $color--primary-dark solid 1px;
+            border-radius: 60px;
+            display: flex;
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    .slick-track{
+        display: flex;
+        align-items: center;
+    }
+
+    .slick-slide{
+        @include mobile{
+            min-width: fit-content;
+            width: fit-content !important;
+        }
+    }
+
+    &.logos-carousel{
+        .wp-block-cb-slide{
+            max-height: 70px;
+        }
+    }
+}

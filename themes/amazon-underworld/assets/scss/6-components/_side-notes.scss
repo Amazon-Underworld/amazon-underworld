@@ -1,0 +1,40 @@
+.side-notes{
+    padding-inline: $padding--medium;
+    @include mobile{
+        gap: $gap--small !important;
+    }
+    .wp-block-media-text{
+        display: flex;
+        flex-flow: column;
+        padding: $padding--medium;
+        max-width: 267px;
+        @include mobile{
+            max-width: unset;
+            padding-inline: 0;
+        }
+        &__media{
+            max-width: 267px;
+            aspect-ratio: 16 / 9;
+            @include mobile{
+                max-width: unset;
+            }
+            img{
+                aspect-ratio: 16 / 9;
+                object-fit: cover;
+            }
+        }
+        &__content{
+            padding-inline: 0 !important;
+        }
+    }
+
+    >:nth-child(2){
+        max-width: $grid--normal !important;
+        margin-inline: auto !important;
+        padding-inline: $padding--large !important;
+        @include mobile{
+            padding-inline: 0 !important;
+        }
+    }
+
+}

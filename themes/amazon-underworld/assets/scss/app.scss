@@ -31,12 +31,14 @@
 @import '5-objects/thumbnail';
 
 // COMPONENTS
+@import '6-components/404';
 @import '6-components/about-us';
 @import '6-components/amazon-slider';
 @import '6-components/accordeon';
 @import '6-components/archive-header';
 @import '6-components/banner-block';
 @import '6-components/card';
+@import '6-components/columns-data-block';
 @import '6-components/content-sidebar';
 @import '6-components/content-block';
 @import '6-components/home-map';
@@ -44,9 +46,11 @@
 @import '6-components/main-header';
 @import '6-components/main-header-lateral';
 @import '6-components/main-footer';
+@import '6-components/modal-author';
 @import '6-components/modal-form';
 @import '6-components/modal-our-methodology';
 @import '6-components/newsletter-block';
+@import '6-components/page-about-us';
 @import '6-components/page-map';
 @import '6-components/page-privacy-policy';
 @import '6-components/pagination';
@@ -57,6 +61,7 @@
 @import '6-components/pre-header';
 @import '6-components/related-posts';
 @import '6-components/share-links';
+@import '6-components/side-notes';
 @import '6-components/single-journalism';
 @import '6-components/single-policy-paper';
 @import '6-components/social-menu';
@@ -73,5 +78,9 @@
 // OVERRIDES
 @import '9-overrides/1.wordpress';
 @import '9-overrides/2.coblocks';
-@import '9-overrides/3.newspack-main-slider';
+@import '9-overrides/3.newspack';
 @import '9-overrides/4.webstories-carousel';
+@import '9-overrides/5.gutenberg';
+@import '9-overrides/6.jeo';
+@import '9-overrides/7.cb-carousel';
+@import '9-overrides/8.jeomap.scss';

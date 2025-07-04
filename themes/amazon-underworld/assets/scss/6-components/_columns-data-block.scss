@@ -1,0 +1,28 @@
+.columns-data{
+    margin: $margin--large 0 !important;
+    @include mobile{
+        margin: $margin--small 0 !important;
+    }
+    >.wp-block-heading{
+        max-width: $grid--normal;
+        text-wrap: unset;
+        font-size: 35px !important ;
+        @include mobile{
+            font-size: 20px !important;
+        }
+    }
+    .wp-block-columns{
+        .wp-block-column{
+            >.wp-block-heading{
+                font-size: 100px !important;
+                @include mobile{
+                    font-size: 50px !important;
+                }
+            }
+            p{
+                width: 90%;
+                margin-inline: auto;
+            }
+        }
+    }
+}
