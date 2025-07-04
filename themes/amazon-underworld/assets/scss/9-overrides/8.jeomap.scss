@@ -47,6 +47,10 @@
             a:nth-of-type(-n + 2) {
                 border-bottom: 1px solid $color--low-dark !important;
             }
+
+            a:nth-of-type(n + 3) {
+                border-bottom: none;
+            }
         }
     }
 
@@ -76,6 +80,21 @@
                         height: 16px;
                         border-radius: unset;
                     }
+                }
+
+                [data-layer_id="sindicatos"],
+                [data-layer_id="ejercito-de-liberacion-nacional-eln"],
+                [data-layer_id="emc-farc"],
+                [data-layer_id="primeiro-comando-da-capital"],
+                [data-layer_id="comando-vermelho"],
+                [data-layer_id="segunda-marquetalia"],
+                [data-layer_id="todos-os-grupos-farc"],
+                [data-layer_id="au-others"] {
+                    padding-left: 40px !important;
+                }
+
+                [data-layer_id="comandos-de-la-frontera"] {
+                    padding-left: 70px !important;
                 }
             }
         }
