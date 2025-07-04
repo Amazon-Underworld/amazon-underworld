@@ -77,21 +77,6 @@
                         border-radius: unset;
                     }
                 }
-
-                [data-layer_id="sindicatos"],
-                [data-layer_id="ejercito-de-liberacion-nacional-eln"],
-                [data-layer_id="emc-farc"],
-                [data-layer_id="primeiro-comando-da-capital"],
-                [data-layer_id="comando-vermelho"],
-                [data-layer_id="segunda-marquetalia"],
-                [data-layer_id="todos-os-grupos-farc"],
-                [data-layer_id="au-others"] {
-                    padding-left: 40px !important;
-                }
-
-                [data-layer_id="comandos-de-la-frontera"] {
-                    padding-left: 70px !important;
-                }
             }
         }
     }
