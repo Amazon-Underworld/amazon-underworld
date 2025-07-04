@@ -32,6 +32,8 @@
             }
         }
         .wp-block-cover:first-of-type{
+            position: relative;
+            z-index: 5;
             .wp-block-heading{
                 @include mobile{
                     font-size: 25px !important;
