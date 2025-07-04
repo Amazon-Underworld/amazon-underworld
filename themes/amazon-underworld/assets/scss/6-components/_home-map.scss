@@ -60,4 +60,11 @@
             font-size: 25px;
         }
     }
+
+    p{
+        font-size: 22px !important;
+        @include mobile{
+            font-size: $font-size--medium !important;
+        }
+    }
 }
