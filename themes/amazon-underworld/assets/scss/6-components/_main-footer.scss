@@ -84,6 +84,7 @@
 
     &__copyright{
         display: flex;
+        justify-content: space-between;
         max-width: $grid--wide;
         margin-inline: auto;
         padding-inline: $padding--medium;
@@ -111,11 +112,6 @@
             }
         }
 
-        .text-copyright {
-            flex-basis: 37.20%;
-            flex-shrink: 0;
-        }
-
         .font-copyright {
             opacity: 0.5;
         }
@@ -137,5 +133,11 @@
                 margin-right: auto;
             }
         }
+    }
+
+    .wp-block-column.first-logo-column {
+        flex-grow: 0 !important;
+        width: auto;
+        flex-basis: auto !important;
     }
 }
