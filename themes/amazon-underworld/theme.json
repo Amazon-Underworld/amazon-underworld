@@ -174,6 +174,11 @@
                     "fontFamily": "'Hershey Sans', sans-serif"
                 },
                 {
+                    "name": "Helper-title",
+                    "slug": "helper-title",
+                    "fontFamily": "'AV Hershey Complex', sans-serif"
+                },
+                {
                     "name": "Helper",
                     "slug": "helper",
                     "fontFamily": "'Bull 5 Typewriter', monospace"

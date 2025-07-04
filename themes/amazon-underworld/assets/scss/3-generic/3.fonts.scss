@@ -48,3 +48,24 @@
     font-weight: 400;
     src: url('#{$path--assets}/fonts/Hershey-AU-Serif.woff') format(woff);
 }
+
+@font-face {
+    font-family: 'AV Hershey Complex';
+    font-display: swap;
+    font-weight: 300;
+    src: url('#{$path--assets}/fonts/AVHersheyComplexLight.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: 'AV Hershey Complex';
+    font-display: swap;
+    font-weight: 500;
+    src: url('#{$path--assets}/fonts/AVHersheyComplexMedium.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: 'AV Hershey Complex';
+    font-display: swap;
+    font-weight: 600;
+    src: url('#{$path--assets}/fonts/AVHersheyComplexHeavy.ttf') format(truetype);
+}

@@ -21,6 +21,8 @@
         font-size: $font-size--hero;
         margin-top: $margin--large;
         text-align: center;
+        line-height: 1;
+        letter-spacing: -0.5px;
     }
 
     &__excerpt {
