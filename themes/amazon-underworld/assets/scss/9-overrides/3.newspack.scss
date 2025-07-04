@@ -14,7 +14,6 @@
                 .entry-title{
                     text-transform: uppercase;
                     text-align: center;
-                    // font-size: $font-size--xx-large;
 
                     @media only screen and (min-width: 782px) {
                         font-size: unset !important;
@@ -26,12 +25,12 @@
                         -webkit-line-clamp: unset !important;
                         max-height: unset !important;
                         font-size: 50px;
+                        line-height: 1;
                     }
 
                     @include mobile{
                         font-size: 25px;
                         a{
-                            -webkit-line-clamp: 4;
                             font-size: 25px !important;
                         }
                     }
