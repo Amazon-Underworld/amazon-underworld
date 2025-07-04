@@ -42,6 +42,11 @@
                     font-family: $font-family--secondary;
                     margin-bottom: $margin--large;
                     font-weight: 400 !important;
+
+                    a{
+                        pointer-events: none;
+                        cursor: default;
+                    }
                 }
                 .entry-meta{
                     margin-top: $margin--large;
@@ -52,6 +57,14 @@
                     font-family: $font-family--secondary;
                     font-size: $font-size--small;
                     font-weight: 400 !important;
+
+                    .author{
+                        a{
+                            font-weight: 400 !important;
+                            pointer-events: none;
+                            cursor: default;
+                        }
+                    }
                 }
             }
         }
