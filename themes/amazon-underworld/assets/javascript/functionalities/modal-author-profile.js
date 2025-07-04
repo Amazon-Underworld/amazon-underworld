@@ -1,3 +1,5 @@
+import { waitUntil } from '../shared/wait';
+
 document.addEventListener('DOMContentLoaded', function() {
 
     const cards = document.querySelectorAll('.wp-block-newspack-blocks-author-profile');
@@ -29,15 +31,12 @@ document.addEventListener('DOMContentLoaded', function() {
             iframe.setAttribute('src', url);
             iframe.setAttribute('allowFullscreen', 'true');
 
-            setTimeout(function(){
-                const closeButton = iframe.querySelectorAll('.close-modal');
-                console.log(closeButton)
+            waitUntil(() =>  iframe.contentWindow.document.getElementById('modal-card-body'), () => {
+                const closeButton = iframe.contentWindow.document.querySelectorAll('.close-modal');
                 closeButton.forEach(closeBtn =>{
-                    console.log(closeBtn);
                     setTimeout(function(){
                         closeBtn.classList.add('open');
                     }, 1000);
-
                     closeBtn.addEventListener('click', (e) => {
                         if(closeBtn.classList.contains('open')){
                             closeBtn.classList.remove('open');
@@ -46,17 +45,18 @@ document.addEventListener('DOMContentLoaded', function() {
                             iframe.classList.remove('open');
                             iframe.setAttribute('src', 'about:blank');
                         }
-                        modal.forEach(modal =>{
-                            if(modal.classList.contains('open')){
-                                modal.classList.remove('open');
-                            }
-                        })
+                        if(modal.classList.contains('open')){
+                            modal.classList.remove('open');
+                        }
+
                     })
                 })
-            }, 2000);
 
+              }, 50, 5_000)
 
         }
+
     }
+
 
 });

@@ -2,7 +2,6 @@
     background-color: $color--high-pure;
     .about-us{
         max-width: $grid--x-wide;
-
     }
     .post-content{
         max-width: 100%;
@@ -14,9 +13,44 @@
             margin-inline: $margin--medium;
             padding-bottom: $padding--xx-large;
             border-bottom: solid 1px #d0cbc0;
+
+            @include mobile{
+                padding-bottom: $padding--large;
+            }
         }
         .wp-block-heading:not(.has-text-color), p:not(.has-text-color){
             color: $color--primary-pure;
+        }
+        .wp-block-heading{
+            @include mobile{
+                font-size: 20px;
+            }
+        }
+        .wp-block-columns{
+            @include mobile{
+                gap: $gap--small;
+            }
+        }
+        .wp-block-cover:first-of-type{
+            .wp-block-heading{
+                @include mobile{
+                    font-size: 25px !important;
+                }
+            }
+            .wp-block-columns{
+                .wp-block-column{
+                    .wp-block-image{
+                        img{
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+        .section-name{
+            @include mobile{
+                font-size: 10px !important;
+            }
         }
         .card{
             border: solid 1px  #d0cbc0;
@@ -56,6 +90,17 @@
                 font-size: $font-size--x-small;
                 text-transform: uppercase;
                 font-family: $font-family--secondary;
+            }
+        }
+        @include mobile{
+            .is-center-mobile{
+                text-align: center !important;
+            }
+            .is-left-mobile{
+                text-align: left !important;
+            }
+            .is-right-mobile{
+                text-align: right !important;
             }
         }
     }

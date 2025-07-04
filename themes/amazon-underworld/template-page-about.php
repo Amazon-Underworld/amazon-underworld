@@ -9,6 +9,7 @@ the_post();
 
 add_action('wp_footer', function () { ?>
     <div id="author-modal">
+
     </div><?php
 });
 
