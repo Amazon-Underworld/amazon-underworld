@@ -63,6 +63,17 @@
     &.logos-carousel{
         .wp-block-cb-slide{
             max-height: 70px;
+            @include mobile{
+                padding-inline: $padding--medium;
+            }
+
+            .wp-block-image{
+                max-width: 135px;
+                margin-inline: auto;
+                @include mobile{
+                    max-width: 100px;
+                }
+            }
         }
     }
 }
