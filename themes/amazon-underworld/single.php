@@ -54,12 +54,12 @@ else{ ?>
     </aside>
     <div class="post-content content content--normal">
         <?php
-        if( $intro ){ ?>
+        if( !empty($intro[0]) ){ ?>
             <h2 class="post-content__intro alignwide"><?php echo $intro[0] ;?></h2>
         <?php
         }
         else{
-            if( $excerpt ) : ?>
+            if( !empty($excerpt) ) : ?>
             <h2 class="post-content__intro alignwide"><?= get_the_excerpt() ?></h2>
         <?php endif;
         } ?>
