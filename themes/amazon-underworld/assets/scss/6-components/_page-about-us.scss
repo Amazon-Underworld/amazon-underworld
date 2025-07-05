@@ -18,6 +18,9 @@
                 padding-bottom: $padding--large;
             }
         }
+        .wp-block-group#impact{
+            border-bottom: none;
+        }
         .wp-block-heading:not(.has-text-color), p:not(.has-text-color){
             color: $color--primary-pure;
         }
