@@ -38,12 +38,7 @@ $post_url_en = apply_filters( 'wpml_permalink', $post_url, 'en');
 
                 if ($download_en || $download_es || $download_pt) :
                 ?>
-                    <p>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="23" height="24" viewBox="0 0 23 24" fill="none">
-                        <path d="M0 12.0001C0 6.77535 -1.39078e-07 4.16299 1.62311 2.53986C3.24624 0.916748 5.8586 0.916748 11.0833 0.916748C16.308 0.916748 18.9204 0.916748 20.5436 2.53986C22.1667 4.16299 22.1667 6.77535 22.1667 12.0001C22.1667 17.2248 22.1667 19.8372 20.5436 21.4604C18.9204 23.0834 16.308 23.0834 11.0833 23.0834C5.8586 23.0834 3.24624 23.0834 1.62311 21.4604C-1.39078e-07 19.8372 0 17.2248 0 12.0001Z" fill="#48441D"/>
-                        <path d="M11.0859 6.21167L11.0859 14.4371M11.0859 14.4371C11.4663 14.4421 11.8416 14.1807 12.1186 13.8615L13.973 11.7817M11.0859 14.4371C10.7189 14.4322 10.3472 14.1721 10.0533 13.8615L8.18809 11.7817M6.40039 17.8783L15.7337 17.8783" stroke="#F8F3EB" stroke-linecap="round"/>
-                        </svg>
-                        <?= __('Download this paper', 'hacklabr'); ?></p>
+                    <p><?= __('Download this paper', 'hacklabr'); ?></p>
 
                     <div class="post-header-pp__language-selector">
 
@@ -128,7 +123,5 @@ $post_url_en = apply_filters( 'wpml_permalink', $post_url, 'en');
             <?php get_template_part('template-parts/share-links', null, ['link'=>get_the_permalink()]) ?>
         </div>
 </div>
-
-<?php get_template_part('template-parts/content/related-posts') ?>
 
 <?php get_footer();
