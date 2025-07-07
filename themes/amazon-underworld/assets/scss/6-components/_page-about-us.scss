@@ -24,15 +24,18 @@
         .wp-block-heading:not(.has-text-color), p:not(.has-text-color){
             color: $color--primary-pure;
         }
-        .wp-block-heading{
-            @include mobile{
-                font-size: 20px;
-            }
-        }
         h2{
             font-size: 50px !important;
             @include mobile{
                 font-size: 25px !important;
+            }
+        }
+        h3{
+            font-size: 35px;
+        }
+        .wp-block-heading{
+            @include mobile{
+                font-size: 20px;
             }
         }
         .wp-block-columns{
