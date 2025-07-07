@@ -86,9 +86,11 @@
                 height: 95%;
 
                 >:nth-child(4){
-                    // padding-top: calc($padding--x-large * 2);
                     margin-bottom: 0;
                 }
+            }
+            .wp-block-group{
+                border: none !important;
             }
             h5{
                 border: solid 1px #d0cbc0;
