@@ -382,6 +382,13 @@ class Assets {
 				'global' => true,
 			],
 
+            'maps' => [
+                'file' => 'maps.js',
+                'preload_callback' => function () {
+                    return has_block('jeo/map');
+                },
+            ],
+
             'modal-our-methodology' => [
                 'file'   => 'modal-our-methodology.js',
                 'global' => true,
