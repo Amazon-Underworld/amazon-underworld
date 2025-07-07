@@ -29,6 +29,12 @@
                 font-size: 20px;
             }
         }
+        h2{
+            font-size: 50px !important;
+            @include mobile{
+                font-size: 25px !important;
+            }
+        }
         .wp-block-columns{
             @include mobile{
                 gap: $gap--small;
