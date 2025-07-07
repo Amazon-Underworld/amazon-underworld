@@ -54,6 +54,7 @@
     }
 
     .slick-slide{
+        max-width: fit-content;
         @include mobile{
             min-width: fit-content;
             width: fit-content !important;
