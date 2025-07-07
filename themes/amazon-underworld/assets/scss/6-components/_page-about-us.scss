@@ -118,6 +118,14 @@
                 }
             }
         }
+        .media-allies{
+            gap: $gap--small;
+            >.wp-block-column{
+                >.wp-block-columns{
+                    gap: $gap--small;
+                }
+            }
+        }
 
         @include mobile{
             .is-center-mobile{
