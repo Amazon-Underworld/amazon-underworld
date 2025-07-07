@@ -2,12 +2,11 @@
     background-color: $color--high-pure;
     #app{
         .post-header{
-            padding-top: calc($padding--large * 4);
             display: grid;
             grid-template-columns: 1fr 1fr;
             max-width: $grid--x-wide;
-            padding-inline: $padding--xx-large;
-            gap: $gap--large;
+            padding: calc($padding--large * 3) 1rem 0rem 2rem;
+            gap: size(70);
             align-items: center;
             background-color: transparent;
 
@@ -42,7 +41,6 @@
 
             &__infos{
                 padding-top: 20%;
-                padding-bottom: 4%;
                 display: flex;
                 flex-flow: column;
                 justify-content: space-between;
@@ -70,8 +68,11 @@
 
             &__title{
                 color: $color--high-pure;
-                font-size: 50px;
+                font-size: size(50);
                 text-transform: uppercase;
+                @media(max-width: 1199px){
+                    font-size: size(32);
+                }
                 @include mobile{
                     font-size: 25px;
                     margin-top: $margin--medium;
@@ -83,6 +84,7 @@
                 height: auto;
                 max-width: 830x;
                 border-radius: 5px;
+                margin-bottom: .5rem;
                 img{
                     // mix-blend-mode: hard-light;
                 }
@@ -104,12 +106,15 @@
                 text-align: center;
                 border-bottom: none;
                 align-self: flex-end;
+                margin-top: -2rem;
             }
 
             &__date{
+                margin-top: -3rem;
                 @include mobile{
                     opacity: 0.7;
                     margin-bottom: $margin--medium;
+                    margin-top: 2rem;
                 }
             }
 
