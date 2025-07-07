@@ -107,6 +107,9 @@
                 font-size: $font-size--x-small;
                 text-transform: uppercase;
                 font-family: $font-family--secondary;
+                a{
+                    text-decoration: none;
+                }
             }
         }
         .authors-block{
