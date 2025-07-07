@@ -69,7 +69,8 @@
             padding-right: 10px !important;
 
             &.category-slug--opiniao,
-            &.category-slug--opinion {
+            &.category-slug--opinion,
+            &.category-slug--opinion-es {
                 .amazon-slide-content .amazon-slide-category {
                     background-color: $color--high-dark;
                 }
@@ -79,7 +80,8 @@
             }
 
             &.category-slug--artigo,
-            &.category-slug--article {
+            &.category-slug--article,
+            &.category-slug--articulo {
                 .amazon-slide-content .amazon-slide-category {
                     background-color: $color--warning-light;
                 }
@@ -89,7 +91,8 @@
             }
 
             &.category-slug--cronica,
-            &.category-slug--chronicle {
+            &.category-slug--chronicle,
+            &.category-slug--cronica-es {
                 .amazon-slide-content .amazon-slide-category {
                     background-color: $color--helper-pure;
                 }
