@@ -153,6 +153,13 @@
 
 .wp-block-newspack-blocks-author-profile{
     &__avatar{
+        figure{
+            width: 100% !important;
+            max-width: 365px !important;
+            height: auto !important;
+            aspect-ratio: 1 / 1 !important;
+
+        }
         @include mobile{
             margin-bottom: $margin--small !important;
             figure{
