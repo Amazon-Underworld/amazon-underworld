@@ -126,7 +126,7 @@ function render_amazon_slider_callback( $attributes ) {
                             <?php if ( $author ) :  ?>
                                 <p class="amazon-slide-author">
                                     <?php
-                                    printf( esc_html__( 'By %s', 'hacklabr' ), esc_html( $author ) );
+                                    printf( esc_html__( 'by %s', 'hacklabr' ), esc_html( $author ) );
                                     ?>
                                 </p>
                             <?php endif; ?>
