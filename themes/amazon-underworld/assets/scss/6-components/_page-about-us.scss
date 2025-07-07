@@ -126,6 +126,11 @@
                 }
             }
         }
+        .see-bio{
+            a{
+                text-decoration: none;
+            }
+        }
 
         @include mobile{
             .is-center-mobile{

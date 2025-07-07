@@ -3,6 +3,7 @@ import { waitUntil } from '../shared/wait';
 document.addEventListener('DOMContentLoaded', function() {
 
     const cards = document.querySelectorAll('.wp-block-newspack-blocks-author-profile');
+    const seeBio = document.querySelectorAll('.see-bio');
 
     if(cards){
         const modal = document.querySelector('#author-modal');
@@ -22,6 +23,20 @@ document.addEventListener('DOMContentLoaded', function() {
             })
 
         })
+
+        seeBio.forEach((bio) =>{
+            const links = bio.querySelectorAll('a');
+
+            links.forEach((link) =>{
+                link.addEventListener('click', (e) =>{
+                    e.preventDefault();
+                    openModal(link);
+
+                })
+            })
+
+        })
+
 
         function getLocalizedAuthorUrl(originalUrl){
             const locale = globalThis.hl_modal_author_profile_data.locale;
