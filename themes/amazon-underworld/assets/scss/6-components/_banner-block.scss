@@ -57,6 +57,7 @@
             line-height: 2.5rem;
             max-width: 369px;
             width: 100%;
+            color: $color--high-pure;
 
             @include mobile {
                 font-size: $font-size--large;
