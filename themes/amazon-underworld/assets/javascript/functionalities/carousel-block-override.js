@@ -18,12 +18,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 variableWidth: true,
 				responsive: [
 					{
-						breakpoint: 768,
+						breakpoint: 1440,
+						settings: {
+							slidesToShow: 4,
+						}
+					},
+                    {
+                        breakpoint: 1356,
+						settings: {
+							slidesToShow: 3.5,
+						}
+                    },
+                    {
+                        breakpoint: 768,
 						settings: {
 							slidesToShow: 1,
                             centerMode: true,
 						}
-					}
+                    }
+
 				]
 
             }, true);

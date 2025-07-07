@@ -46,7 +46,7 @@ $locale = get_locale();
             <div class="card-modal__infos">
                 <p class="card-modal__description">
                 <?php if($locale === 'en_US'){ ?>
-                    <p><?= _e(get_queried_object()->description, 'hacklabr');?>> </p>
+                    <p><?= _e(get_queried_object()->description, 'hacklabr');?> </p>
                 <?php }
                 elseif($locale === 'pt_BR'){?>
                     <p><?= _e($description_pt,'hacklabr');?> </p>
