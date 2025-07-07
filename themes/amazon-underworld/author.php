@@ -2,12 +2,18 @@
 get_header();
 
 $name = get_post_meta(get_queried_object_id(),'display_', true);
-$bio = get_post_meta(get_queried_object_id(),'full_biography', true);
+$bio_en = get_post_meta(get_queried_object_id(),'full_biography', true);
+$bio_es = get_post_meta(get_queried_object_id(),'full_biography_es', true);
+$bio_pt = get_post_meta(get_queried_object_id(),'full_biography_pt_br', true);
+$description_es = get_post_meta(get_queried_object_id(),'info_bio_es', true);
+$description_pt = get_post_meta(get_queried_object_id(),'info_bio_pt_br', true);
 $facebook =  get_post_meta(get_queried_object_id(),'facebook', true);
 $instagram =  get_post_meta(get_queried_object_id(),'instagram', true);
 $linkedin =  get_post_meta(get_queried_object_id(),'linkedin', true);
 $avatar =  get_avatar(get_queried_object_id(), 365);
 $email = get_queried_object()->user_email;
+$locale = get_locale();
+
 ?>
 <div class="index-wrapper">
     <div class="content container">
@@ -39,8 +45,17 @@ $email = get_queried_object()->user_email;
                         </figure>
                         <h1 class="card-modal__title"> <?php  echo substr(get_the_archive_title(), strpos(get_the_archive_title(), ': ') + 2);?> </h1>
                         <div class="card-modal__infos">
-                            <p class="card-modal__description"><?php
-                                _e(get_queried_object()->description, 'hacklabr');?>
+                            <p class="card-modal__description">
+                            <?php if($locale === 'en_US'){ ?>
+                                <p><?= _e(get_queried_object()->description, 'hacklabr');?>> </p>
+                            <?php }
+                            elseif($locale === 'pt_BR'){?>
+                                <p><?= _e($description_pt,'hacklabr');?> </p>
+                            <?php }
+                            else{ ?>
+                                <p><?= _e($description_es,'hacklabr');?> </p>
+                            <?php } ?>
+
                             </p>
                             <p class="card-modal__email"><?php
                                 _e($email, 'hacklabr');?>
@@ -55,7 +70,15 @@ $email = get_queried_object()->user_email;
                         <button class="card-modal__close"><?= _e('See articles');?></button>
 
                         <div class="card-modal__bio">
-                            <p><?= _e($bio,'hacklabr');?> </p>
+                            <?php if($locale === 'en_US'){ ?>
+                                <p><?= _e($bio_en,'hacklabr');?> </p>
+                            <?php }
+                            elseif($locale === 'pt_BR'){?>
+                                <p><?= _e($bio_pt,'hacklabr');?> </p>
+                            <?php }
+                            else{ ?>
+                                <p><?= _e($bio_es,'hacklabr');?> </p>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
