@@ -70,21 +70,23 @@
             min-height: 380px;
             max-width: 332px;
             aspect-ratio: 1 / 1;
+            padding: $padding--medium 0;
 
             &-header{
-                padding: $padding--small $padding--large $padding--x-large;
+                padding: 0 $padding--medium;
             }
 
             &-body{
                 display: flex;
                 flex-flow: column;
-                justify-content: center;
+                justify-content: space-around;
                 align-items: center;
                 gap: 0;
-                padding: $padding--large $padding--large $padding--small;
+                padding: 0 $padding--small;
+                height: 95%;
 
                 >:nth-child(4){
-                    padding-top: calc($padding--x-large * 2);
+                    // padding-top: calc($padding--x-large * 2);
                     margin-bottom: 0;
                 }
             }
