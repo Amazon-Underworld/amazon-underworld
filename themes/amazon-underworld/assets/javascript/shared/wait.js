@@ -1,3 +1,9 @@
+export async function until (condition, intervalMs = 50, timeoutMs = 30_000 ) {
+    return new Promise((resolve) => {
+        waitUntil( condition, resolve, intervalMs, timeoutMs );
+    });
+}
+
 export function waitUntil ( condition, callback, intervalMs = 50, timeoutMs = 30_000 ) {
 	const initialValue = condition();
 	if ( initialValue ) {
@@ -8,8 +14,8 @@ export function waitUntil ( condition, callback, intervalMs = 50, timeoutMs = 30
 	let interval = window.setInterval( () => {
 		const value = condition();
 		if ( value ) {
-			callback( value );
-			return window.clearInterval( interval );
+			window.clearInterval( interval );
+			return callback( value );
 		}
 
 		elapsed += intervalMs;
