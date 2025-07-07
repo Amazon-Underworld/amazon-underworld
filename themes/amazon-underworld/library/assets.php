@@ -144,6 +144,11 @@ class Assets {
                 }
 
                 wp_enqueue_script( $handle, $src, $deps, $version, true );
+
+                if (!empty($data['localize_callback'])) {
+                    $object_name = 'hl_' . str_replace('-', '_', $handle) . '_data';
+                    wp_localize_script($handle, $object_name, $data['localize_callback']());
+                }
             }
         }
     }
@@ -173,6 +178,11 @@ class Assets {
                 }
 
                 wp_enqueue_script( $handle, $src, $deps, $version, true );
+
+                if (!empty($data['localize_callback'])) {
+                    $object_name = 'hl_' . str_replace('-', '_', $handle) . '_data';
+                    wp_localize_script($handle, $object_name, $data['localize_callback']());
+                }
             }
         }
     }
