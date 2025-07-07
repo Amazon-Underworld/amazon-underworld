@@ -52,12 +52,12 @@
 
         p {
             font-family: "Averia Serif Libre" !important;
-            font-size: size(32);
-            font-weight: 700;
-            line-height: 2.5rem;
+            font-size: size(32) !important;
+            font-weight: 700 !important;
+            line-height: 2.5rem !important;
             max-width: 369px;
             width: 100%;
-            color: $color--high-pure;
+            color: $color--high-pure !important;
 
             @include mobile {
                 font-size: $font-size--large;
