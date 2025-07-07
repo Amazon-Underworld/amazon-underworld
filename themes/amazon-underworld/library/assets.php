@@ -405,7 +405,14 @@ class Assets {
 
             'modal-author-profile' => [
                 'file' => 'modal-author-profile.js',
-                'global' => true,
+                'preload_callback' => function () {
+					return is_page_template( 'template-page-about.php' );
+				},
+                'localize_callback' => function(){
+                    return [
+                        'locale' => apply_filters( 'wpml_current_language', 'en' ),
+                    ];
+                },
 			],
  		];
 

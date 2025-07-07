@@ -23,8 +23,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         })
 
+        function getLocalizedAuthorUrl(originalUrl){
+            const locale = globalThis.hl_modal_author_profile_data.locale;
+            if(locale === 'en'){
+                return originalUrl;
+            }
+            else{
+                const parsedUrl = new URL(originalUrl);
+                parsedUrl.pathname = '/' + locale + parsedUrl.pathname;
+                return parsedUrl.toString();
+            }
+        }
+
         function openModal(link){
-            const url = link.getAttribute( 'href' );
+            const url = getLocalizedAuthorUrl(link.getAttribute( 'href' ));
 
             modal.classList.add('open');
             iframe.classList.add('open');
