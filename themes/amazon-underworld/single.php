@@ -49,7 +49,6 @@ else{ ?>
 
             <?php get_template_part('template-parts/share-links', null, ['link'=>get_the_permalink()]) ?>
         </div>
-        <?php  get_template_part('template-parts/content/related-posts-float') ?>
 
     </aside>
     <div class="post-content content content--normal">
@@ -87,19 +86,9 @@ else{ ?>
         <?php get_template_part('template-parts/share-links', null, ['link'=>get_the_permalink()]) ?>
     </div>
 
-    <div class="post-footer__close">
-        <?php if(!empty($close_text[0])){ ?>
-            <p> <?=_e($close_text[0]); ?> </p>
-        <?php
-        } else { ?>
-            <p> <?= _e('Amazon Underworld is a joint investigation by InfoAmazonia (Brazil), Armando.Info (Venezuela), and La Liga Contra el Silencio (Colombia). The work is in collaboration with the Pulitzer Center`s Rainforest Research Network and is funded by the Open Society Foundation, the UK Foreign and Commonwealth Office, and the International Union for Conservation of Nature (IUCN NL).', 'hacklabr')?> </p>
-        <?php }
-        ?>
-        <a href="#post-header"><button type="button" class="post-footer__back-to-top"> <?= _e('Go to top', 'hacklabr')?></button></a>
-    </div>
 </div>
 
-<?php get_template_part('template-parts/content/related-posts') ?>
+
 
 
 
