@@ -61,7 +61,7 @@
 
 
             @include mobile {
-                font-size: $font-size--large;
+                font-size: size(20) !important;
                 text-align: center;
                 width: 210px;
             }
