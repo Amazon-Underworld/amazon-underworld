@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/amazon-underworld\n"
-"POT-Creation-Date: 2025-07-04T18:38:48+00:00\n"
-"PO-Revision-Date: 2025-07-04 15:45-0300\n"
+"POT-Creation-Date: 2025-07-07T12:23:01+00:00\n"
+"PO-Revision-Date: 2025-07-07 09:34-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: pt_BR\n"
@@ -55,15 +55,15 @@ msgstr ""
 msgid "GO TO HOME"
 msgstr "IR PARA HOME"
 
-#: author.php:49
+#: author.php:64
 msgid "Linkedin, "
 msgstr ""
 
-#: author.php:50
+#: author.php:65
 msgid "Instagram, "
 msgstr ""
 
-#: author.php:51
+#: author.php:66
 msgid "Facebook"
 msgstr ""
 
@@ -139,8 +139,8 @@ msgid "Image"
 msgstr "Imagem"
 
 #: library/blocks/amazon-slider/amazon-slider.php:129
-msgid "By %s"
-msgstr "Por"
+msgid "by %s"
+msgstr "por %s"
 
 #: library/blocks/amazon-slider/amazon-slider.php:140
 #: library/blocks/amazon-slider/amazon-slider.php:141
@@ -285,23 +285,23 @@ msgstr ""
 msgid "Layout Política de Privacidade"
 msgstr ""
 
-#: single-policy-paper.php:34
+#: single-policy-paper.php:41
 msgid "Download this paper"
 msgstr "Baixe este arquivo"
 
-#: single-policy-paper.php:43
-msgid "Español"
-msgstr "Español"
-
-#: single-policy-paper.php:48
+#: single-policy-paper.php:50
 msgid "English"
 msgstr "English"
 
-#: single-policy-paper.php:53
+#: single-policy-paper.php:59
+msgid "Español"
+msgstr "Español"
+
+#: single-policy-paper.php:68
 msgid "Português"
 msgstr "Português"
 
-#: single-policy-paper.php:63 single-policy-paper.php:90 single.php:76
+#: single-policy-paper.php:83 single-policy-paper.php:110 single.php:76
 msgid "Tags"
 msgstr "Tags"
 
@@ -330,7 +330,7 @@ msgstr "Inventário de Componentes"
 
 #. Template Name of the theme
 msgid "About Us"
-msgstr ""
+msgstr "Sobre nós"
 
 #. Template Name of the theme
 msgid "Untitled pagebuilder"
