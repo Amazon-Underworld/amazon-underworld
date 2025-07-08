@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const btnOpen = document.querySelectorAll('.open-our-methodology a');
     const btnClose = document.querySelector('.close-our-methodology');
     const header = document.querySelector('.main-header-lateral');
+    const footer = document.querySelector('.main-footer');
 
     if (!modal || btnOpen.length === 0 || !btnClose) {
         return;
@@ -11,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function openModal() {
         document.body.classList.add('modal-is-open');
         header.style.zIndex = '0';
+        footer.style.zIndex = '-1'
         setTimeout(()=>{
             modal.style.display = 'flex';
         }, 200);
@@ -19,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeModal() {
         document.body.classList.remove('modal-is-open');
         header.style.zIndex = '2';
+        footer.style.zIndex = '0'
         modal.style.display = 'none';
     }
 
