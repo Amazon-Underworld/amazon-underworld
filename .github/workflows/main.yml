@@ -15,7 +15,7 @@ env:
 jobs:
   build_assets:
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/tags/')
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/develop' || startsWith(github.ref, 'refs/tags/')
     container:
       image: node:20
     steps:
@@ -39,6 +39,25 @@ jobs:
         with:
           name: ${{ env.THEME_NAME }}
           path: themes/${{ env.THEME_NAME }}
+
+    deploy_test:
+    needs: build_assets
+    if: "!startsWith(github.ref, 'refs/tags/')" # só executa em push para main ou develop
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: ${{ env.THEME_NAME }}
+          path: ./${{ env.THEME_NAME }}/
+
+      - name: Deploy para ambiente de teste via CURL
+        if: env.DEPLOY != 0
+        run: |
+          echo "Enviando deploy de teste para ambiente dev..."
+          curl "${{ env.CURL_URL }}wp-json/git-updater/v1/reset-branch/?key=${{ secrets.GIT_UPDATER_KEY_DEV }}&theme=${{ env.THEME_NAME }}"
+          curl "${{ env.CURL_URL }}wp-json/git-updater/v1/update/?key=${{ secrets.GIT_UPDATER_KEY_DEV }}&theme=${{ env.THEME_NAME }}&override"
+
 
   create_release:
     if: startsWith(github.ref, 'refs/tags/')
