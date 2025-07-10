@@ -4,16 +4,13 @@
             display: flex;
             flex-direction: column;
 
-            > .title {
+            > .wp-block-heading {
                 order: 1;
             }
 
-            > .wp-block-heading {
+            > .wp-block-columns.wp-container-core-columns-is-layout-28f84493 {
                 order: 2;
-            }
-
-            > .text {
-                order: 3;
+                gap: unset !important;
             }
 
             > .wp-block-group {
