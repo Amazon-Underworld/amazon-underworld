@@ -1,0 +1,207 @@
+.filter-posts {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 34px !important;
+
+    &__toggle {
+        display: none;
+    }
+
+    &__label {
+        font-family: $font-family--secondary;
+        font-size: $font-size--small;
+        font-weight: 500;
+        letter-spacing: -0.7px;
+        text-transform: uppercase;
+        color: $color--primary-pure;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 5px;
+    }
+
+    &__link {
+        font-family: $font-family--secondary;
+        font-size: $font-size--small;
+        font-weight: 500;
+        letter-spacing: -0.7px;
+        min-height: 30px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 0 20px;
+        border-radius: 5px;
+        border: 1px solid $color--primary-pure;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $color--primary-pure;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &__link {
+        &.active.category-article,
+        &.active.category-articulo,
+        &.active.category-artigo {
+            background-color: $color--warning-light;
+            border: none;
+        }
+
+        &.active.category-chronicle,
+        &.active.category-cronica,
+        &.active.category-cronica-es {
+            background-color: $color--helper-pure;
+            border: none;
+        }
+
+        &.active.category-photoshoot,
+        &.active.category-photoessay,
+        &.active.category-fotoensayo,
+        &.active.category-fotoensaio,
+        &.active.category-fotoensaio-es,
+        &.active.category-opinion,
+        &.active.category-opiniao,
+        &.active.category-opinion-es {
+            background-color: $color--high-dark;
+            border: none;
+        }
+    }
+
+    @include mobile {
+        position: fixed;
+        bottom: 10px;
+        left: 14px;
+        right: 14px;
+        z-index: 100;
+
+        &__label {
+            display: none;
+        }
+
+        &__toggle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 11px 22px;
+            background-color: $color--primary-pure;
+            border-radius: 55px;
+            cursor: pointer;
+            font-size: 12px;
+
+            .filter-by {
+                font-family: $font-family--secondary;
+                font-size: $font-size--small;
+                font-weight: 500;
+                letter-spacing: -0.7px;
+                text-transform: uppercase;
+                color: $color--high-pure;
+            }
+
+            .arrow-down {
+                position: absolute;
+                right: 22px;
+            }
+
+            &.category-article,
+            &.category-articulo,
+            &.category-artigo {
+                background-color: $color--warning-light;
+                .filter-by {
+                    color: $color--secondary-light;
+                }
+
+                .arrow-down {
+                    svg {
+                        path {
+                            stroke: $color--secondary-light;
+                        }
+                    }
+                }
+            }
+
+            &.category-chronicle,
+            &.category-cronica,
+            &.category-cronica-es {
+                background-color: $color--helper-pure;
+                .filter-by {
+                    color: $color--secondary-light;
+                }
+
+                .arrow-down {
+                    svg {
+                        path {
+                            stroke: $color--secondary-light;
+                        }
+                    }
+                }
+            }
+
+            &.category-photoshoot,
+            &.category-photoessay,
+            &.category-fotoensayo,
+            &.category-fotoensaio,
+            &.category-fotoensaio-es,
+            &.category-opinion,
+            &.category-opiniao,
+            &.category-opinion-es {
+                background-color: $color--high-dark;
+                .filter-by {
+                    color: $color--secondary-light;
+                }
+
+                .arrow-down {
+                    svg {
+                        path {
+                            stroke: $color--secondary-light;
+                        }
+                    }
+                }
+            }
+
+            &.is-close-btn {
+                background-color: #26240C;
+            }
+        }
+
+        &__list {
+            display: none;
+            position: absolute;
+            bottom: calc(100% + 10px);
+            left: 0;
+            right: 0;
+            z-index: 10;
+
+            li {
+                width: 100%;
+
+                a {
+                    justify-content: center;
+                    padding: 11px 1rem;
+                    border-radius: 60px;
+                    border: unset;
+                    background-color: #C2BD99;
+                }
+            }
+        }
+
+        &.is-open {
+            .filter-posts__list {
+                display: flex;
+            }
+
+            .filter-posts__toggle .arrow-down {
+                transform: rotate(180deg);
+            }
+
+        }
+    }
+}
