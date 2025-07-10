@@ -15,19 +15,27 @@ $modifiers = array_map(fn ($modifier) => "post-card--{$modifier}", $modifiers);
 $modifiers = implode(' ', $modifiers);
 
 $categories = get_the_category();
-?>
-<article id="post-ID-<?php the_ID(); ?>" class="post-card <?=$modifiers?>">
 
-    <div class="post-card__meta">
-        <?php if (!$hide_author): ?>
-        <div class="post-card__author">
-            <?php the_author(); ?>
+$main_category_class = '';
+if (!empty($categories)) {
+    $main_category_class = 'category-' . $categories[0]->slug;
+}
+?>
+<article id="post-ID-<?php the_ID(); ?>" class="post-card <?php echo $main_category_class; ?> <?=$modifiers?>">
+
+    <?php if (is_singular('policy-paper')): ?>
+        <div class="post-card__meta">
+            <?php if (!$hide_author): ?>
+            <div class="post-card__author">
+                <?php the_author(); ?>
+            </div>
+            <?php endif; ?>
+            <time class="post-card__date">
+                <?php echo get_the_date('j F Y'); ?>
+            </time>
         </div>
-        <?php endif; ?>
-        <time class="post-card__date">
-            <?php echo get_the_date('j F Y'); ?>
-        </time>
-    </div>
+    <?php endif; ?>
+
     <header class="post-card__image">
         <a href="<?php the_permalink();?>" aria-label="<?= esc_attr(get_the_title()) ?>">
             <?php if (has_post_thumbnail()): ?>
@@ -53,8 +61,18 @@ $categories = get_the_category();
             <a href="<?php the_permalink();?>"><?php the_title();?></a>
         </h3>
 
-        <div class="post-card__excerpt">
-            <?= get_the_excerpt(); ?>
+        <?php if (!$hide_excerpt): ?>
+            <div class="post-card__excerpt">
+                <?= get_the_excerpt(); ?>
+            </div>
+        <?php endif; ?>
+
+        <div class="post-card__meta">
+            <?php if (!$hide_author): ?>
+            <div class="post-card__author">
+                <?= _e('by', 'hacklabr') ?> <?php the_author(); ?>
+            </div>
+            <?php endif; ?>
         </div>
     </main>
 </article>
