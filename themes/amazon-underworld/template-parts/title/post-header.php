@@ -16,7 +16,7 @@ $terms = get_the_terms($post_id, 'category');
                 <?php
                 if(!empty($categories)){
                     foreach($categories as $category){
-                        if($category->slug != 'infoamazonia'){ ?>
+                        if($category->slug != 'infoamazonia' && $category->slug != 'infoamazonia-es' && $category->slug != 'infoamazonia-pt-br'){ ?>
                         <a class="tag tag--<?= $category->slug ?>">
                         <?= $category->name ?>
                         </a>

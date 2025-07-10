@@ -17,19 +17,19 @@ $post_url = get_permalink(get_the_ID());
 
 echo do_shortcode('[main-header]');
 
-if(has_term('opinion', 'category', $post_id)){ ?>
+if(has_term('opinion', 'category', $post_id) || has_term('opiniao', 'category', $post_id) || has_term('opinion-es', 'category', $post_id)  ){ ?>
     <header id="post-header" class="post-header post-header__opinion container">
         <?php get_template_part('template-parts/title/post-header'); ?>
     </header>
 <?php }
 
-elseif(has_term('article', 'category', $post_id)){ ?>
+elseif(has_term('article', 'category', $post_id) || has_term('artigo', 'category', $post_id) || has_term('articulo', 'category', $post_id) ){ ?>
     <header id="post-header"  class="post-header post-header__article container">
         <?php get_template_part('template-parts/title/post-header'); ?>
     </header>
 <?php }
 
-elseif(has_term('chronicle', 'category', $post_id)){ ?>
+elseif(has_term('chronicle', 'category', $post_id) || has_term('cronica', 'category', $post_id)  || has_term('cronica-es', 'category', $post_id) ){ ?>
     <header id="post-header"  class="post-header post-header__chronicle container">
         <?php get_template_part('template-parts/title/post-header'); ?>
     </header>

@@ -20,9 +20,7 @@
 
         .hamburger{
             color: $color--high-light;
-            @include mobile{
-                color:  #181818;
-            }
+
         }
 
         @include tablet {
@@ -47,7 +45,7 @@
             filter: invert(100%) hue-rotate(230deg) brightness(150%);
 
             @include mobile{
-                max-width: 9.4rem;
+                max-width: 14rem;
             }
         }
         @include mobile{
