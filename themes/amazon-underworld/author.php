@@ -19,7 +19,7 @@ $locale = get_locale();
     <div class="content container">
         <?php
             get_template_part( 'template-parts/title/author' ); ?>
-            <main class="">
+            <main class="posts-grid">
                 <?php
                 while ( have_posts() ) : the_post(); ?>
                     <?php get_template_part( 'template-parts/content/post' ); ?>
@@ -27,15 +27,11 @@ $locale = get_locale();
 
                 <?php get_template_part( 'template-parts/content/pagination' ); ?>
             </main>
-
-            <aside class="">
-                <?php dynamic_sidebar( 'sidebar-default' ) ?>
-            </aside>
     </div><!-- /.container -->
 </div><!-- /.index-wrapper -->
 
 </div>
-    <div class="card-modal alignfull">
+    <div id="card-modal" class="card-modal alignfull">
         <div class="card-modal__body" id="modal-card-body">
         <button type="button" class="close-modal">
         </button>

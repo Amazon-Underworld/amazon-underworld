@@ -1,3 +1,8 @@
+<?php
+$categories = get_the_category();
+
+?>
+
 <article id="post-ID-<?php the_ID(); ?>" class="post">
     <div class="post-card">
         <div class="post-card--thumb">
@@ -13,7 +18,16 @@
         </div><!-- /.post-card--thumb -->
 
         <div class="post-card--content">
-            <div class="entry-meta"><?php echo get_html_terms( get_the_ID(), 'category', true ); ?></div>
+            <div class="entry-meta">
+                <?php if(!empty($categories)){
+                    foreach($categories as $category){
+                        if($category->slug != 'infoamazonia'){ ?>
+                        <a class="tag tag--<?= $category->slug ?>">
+                        <?= $category->name ?>
+                        </a>
+                    <?php }
+                    }
+                }?></div>
             <a href="<?php the_permalink(); ?>"><h5 class="entry-title"><?php the_title(); ?></h5></a>
             <div class="entry-date"><?php echo get_the_date(); ?></div>
             <div class="entry-excerpt">
