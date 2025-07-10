@@ -21,7 +21,7 @@ $categories = get_the_category();
             <div class="entry-meta">
                 <?php if(!empty($categories)){
                     foreach($categories as $category){
-                        if($category->slug != 'infoamazonia'){ ?>
+                        if($category->slug != 'infoamazonia' && $category->slug != 'infoamazonia-es' && $category->slug != 'infoamazonia-pt-br'){ ?>
                         <a class="tag tag--<?= $category->slug ?>">
                         <?= $category->name ?>
                         </a>
