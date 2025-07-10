@@ -58,6 +58,15 @@ document.addEventListener('DOMContentLoaded', function() {
             iframe.setAttribute('src', url);
             iframe.setAttribute('allowFullscreen', 'true');
 
+            waitUntil(() =>  iframe.contentWindow.document.querySelector('.archive'), () => {
+
+                const card = iframe.contentWindow.document.getElementById('card-modal');
+                const app = iframe.contentWindow.document.getElementById('app');
+                app.style.display = 'none';
+                card.style.display = 'block';
+
+            }, 50)
+
             waitUntil(() =>  iframe.contentWindow.document.getElementById('modal-card-body'), () => {
                 const closeButton = iframe.contentWindow.document.querySelectorAll('.close-modal');
                 closeButton.forEach(closeBtn =>{

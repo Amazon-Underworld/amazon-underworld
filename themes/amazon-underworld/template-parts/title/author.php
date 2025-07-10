@@ -1,10 +1,45 @@
 <?php
+$bio_en = get_post_meta(get_queried_object_id(),'full_biography', true);
+$bio_es = get_post_meta(get_queried_object_id(),'full_biography_es', true);
+$bio_pt = get_post_meta(get_queried_object_id(),'full_biography_pt_br', true);
+$description_es = get_post_meta(get_queried_object_id(),'info_bio_es', true);
+$description_pt = get_post_meta(get_queried_object_id(),'info_bio_pt_br', true);
+$facebook =  get_post_meta(get_queried_object_id(),'facebook', true);
+$instagram =  get_post_meta(get_queried_object_id(),'instagram', true);
+$linkedin =  get_post_meta(get_queried_object_id(),'linkedin', true);
+$avatar =  get_avatar(get_queried_object_id(), 365);
+$email = get_queried_object()->user_email;
+$locale = get_locale();
 ?>
 <header class="c-title title-author">
-    <div class="container">
-        <h1 class="entry-title">
-            <?php printf( __('Author: %s', 'hacklabr'), get_the_author_meta('display_name', get_queried_object_id() ) );?>
+        <h1 class="entry-title title-author__name">
+            <?php  echo substr(get_the_archive_title(), strpos(get_the_archive_title(), ': ') + 2);?>
         </h1>
-        <p><?php the_author_meta( 'description', get_queried_object_id() );?></p>
-    </div>
+        <div class="title-author__infos">
+            <p><?php  _e(get_queried_object()->description, 'hacklabr');?></p>
+            <ul class="title-author__social-network">
+                <?php if(!empty($linkedin)){ ?>
+                    <li><a href="<?= $linkedin ?>"> <?php _e('Linkedin', 'hacklabr');?></a></li>
+                <?php } ?>
+                <?php if(!empty($instagram)){ ?>
+                    <li><a href="<?= $instagram ?>"> <?php _e('Instagram', 'hacklabr');?></a></li>
+                <?php } ?>
+                <?php if(!empty($facebook)){ ?>
+                    <li><a href="<?= $facebook ?>"> <?php _e('Facebook', 'hacklabr');?></a></li>
+                <?php } ?>
+                </ul>
+            <p class="title-author__results"><span><?= $wp_query->found_posts;?></span><?php _e(' Articles', 'hacklabr');?></p>
+        </div>
+        <div class="title-author__bio">
+                <?php if($locale === 'en_US'){ ?>
+                    <p><?= _e($bio_en,'hacklabr');?> </p>
+                <?php }
+                elseif($locale === 'pt_BR'){?>
+                    <p><?= _e($bio_pt,'hacklabr');?> </p>
+                <?php }
+                else{ ?>
+                    <p><?= _e($bio_es,'hacklabr');?> </p>
+                <?php } ?>
+        </div>
+
 </header><!-- /.c-title.title-default -->
