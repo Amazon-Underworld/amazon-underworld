@@ -358,6 +358,13 @@ class Assets {
 				'global' => true,
 			],
 
+            'filter-posts' => [
+                'file' => 'filter-posts.js',
+                'preload_callback' => function () {
+                    return is_post_type_archive() || is_home();
+                },
+            ],
+
 			'anchor-sidebar'     => [
 				'file' => 'anchor-sidebar.js',
 				'preload_callback' => function () {
