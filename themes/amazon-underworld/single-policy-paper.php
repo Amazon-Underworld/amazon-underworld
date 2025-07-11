@@ -77,7 +77,7 @@ $post_url_en = apply_filters( 'wpml_permalink', $post_url, 'en');
         </header>
 
         <div class="post-footer post-footer__desktop">
-            <div class="post-header-pp__tags">
+            <div class="post-footer__tags post-header-pp__tags">
             <?php
                 if(!empty($tags)){ ?>
                     <span><?= _e('Tags', 'hacklabr');?></span>
@@ -106,7 +106,7 @@ $post_url_en = apply_filters( 'wpml_permalink', $post_url, 'en');
     </main>
 
     <div class="post-footer post-footer__mobile">
-            <div class="post-header-pp__tags">
+            <div class="post-footer__tags post-header-pp__tags">
                 <span><?= _e('Tags', 'hacklabr');?></span>
                     <?php
                     if(!empty($tags)){

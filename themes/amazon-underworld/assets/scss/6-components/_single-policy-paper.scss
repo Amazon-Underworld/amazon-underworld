@@ -5,7 +5,7 @@
 
         .policy-paper-app{
             display: grid;
-            grid-template-columns: auto auto;
+            grid-template-columns: 40% 60%;
             gap: calc($gap--large * 3);
             padding-top: calc($padding--large * 5);
             @include mobile{
@@ -37,6 +37,10 @@
                     &:not(.has-text-color){
                         color: $color--primary-pure;
                     }
+                }
+
+                .wp-block-heading:first-of-type{
+                    margin-bottom: 27px !important;
                 }
 
                 figcaption{
@@ -79,6 +83,8 @@
             }
             .post-footer{
                 padding-inline-start: $padding--medium;
+                display: flex;
+                flex-flow: column;
 
                 .share-links{
                     text-transform: uppercase;
@@ -103,6 +109,10 @@
                     @include mobile{
                         display: block;
                     }
+                }
+
+                &__tags{
+                    max-width: 70%;
                 }
             }
             .post-header-pp{
@@ -132,11 +142,8 @@
                         font-weight: 500;
                         letter-spacing: -0.7px;
                         text-transform: uppercase;
-                        // display: flex;
-                        // align-items: center;
-                        // gap: .3rem;
                         margin-top: 1rem;
-                        margin-bottom: .5rem;
+                        margin-bottom: 0;
                         padding-left: .3rem;
                     }
                     button{
