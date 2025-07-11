@@ -110,7 +110,7 @@
                     border-radius: 0;
                     margin-bottom: $margin--medium;
                     img{
-                        max-width: size(442);
+                        object-fit: cover;
                         margin-inline: auto;
                         height: size(578);
 
@@ -170,7 +170,7 @@
                         color: $color--high-pure;
                         padding: $padding--small $padding--medium;
                         border-radius: 30px;
-
+                        cursor: pointer;
                     }
 
                     @include mobile{
