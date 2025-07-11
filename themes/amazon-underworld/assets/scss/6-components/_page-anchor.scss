@@ -13,6 +13,18 @@
                 color: $color--primary-pure;
             }
         }
+
+        &__toggle-menu {
+            background-color: $color--primary-pure;
+        }
+
+        &__language-selector {
+            .wpml-language-switcher.wpml-ls-item {
+                a {
+                    color: $color--primary-pure;
+                }
+            }
+        }
     }
 
     #app {
@@ -23,12 +35,24 @@
         position: relative;
         top: 0;
         z-index: 0;
+
+        @include mobile {
+            padding-top: unset !important;
+        }
     }
 
     .index-wrapper.page-with-title {
         .container {
             margin-inline: 0;
             max-width: $grid--wide;
+
+            .c-title.title-default {
+                .container {
+                    @include mobile {
+                        padding-left: 0;
+                    }
+                }
+            }
 
             .entry-title {
                 font-size: 50px;
@@ -39,6 +63,10 @@
                 margin-top: 1rem;
                 font-weight: 400;
                 line-height: 3rem;
+
+                @include mobile {
+                    font-size: 30px;
+                }
             }
         }
 
@@ -46,8 +74,16 @@
             display: grid;
             grid-template-columns: 1fr 2fr;
 
+            @include mobile {
+                grid-template-columns: 1fr;
+            }
+
             .sidebarpage {
                 padding: $padding--large $padding--medium;
+
+                @include mobile {
+                    display: none;
+                }
 
                 .anchor-title {
                     color: $color--primary-pure !important;
@@ -80,6 +116,11 @@
             margin-inline: auto;
             max-width: $grid--normal !important;
 
+            @include mobile {
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+
             p, li {
                 font-size: $font-size--medium;
                 color: $color--primary-pure;
@@ -88,16 +129,31 @@
                 line-height: 1.7;
             }
 
+            p {
+                @include mobile {
+                    padding-left: 0;
+                }
+            }
+
             .wp-block-heading {
                 color: $color--primary-pure;
                 font-weight: 600;
                 line-height: $line-height--normal;
                 margin-bottom: 1rem;
                 max-width: $grid--wide;
+
+                @include mobile {
+                    font-size: $font-size--x-large;
+                    padding-left: 0;
+                }
             }
 
             .wp-block-list {
                 padding-left: 6rem;
+
+                @include mobile {
+                    padding-left: 2rem;
+                }
             }
 
         }
