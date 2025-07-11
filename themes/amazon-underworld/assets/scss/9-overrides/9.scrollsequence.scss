@@ -10,6 +10,9 @@
         .scrollsequence-pages-wrap{
             width: 100% !important;
             .scrollsequence-page{
+                iframe{
+                    max-width: 100% !important;
+                }
                 width: 100%;
                 @include mobile{
                     >div{
