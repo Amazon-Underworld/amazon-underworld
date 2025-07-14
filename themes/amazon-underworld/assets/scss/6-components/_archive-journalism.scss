@@ -68,7 +68,9 @@
                 font-family: $font-family--secondary;
                 color: $color--secondary-light;
                 letter-spacing: -0.12px;
-                padding: $padding--x-small 14px;
+                line-height: 100%;
+                font-weight: 500;
+                padding: 6px 14px;
 
                 background-color: var(--tag-color, $color--high-pure);
             }
@@ -84,6 +86,7 @@
         @include mobile {
             padding-bottom: 5px;
             padding-top: 6rem;
+            margin-bottom: 30px;
         }
 
         &__background {
@@ -112,7 +115,6 @@
                     border-radius: 5px;
                     height: auto;
                     width: 100%;
-                    max-width: 820px;
                     min-height: 712px;
 
                     @include mobile {
@@ -169,6 +171,8 @@
     }
 
     .post-grid-filters {
+        margin-bottom: $margin--x-large;
+
         .post-card {
             margin-bottom: 33px;
 
@@ -190,7 +194,6 @@
                     border-radius: 5px;
                     height: auto;
                     width: 100%;
-                    max-width: 544px;
                     min-height: 534px;
 
                     @include mobile {
