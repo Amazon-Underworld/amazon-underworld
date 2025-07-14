@@ -170,6 +170,13 @@
         }
     }
 
+    .posts-grid {
+        &__content {
+            gap: 10px;
+        }
+
+    }
+
     .post-grid-filters {
         margin-bottom: $margin--x-large;
 
@@ -234,12 +241,6 @@
         }
     }
 
-    .posts-grid {
-        &__content {
-            gap: 10px;
-        }
-
-    }
 
     .archive-header {
         &__infos * {

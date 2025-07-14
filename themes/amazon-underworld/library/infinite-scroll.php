@@ -40,11 +40,13 @@ function load_more_posts_handler() {
     $query = new \WP_Query($args);
 
     if ($query->have_posts()) {
+        add_filter( 'wp_lazy_loading_enabled', '__return_false' );
         ob_start();
         while ($query->have_posts()) : $query->the_post();
             get_template_part('template-parts/post-card', 'vertical', ['hide_excerpt' => true]);
         endwhile;
         $posts_html = ob_get_clean();
+        remove_filter( 'wp_lazy_loading_enabled', '__return_false' );
 
         wp_send_json_success(['html' => $posts_html]);
     } else {
