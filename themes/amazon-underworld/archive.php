@@ -1,6 +1,8 @@
 <?php
 get_header();
-$excluded_ids = [];
+
+$featured_post_query = new WP_Query(['posts_per_page' => 1, 'ignore_sticky_posts' => true, 'fields' => 'ids']);
+$excluded_ids = $featured_post_query->have_posts() ? $featured_post_query->posts : [];
 ?>
 
 <div class="container archive container--wide">
@@ -9,20 +11,11 @@ $excluded_ids = [];
 
             <div class="post-grid-latest-posts__featured">
                 <?php
-            $args_last = [
-                'post_type' => 'post',
-                'posts_per_page' => 1,
-                'ignore_sticky_posts' => true,
-                'no_found_rows' => true
-            ];
-            $last_post_query = new WP_Query($args_last);
-            if ($last_post_query->have_posts()) :
-                while ($last_post_query->have_posts()) : $last_post_query->the_post();
-                    $excluded_ids[] = get_the_ID();
+                if ($featured_post_query->have_posts()) :
+                    $featured_post_query->the_post();
                     get_template_part('template-parts/post-card', 'horizontal', ['hide_excerpt' => false]);
-                endwhile;
+                endif;
                 wp_reset_postdata();
-            endif;
                 ?>
             </div>
 
@@ -36,30 +29,28 @@ $excluded_ids = [];
     <div class="post-grid-filters">
         <main class="posts-grid__content">
             <?php
-
             $paged = get_query_var('paged') ? get_query_var('paged') : 1;
-            $offset = 1;
+            $filter_term = !empty($_GET['filter_term']) ? sanitize_text_field($_GET['filter_term']) : 'all';
 
-            $tax_query = [];
-            if (!empty($_GET['filter_term']) && $_GET['filter_term'] !== 'all') {
-                $tax_query[] = [
-                    'taxonomy' => 'category',
-                    'field'    => 'slug',
-                    'terms'    => sanitize_text_field($_GET['filter_term']),
-                ];
-            }
-
-            $args_filtered = [
+            $args_main = [
                 'post_type'      => 'post',
                 'posts_per_page' => 12,
                 'paged'          => $paged,
                 'post__not_in'   => $excluded_ids,
-                'tax_query'      => $tax_query,
             ];
 
-            $filtered_query = new WP_Query($args_filtered);
-            if ($filtered_query->have_posts()) :
-                while ($filtered_query->have_posts()) : $filtered_query->the_post();
+            if ($filter_term !== 'all') {
+                $args_main['tax_query'] = [[
+                    'taxonomy' => 'category',
+                    'field'    => 'slug',
+                    'terms'    => $filter_term,
+                ]];
+            }
+
+            $main_query = new WP_Query($args_main);
+
+            if ($main_query->have_posts()) :
+                while ($main_query->have_posts()) : $main_query->the_post();
                     get_template_part('template-parts/post-card', 'vertical', ['hide_excerpt' => true]);
                 endwhile;
             else :
@@ -71,15 +62,11 @@ $excluded_ids = [];
     </div>
 
     <?php
-     the_posts_pagination([
-        'prev_text' => __( '<iconify-icon icon="iconamoon:arrow-left-2-bold"></iconify-icon>', 'hacklbr'),
-        'next_text' => __( '<iconify-icon icon="iconamoon:arrow-right-2-bold"></iconify-icon>', 'hacklbr'),
-
-    ]); ?>
-
-
-
-
+        if ($main_query->max_num_pages > 1) {
+        echo '<div id="infinite-scroll-trigger"></div>';
+        }
+        wp_reset_postdata();
+    ?>
 </div><!-- /.container -->
 
 <?php get_footer(); ?>

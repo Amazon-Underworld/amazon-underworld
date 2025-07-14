@@ -365,6 +365,19 @@ class Assets {
                 },
             ],
 
+            'infinite-scroll' => [
+                'file' => 'infinite-scroll.js',
+                'preload_callback' => function () {
+                    return is_archive() || is_home();
+                },
+                'localize_callback' => function(){
+                    return [
+                        'ajaxUrl' => admin_url('admin-ajax.php'),
+                        'nonce'   => wp_create_nonce('hacklabr_load_more_nonce')
+                    ];
+                },
+            ],
+
 			'anchor-sidebar'     => [
 				'file' => 'anchor-sidebar.js',
 				'preload_callback' => function () {
