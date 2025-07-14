@@ -435,6 +435,15 @@
                     }
                 }
 
+                .wp-block-embed-youtube {
+                    display: block !important;
+                    visibility: visible !important;
+                    opacity: 1 !important;
+                    height: auto !important;
+                    width: 100%;
+                    aspect-ratio: 16 / 9;
+                }
+
             }
         }
         .post-footer{
