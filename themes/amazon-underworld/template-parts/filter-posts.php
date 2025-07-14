@@ -41,7 +41,11 @@ if ( $taxonomy_terms && ! is_wp_error( $taxonomy_terms ) ) :
             <?php foreach ($taxonomy_terms as $term) :
                 $active_class = ($selected_term_slug === $term->slug) ? 'active' : '';
 
-                $term_link = add_query_arg('filter_term', $term->slug, $current_url);
+                if ($active_class) {
+                    $term_link = $current_url;
+                } else {
+                    $term_link = add_query_arg('filter_term', $term->slug, $current_url);
+                }
                 $category_class = 'category-' . $term->slug;
             ?>
                 <li>
