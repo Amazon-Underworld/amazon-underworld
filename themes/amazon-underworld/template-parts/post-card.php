@@ -70,7 +70,14 @@ if (!empty($categories)) {
         <div class="post-card__meta">
             <?php if (!$hide_author): ?>
             <div class="post-card__author">
-                <?= _e('by', 'hacklabr') ?> <?php the_author(); ?>
+                <?= _e('by', 'hacklabr') ?>
+                <?php
+                if (function_exists('coauthors_posts_links')) {
+                    coauthors_posts_links();
+                } else {
+                    the_author_posts_link();
+                }
+                ?>
             </div>
             <?php endif; ?>
         </div>
