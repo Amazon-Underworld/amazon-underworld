@@ -9,7 +9,7 @@ on:
       - '*'
 env:
   THEME_NAME: amazon-underworld
-  CURL_URL: https://dev.amazonunderworld.org/
+  CURL_URL: https://amazonunderworld.org/
   DEPLOY: 1
 
 jobs:
@@ -113,5 +113,5 @@ jobs:
       - name: Execute CURL after release
         if: steps.check_asset_availability.outputs.success == 'true' && env.DEPLOY != 0
         run: |
-          curl "${{ env.CURL_URL }}wp-json/git-updater/v1/reset-branch/?key=${{ secrets.GIT_UPDATER_KEY_DEV }}&theme=${{ env.THEME_NAME }}"
-          curl "${{ env.CURL_URL }}wp-json/git-updater/v1/update/?key=${{ secrets.GIT_UPDATER_KEY_DEV }}&theme=${{ env.THEME_NAME }}&tag=${{ env.tag }}&override=true"
+          curl "${{ env.CURL_URL }}wp-json/git-updater/v1/reset-branch/?key=${{ secrets.GIT_UPDATER_KEY }}&theme=${{ env.THEME_NAME }}"
+          curl "${{ env.CURL_URL }}wp-json/git-updater/v1/update/?key=${{ secrets.GIT_UPDATER_KEY }}&theme=${{ env.THEME_NAME }}&tag=${{ env.tag }}&override=true"
