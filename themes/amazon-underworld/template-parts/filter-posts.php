@@ -39,6 +39,11 @@ if ( $taxonomy_terms && ! is_wp_error( $taxonomy_terms ) ) :
 
         <ul class="filter-posts__list">
             <?php foreach ($taxonomy_terms as $term) :
+                $excluded_slugs = ['infoamazonia', 'infoamazonia-pt-br', 'infoamazonia-es'];
+                if (in_array($term->slug, $excluded_slugs)) {
+                    continue;
+                }
+
                 $active_class = ($selected_term_slug === $term->slug) ? 'active' : '';
 
                 if ($active_class) {

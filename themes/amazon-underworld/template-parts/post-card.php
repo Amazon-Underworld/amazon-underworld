@@ -16,9 +16,26 @@ $modifiers = implode(' ', $modifiers);
 
 $categories = get_the_category();
 
-$main_category_class = '';
+$primary_category = null;
 if (!empty($categories)) {
-    $main_category_class = 'category-' . $categories[0]->slug;
+    $primary_category_id = 0;
+
+    if (function_exists('yoast_get_primary_term_id')) {
+        $yoast_id = yoast_get_primary_term_id('category', get_the_ID());
+        if ($yoast_id) {
+            $primary_category_id = $yoast_id;
+        }
+    }
+    if ($primary_category_id > 0) {
+        $primary_category = get_term($primary_category_id, 'category');
+    } else {
+        $primary_category = $categories[0];
+    }
+}
+
+$main_category_class = '';
+if ($primary_category && !is_wp_error($primary_category)) {
+    $main_category_class = 'category-' . $primary_category->slug;
 }
 ?>
 <article id="post-ID-<?php the_ID(); ?>" class="post-card <?php echo $main_category_class; ?> <?=$modifiers?>">
@@ -47,13 +64,11 @@ if (!empty($categories)) {
     </header>
 
     <main class="post-card__content">
-        <?php if (!$hide_categories && !empty($categories)): ?>
+        <?php if (!$hide_categories && $primary_category && !is_wp_error($primary_category)): ?>
             <div class="post-card__category">
-                <?php foreach ($categories as $category): ?>
-                    <a class="tag tag--solid tag--category-<?= $category->slug ?>">
-                        <?= $category->name ?>
-                    </a>
-                <?php endforeach; ?>
+                <a class="tag tag--solid tag--category-<?= esc_attr($primary_category->slug) ?>">
+                    <?= esc_html($primary_category->name) ?>
+                </a>
             </div>
         <?php endif; ?>
 
