@@ -7,6 +7,11 @@
             border-bottom: 1px solid $color--low-dark !important;
             font-size: $font-size--small;
 
+            @include mobile {
+                justify-content: flex-end !important;
+                gap: 1rem !important;
+            }
+
             .text-icon {
                 .layer-icon, .legend-icon {
                     display: none;
@@ -17,11 +22,19 @@
                     font-family: $font-family--primary;
                     font-weight: $font-weight--regular;
                     font-size: $font-size--small;
+
+                    @media (max-width: 800px) {
+                        display: block !important;
+                    }
                 }
             }
 
             .arrow-icon {
                 filter: unset;
+
+                @media (max-width: 800px) {
+                    display: block !important;
+                }
             }
         }
 
