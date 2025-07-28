@@ -7,9 +7,9 @@
             border-bottom: 1px solid $color--low-dark !important;
             font-size: $font-size--small;
 
-            @include mobile {
-                justify-content: flex-end !important;
-                gap: 1rem !important;
+            @media (max-width: 800px) {
+                justify-content: space-between !important;
+                padding: 8px 10px !important;
             }
 
             .text-icon {
@@ -44,6 +44,10 @@
         min-width: 290px !important;
         max-width: 290px !important;
         opacity: 0.7 !important;
+
+        @include mobile {
+            min-width: 250px !important;
+        }
 
         .layers-wrapper {
             a {
@@ -87,6 +91,10 @@
         min-width: 290px !important;
         max-width: 290px !important;
         opacity: 0.7;
+
+        @include mobile {
+            min-width: 250px !important;
+        }
 
         .hideable-content {
             .legends-wrapper {
