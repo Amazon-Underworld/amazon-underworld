@@ -28,6 +28,12 @@
         }
     }
 
+    .wp-block-cover__inner-container{
+        >.wp-block-group{
+            padding-bottom: 88px;
+        }
+    }
+
     .wp-block-image {
         margin-top: 44px !important;
 
@@ -60,5 +66,7 @@
 
     a {
         text-decoration: none !important;
+        letter-spacing: -0.4px;
+        line-height: 1;
     }
 }
