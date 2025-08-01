@@ -183,7 +183,7 @@ function get_posts_by_month( $args = [] ) {
                 '<li id="item-%1$s" class="item item-month-%2$s"><a href="%3$s"><div class="thumb">%4$s</div><div class="title"><h3>%5$s</h3></div></a></li>',
                 get_the_ID(),
                 $month_title,
-                get_permalink( get_the_ID() ),
+                get_custom_permalink( get_the_ID() ),
                 $thumbnail,
                 get_the_title( get_the_ID() )
             );
@@ -245,3 +245,39 @@ function get_main_header(){
 }
 
 add_shortcode('main-header', 'get_main_header');
+
+function get_custom_permalink($post_id = null){
+    if($post_id == null){
+        $post_id = get_the_ID();
+    }
+
+    $mps_link = get_post_meta($post_id, 'external-source-link', true);
+    if(!empty($mps_link) && filter_var($mps_link, FILTER_VALIDATE_URL)) {
+        return $mps_link;
+    }
+
+    $external_link = get_post_meta($post_id, 'external_link', true);
+
+    if(!empty($external_link) && filter_var($external_link, FILTER_VALIDATE_URL)) {
+        return $external_link;
+    }
+
+    return get_permalink($post_id);
+}
+
+add_filter('newspack_blocks_build_articles_query', 'remove_clippings_from_newspack_blocks');
+
+function remove_clippings_from_newspack_blocks($args){
+
+    $meta_query = $args['meta_query'] ?? [];
+
+    $meta_query[] = [
+        'key'   => 'external_link',
+        'value' => 'bug #23268',
+        'compare' => 'NOT EXISTS'
+    ];
+
+    $args['meta_query'] = $meta_query;
+
+    return $args;
+}

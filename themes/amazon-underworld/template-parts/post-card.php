@@ -38,15 +38,6 @@ if ($primary_category && !is_wp_error($primary_category)) {
     $main_category_class = 'category-' . $primary_category->slug;
 }
 
-$external_link = get_post_meta(get_the_ID(), 'external-source-link', true);
-
-if (!empty($external_link) && filter_var($external_link, FILTER_VALIDATE_URL)) {
-    $post_url = $external_link;
-    $link_target = 'target="_blank" rel="noopener noreferrer"';
-} else {
-    $post_url = get_permalink();
-    $link_target = '';
-}
 ?>
 <article id="post-ID-<?php the_ID(); ?>" class="post-card <?php echo $main_category_class; ?> <?=$modifiers?>">
 
@@ -64,7 +55,7 @@ if (!empty($external_link) && filter_var($external_link, FILTER_VALIDATE_URL)) {
     <?php endif; ?>
 
     <header class="post-card__image">
-        <a href="<?php echo esc_url($post_url); ?>" aria-label="<?= esc_attr(get_the_title()) ?>" <?php echo $link_target; ?>>
+        <a href="<?php echo get_custom_permalink(); ?>" aria-label="<?= esc_attr(get_the_title()) ?>">
             <?php if (has_post_thumbnail()): ?>
                 <?php the_post_thumbnail($image_size); ?>
             <?php else: ?>
@@ -83,7 +74,7 @@ if (!empty($external_link) && filter_var($external_link, FILTER_VALIDATE_URL)) {
         <?php endif; ?>
 
         <h3 class="post-card__title">
-            <a href="<?php echo esc_url($post_url); ?>" <?php echo $link_target; ?>><?php the_title();?></a>
+            <a href="<?php echo get_custom_permalink(); ?>"><?php the_title();?></a>
         </h3>
 
         <?php if (!$hide_excerpt): ?>

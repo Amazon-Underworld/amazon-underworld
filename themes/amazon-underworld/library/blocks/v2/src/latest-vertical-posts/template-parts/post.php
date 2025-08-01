@@ -10,7 +10,7 @@ $show_date      = isset( $args['attributes']['showDate'] ) ? $args['attributes']
 
 ?>
 
-<a href="<?php echo get_permalink(); ?>">
+<a href="<?php echo get_custom_permalink(); ?>">
     <div class="post">
         <?php if ( 'numbered' === $block_model ) : ?>
             <div class="post-number">
