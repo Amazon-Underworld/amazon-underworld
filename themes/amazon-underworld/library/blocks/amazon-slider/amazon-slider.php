@@ -6,17 +6,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 function render_amazon_slider_callback( $attributes ) {
-    $category_slugs_string          = $attributes['categorySlugs'] ?? 'infoamazonia';
+
+    global $newspack_blocks_post_id;
+
+    $category_slugs_string          = $attributes['categorySlugs'] ?? '';
     $number_of_posts        = $attributes['numberOfPosts'] ?? 11;
     $order_by               = $attributes['orderBy'] ?? 'date';
     $order                  = $attributes['order'] ?? 'DESC';
-    $external_link_meta_key = $attributes['externalLinkMetaKey'] ?? 'infoamazonia_redirect_url';
-    $display_author_meta_key = $attributes['displayAuthorMetaKey'] ?? 'displayed_author_name';
 
+    $display_author_meta_key = $attributes['displayAuthorMetaKey'] ?? 'displayed_author_name';
     $slides_desktop     = $attributes['slidesPerViewDesktop'] ?? 4;
     $slides_tablet      = $attributes['slidesPerViewTablet'] ?? 2;
     $slides_mobile      = $attributes['slidesPerViewMobile'] ?? 1;
-    $loop_slides        = $attributes['loopSlides'] ?? true;
+    $loop_slides        = $attributes['loopSlides'] ?? false;
 
     $query_args = [
         'post_type'      => 'post',
@@ -24,6 +26,7 @@ function render_amazon_slider_callback( $attributes ) {
         'orderby'        => $order_by,
         'order'          => $order,
         'post_status'    => 'publish',
+        'post__not_in'    => array_keys($newspack_blocks_post_id),
     ];
 
     if ( ! empty( $category_slugs_string ) ) {
@@ -58,14 +61,6 @@ function render_amazon_slider_callback( $attributes ) {
             <?php while ( $slider_posts_query->have_posts() ) : $slider_posts_query->the_post(); ?>
                 <?php
                 $current_post_id = get_the_ID();
-                $external_url = get_post_meta( $current_post_id, $external_link_meta_key, true );
-
-                if ( empty( $external_url ) || ! filter_var( $external_url, FILTER_VALIDATE_URL ) ) {
-                    if ( current_user_can( 'edit_posts' ) ) {
-                        error_log("Amazon Slider: External URL missing or invalid for post ID {$current_post_id} with meta key '{$external_link_meta_key}'.");
-                    }
-                     continue;
-                }
 
                 $image_url    = get_the_post_thumbnail_url( $current_post_id, 'large' );
                 $image_alt    = get_post_meta( get_post_thumbnail_id( $current_post_id ), '_wp_attachment_image_alt', true ) ?: get_the_title( $current_post_id );
@@ -110,7 +105,7 @@ function render_amazon_slider_callback( $attributes ) {
                 }
                 ?>
                 <div class="amazon-slide-item <?php echo esc_attr( $category_css_class ); ?>">
-                    <a href="<?php echo esc_url( $external_url ); ?>" target="_blank" rel="noopener noreferrer" class="amazon-slide-link">
+                    <a href="<?php echo get_custom_permalink(); ?>" class="amazon-slide-link">
                         <div class="amazon-slide-image-container">
                             <?php if ( $image_url ) : ?>
                                 <img src="<?php echo esc_url( $image_url ); ?>" alt="<?php echo esc_attr( $image_alt ); ?>" class="amazon-slide-image" loading="lazy"/>

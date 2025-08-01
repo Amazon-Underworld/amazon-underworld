@@ -19,7 +19,6 @@ export default function Edit({ attributes, setAttributes }) {
         numberOfPosts,
         orderBy,
         order,
-        externalLinkMetaKey,
         displayAuthorMetaKey,
         slidesPerViewDesktop,
         slidesPerViewTablet,
@@ -71,14 +70,6 @@ export default function Edit({ attributes, setAttributes }) {
                             { label: __('Ascending (ASC)', 'hacklabr'), value: 'ASC' },
                         ]}
                             onChange={(value) => setAttributes({ order: value })}
-                        />
-                    </PanelRow>
-                    <PanelRow>
-                        <TextControl
-                            label={__('External Link Custom Field Name', 'hacklabr')}
-                            value={externalLinkMetaKey}
-                            onChange={(value) => setAttributes({ externalLinkMetaKey: value })}
-                            help={__('E.g., infoamazonia_redirect_url. This field on each post must contain the full external URL.', 'hacklabr')}
                         />
                     </PanelRow>
                     <PanelRow>

@@ -12,7 +12,7 @@
     "attributes": {
         "categorySlug": {
             "type": "string",
-            "default": "infoamazonia"
+            "default": ""
         },
         "numberOfPosts": {
             "type": "number",
@@ -26,10 +26,6 @@
             "type": "string",
             "default": "DESC"
         },
-        "externalLinkMetaKey": {
-            "type": "string",
-            "default": "infoamazonia_redirect_url"
-        },
         "displayAuthorMetaKey": {
             "type": "string",
             "default": "displayed_author_name"
@@ -37,7 +33,7 @@
         "slidesPerViewDesktop": { "type": "number", "default": 3 },
         "slidesPerViewTablet":  { "type": "number", "default": 2 },
         "slidesPerViewMobile":  { "type": "number", "default": 1 },
-        "loopSlides":         { "type": "boolean", "default": true }
+        "loopSlides":         { "type": "boolean", "default": false }
     },
     "editorScript": ["file:../../../dist/blocks/amazon-slider/editor.js"],
     "editorStyle": ["file:../../../dist/blocks/amazon-slider/editor.css"],
