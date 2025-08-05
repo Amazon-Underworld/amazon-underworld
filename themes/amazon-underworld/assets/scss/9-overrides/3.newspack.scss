@@ -182,13 +182,14 @@
 
         h3{
             letter-spacing: -1%;
-            font-size: 30px;
+            font-size: 30px !important;
+            letter-spacing: -0.3px !important;
             a{
                 text-decoration: none;
             }
 
             @include mobile{
-                font-size: $font-size--medium;
+                font-size: 24px !important;
             }
         }
 
