@@ -37,6 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         function applyDotsContent() {
+            // Adiciona título à paginação
+            const titlePagination = document.createElement('span');
+            titlePagination.innerText = 'Most featured';
+            titlePagination.classList.add('most-featured');
+            pagination.prepend(titlePagination);
             const dots = pagination.querySelectorAll('button');
             dots.forEach((dot, index) => {
                 if (!dot.querySelector('img') && articles[index]) {
@@ -58,6 +63,26 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         observer.observe(pagination, { childList: true, subtree: true });
+
+        // Cria botão Read More com o link da matéria
+        const contentWrappers = wrapper.querySelectorAll('.entry-wrapper');
+        contentWrappers.forEach(contentWrapper =>{
+            const readMore = document.createElement('button');
+            readMore.classList.add('read-more');
+
+
+            const link = contentWrapper.querySelector('.entry-title a');
+            const url = link.getAttribute('href');
+
+            const buttonLink = document.createElement('a');
+            buttonLink.setAttribute('href', url);
+            readMore.appendChild(buttonLink);
+            buttonLink.innerText = 'Read More';
+
+            contentWrapper.appendChild(readMore);
+
+        });
+
 
     }, 50, 5000);
 

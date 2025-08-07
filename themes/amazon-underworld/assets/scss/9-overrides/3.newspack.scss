@@ -4,6 +4,8 @@
     .swiper-wrapper{
         .post{
             .entry-wrapper{
+                display: flex;
+                flex-flow: column;
                 background-color: transparent;
                 margin-inline: auto;
                 top: 22%;
@@ -65,6 +67,33 @@
                             pointer-events: none;
                             cursor: default;
                         }
+                    }
+                }
+
+                .read-more{
+                    margin-inline: auto;
+                    width: 122px;
+                    height: 34px;
+                    border-radius: 55px;
+                    background-color: $color--high-light;
+                    text-transform: uppercase;
+                    font-family: $font-family--secondary;
+                    padding: 10x 24px;
+                    margin-top: 2rem;
+                    font-size: $font-size--small;
+                    letter-spacing: -0.7px;
+                    line-height: 1;
+                    @include mobile{
+                        width: 103px;
+                        margin-top: 1rem;
+                        font-size: $font-size--x-small;
+                        letter-spacing: -0.12px;
+                    }
+                    >a{
+                        width: 100%;
+                        cursor: pointer;
+                        text-decoration: none;
+                        color: $color--secondary-light;
                     }
                 }
             }
@@ -129,7 +158,6 @@
                 }
                 &-title{
                     color: $color--high-light;
-                    // text-transform: capitalize;
                     font-family: $font-family--primary;
                     font-size: $font-size--medium;
                     display: -webkit-box;
@@ -145,10 +173,28 @@
 
             }
 
+            &:first-of-type{
+                border-left: none !important;
+            }
+
         }
-        :first-child{
-            border-left: none !important;
+
+        .most-featured{
+            color: $color--high-pure;
+            font-size: $font-size--small;
+            text-transform: uppercase;
+            font-family: $font-family--secondary;
+            letter-spacing: -0.7px;
+            line-height: 1;
+            border: none;
+            position: absolute;
+            left: 2rem;
+
+            @include mobile{
+                display: none;
+            }
         }
+
     }
 }
 
