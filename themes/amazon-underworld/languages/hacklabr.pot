@@ -2,21 +2,21 @@
 # This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: hacklabr 0.12.11\n"
+"Project-Id-Version: amazon-underworld 1.4.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/amazon-underworld\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2025-07-07T12:23:01+00:00\n"
+"POT-Creation-Date: 2025-08-08T17:33:17+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: hacklabr\n"
 
 #. Theme Name of the theme
 #: style.css
-msgid "hacklabr"
+msgid "amazon-underworld"
 msgstr ""
 
 #. Theme URI of the theme
@@ -51,15 +51,20 @@ msgstr ""
 msgid "GO TO HOME"
 msgstr ""
 
-#: author.php:64
+#: archive.php:57
+msgid "Nenhum post encontrado."
+msgstr ""
+
+#: author.php:59
 msgid "Linkedin, "
 msgstr ""
 
-#: author.php:65
+#: author.php:60
 msgid "Instagram, "
 msgstr ""
 
-#: author.php:66
+#: author.php:61
+#: template-parts/title/author.php:28
 msgid "Facebook"
 msgstr ""
 
@@ -111,16 +116,16 @@ msgstr ""
 msgid "Toggle menu visibility"
 msgstr ""
 
-#: header-lateral.php:66
-#: template-parts/main-header.php:51
+#: header-lateral.php:65
+#: template-parts/main-header.php:52
 msgid "Follow us"
 msgstr ""
 
-#: library/blocks/amazon-slider/amazon-slider.php:37
+#: library/blocks/amazon-slider/amazon-slider.php:40
 msgid "No posts found for category slug \"%s\". Please check block settings and ensure posts have the category and the custom field for external links."
 msgstr ""
 
-#: library/blocks/amazon-slider/amazon-slider.php:118
+#: library/blocks/amazon-slider/amazon-slider.php:113
 #: dist/blocks/banner-with-image/editor.js:29
 #: dist/blocks/banner-with-image/editor.js:39
 #: dist/blocks/card-header/editor.js:29
@@ -132,17 +137,17 @@ msgstr ""
 msgid "Image"
 msgstr ""
 
-#: library/blocks/amazon-slider/amazon-slider.php:129
+#: library/blocks/amazon-slider/amazon-slider.php:124
 msgid "by %s"
 msgstr ""
 
-#: library/blocks/amazon-slider/amazon-slider.php:140
-#: library/blocks/amazon-slider/amazon-slider.php:141
+#: library/blocks/amazon-slider/amazon-slider.php:135
+#: library/blocks/amazon-slider/amazon-slider.php:136
 msgid "Previous slide"
 msgstr ""
 
-#: library/blocks/amazon-slider/amazon-slider.php:143
-#: library/blocks/amazon-slider/amazon-slider.php:144
+#: library/blocks/amazon-slider/amazon-slider.php:138
+#: library/blocks/amazon-slider/amazon-slider.php:139
 msgid "Next slide"
 msgstr ""
 
@@ -226,6 +231,7 @@ msgid "Check the API Key or playlist ID"
 msgstr ""
 
 #: library/blocks/v2/src/latest-vertical-posts/template-parts/post.php:64
+#: template-parts/post-card.php:89
 msgid "by"
 msgstr ""
 
@@ -295,16 +301,8 @@ msgstr ""
 
 #: single-policy-paper.php:83
 #: single-policy-paper.php:110
-#: single.php:76
+#: single.php:75
 msgid "Tags"
-msgstr ""
-
-#: single.php:95
-msgid "Amazon Underworld is a joint investigation by InfoAmazonia (Brazil), Armando.Info (Venezuela), and La Liga Contra el Silencio (Colombia). The work is in collaboration with the Pulitzer Center`s Rainforest Research Network and is funded by the Open Society Foundation, the UK Foreign and Commonwealth Office, and the International Union for Conservation of Nature (IUCN NL)."
-msgstr ""
-
-#: single.php:98
-msgid "Go to top"
 msgstr ""
 
 #. Template Name of the theme
@@ -337,6 +335,14 @@ msgstr ""
 msgid "Explore more "
 msgstr ""
 
+#: template-parts/filter-posts.php:10
+msgid "Filter by"
+msgstr ""
+
+#: template-parts/filter-posts.php:30
+msgid "FILTER BY"
+msgstr ""
+
 #: template-parts/search-form.php:3
 msgid "Search"
 msgstr ""
@@ -357,8 +363,16 @@ msgstr ""
 msgid " Results Found"
 msgstr ""
 
-#: template-parts/title/author.php:6
-msgid "Author: %s"
+#: template-parts/title/author.php:22
+msgid "Linkedin"
+msgstr ""
+
+#: template-parts/title/author.php:25
+msgid "Instagram"
+msgstr ""
+
+#: template-parts/title/author.php:31
+msgid " Articles"
 msgstr ""
 
 #: template-parts/title/post-header.php:31
@@ -366,121 +380,109 @@ msgid "By "
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:35
+#: library/blocks/amazon-slider/editor.js:34
 #: dist/blocks/amazon-slider/editor.js:103
 msgid "Content Source Settings"
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:38
+#: library/blocks/amazon-slider/editor.js:37
 #: dist/blocks/amazon-slider/editor.js:106
 msgid "Category Slugs (comma-separated)"
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:41
+#: library/blocks/amazon-slider/editor.js:40
 #: dist/blocks/amazon-slider/editor.js:109
 msgid "Enter one or more category slugs, separated by commas (e.g., \"news,events\")."
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:46
+#: library/blocks/amazon-slider/editor.js:45
 #: dist/blocks/amazon-slider/editor.js:114
 msgid "Number of Posts"
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:55
+#: library/blocks/amazon-slider/editor.js:54
 #: dist/blocks/amazon-slider/editor.js:123
 msgid "Order By"
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:58
+#: library/blocks/amazon-slider/editor.js:57
 #: dist/blocks/amazon-slider/editor.js:126
 msgid "Date"
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:59
+#: library/blocks/amazon-slider/editor.js:58
 #: dist/blocks/amazon-slider/editor.js:127
 msgid "Title"
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:60
+#: library/blocks/amazon-slider/editor.js:59
 #: dist/blocks/amazon-slider/editor.js:128
 msgid "Random"
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:67
+#: library/blocks/amazon-slider/editor.js:66
 #: dist/blocks/amazon-slider/editor.js:135
 msgid "Order"
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:70
+#: library/blocks/amazon-slider/editor.js:69
 #: dist/blocks/amazon-slider/editor.js:138
 msgid "Descending (DESC)"
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:71
+#: library/blocks/amazon-slider/editor.js:70
 #: dist/blocks/amazon-slider/editor.js:139
 msgid "Ascending (ASC)"
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:78
-#: dist/blocks/amazon-slider/editor.js:146
-msgid "External Link Custom Field Name"
-msgstr ""
-
-#: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:81
-#: dist/blocks/amazon-slider/editor.js:149
-msgid "E.g., infoamazonia_redirect_url. This field on each post must contain the full external URL."
-msgstr ""
-
-#: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:86
+#: library/blocks/amazon-slider/editor.js:77
 #: dist/blocks/amazon-slider/editor.js:154
 msgid "Display Author Meta Key"
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:89
+#: library/blocks/amazon-slider/editor.js:80
 #: dist/blocks/amazon-slider/editor.js:157
 msgid "E.g., displayed_author_name. This field on each post must contain the author name to display."
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:94
+#: library/blocks/amazon-slider/editor.js:85
 #: dist/blocks/amazon-slider/editor.js:162
 msgid "Slider Layout Settings"
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:97
+#: library/blocks/amazon-slider/editor.js:88
 #: dist/blocks/amazon-slider/editor.js:165
 msgid "Infinite Loop"
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:104
+#: library/blocks/amazon-slider/editor.js:95
 #: dist/blocks/amazon-slider/editor.js:172
 msgid "Slides Per View (Desktop)"
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:112
+#: library/blocks/amazon-slider/editor.js:103
 #: dist/blocks/amazon-slider/editor.js:180
 msgid "Slides Per View (Tablet)"
 msgstr ""
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:120
+#: library/blocks/amazon-slider/editor.js:111
 #: dist/blocks/amazon-slider/editor.js:188
 msgid "Slides Per View (Mobile)"
 msgstr ""
@@ -805,6 +807,14 @@ msgstr ""
 #: dist/js/functionalities/gutenberg.js:29
 #: dist/js/functionalities/gutenberg.js:2510
 msgid "Iconify ID"
+msgstr ""
+
+#: dist/js/functionalities/main-slider.js:19
+msgid "Most featured"
+msgstr ""
+
+#: dist/js/functionalities/main-slider.js:19
+msgid "Read More"
 msgstr ""
 
 #: library/blocks/v2/build/events-from-mapas-culturais/index.js:77
@@ -1244,6 +1254,14 @@ msgstr ""
 #: library/blocks/v2/src/opportunities-from-mapas-culturais/edit.js:71
 #: library/blocks/v2/build/opportunities-from-mapas-culturais/index.js:71
 msgid "Opportunities to display"
+msgstr ""
+
+#: dist/blocks/amazon-slider/editor.js:146
+msgid "External Link Custom Field Name"
+msgstr ""
+
+#: dist/blocks/amazon-slider/editor.js:149
+msgid "E.g., infoamazonia_redirect_url. This field on each post must contain the full external URL."
 msgstr ""
 
 #: library/blocks/amazon-slider/block.json

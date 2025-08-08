@@ -4,8 +4,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: hacklabr 0.9.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/amazon-underworld\n"
-"POT-Creation-Date: 2025-07-07T12:23:01+00:00\n"
-"PO-Revision-Date: 2025-07-07 09:34-0300\n"
+"POT-Creation-Date: 2025-08-08T17:33:17+00:00\n"
+"PO-Revision-Date: 2025-08-08 14:35-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: es_ES\n"
@@ -18,8 +18,8 @@ msgstr ""
 
 #. Theme Name of the theme
 #: style.css
-msgid "hacklabr"
-msgstr "hacklabr"
+msgid "amazon-underworld"
+msgstr ""
 
 #. Theme URI of the theme
 #. Author URI of the theme
@@ -55,15 +55,19 @@ msgstr ""
 msgid "GO TO HOME"
 msgstr "IR A HOME"
 
-#: author.php:64
+#: archive.php:57
+msgid "Nenhum post encontrado."
+msgstr ""
+
+#: author.php:59
 msgid "Linkedin, "
 msgstr ""
 
-#: author.php:65
+#: author.php:60
 msgid "Instagram, "
 msgstr ""
 
-#: author.php:66
+#: author.php:61 template-parts/title/author.php:28
 msgid "Facebook"
 msgstr ""
 
@@ -113,11 +117,11 @@ msgstr "Activar o desactivar la visibilidad del formulario de búsqueda"
 msgid "Toggle menu visibility"
 msgstr "Activar o desactivar la visibilidad del menú"
 
-#: header-lateral.php:66 template-parts/main-header.php:51
+#: header-lateral.php:65 template-parts/main-header.php:52
 msgid "Follow us"
 msgstr "Síganos"
 
-#: library/blocks/amazon-slider/amazon-slider.php:37
+#: library/blocks/amazon-slider/amazon-slider.php:40
 msgid ""
 "No posts found for category slug \"%s\". Please check block settings and "
 "ensure posts have the category and the custom field for external links."
@@ -126,7 +130,7 @@ msgstr ""
 "configuración del bloque y asegúrese de que las publicaciones tengan la "
 "categoría y el campo personalizado para enlaces externos."
 
-#: library/blocks/amazon-slider/amazon-slider.php:118
+#: library/blocks/amazon-slider/amazon-slider.php:113
 #: dist/blocks/banner-with-image/editor.js:29
 #: dist/blocks/banner-with-image/editor.js:39
 #: dist/blocks/card-header/editor.js:29
@@ -138,17 +142,17 @@ msgstr ""
 msgid "Image"
 msgstr "Imagen"
 
-#: library/blocks/amazon-slider/amazon-slider.php:129
+#: library/blocks/amazon-slider/amazon-slider.php:124
 msgid "by %s"
 msgstr "por %s"
 
-#: library/blocks/amazon-slider/amazon-slider.php:140
-#: library/blocks/amazon-slider/amazon-slider.php:141
+#: library/blocks/amazon-slider/amazon-slider.php:135
+#: library/blocks/amazon-slider/amazon-slider.php:136
 msgid "Previous slide"
 msgstr "Slide anterior"
 
-#: library/blocks/amazon-slider/amazon-slider.php:143
-#: library/blocks/amazon-slider/amazon-slider.php:144
+#: library/blocks/amazon-slider/amazon-slider.php:138
+#: library/blocks/amazon-slider/amazon-slider.php:139
 msgid "Next slide"
 msgstr "Slide siguiente"
 
@@ -234,6 +238,7 @@ msgid "Check the API Key or playlist ID"
 msgstr "Verifique la clave API o el ID de la lista de reproducción"
 
 #: library/blocks/v2/src/latest-vertical-posts/template-parts/post.php:64
+#: template-parts/post-card.php:89
 msgid "by"
 msgstr "por"
 
@@ -301,28 +306,9 @@ msgstr "Español"
 msgid "Português"
 msgstr "Português"
 
-#: single-policy-paper.php:83 single-policy-paper.php:110 single.php:76
+#: single-policy-paper.php:83 single-policy-paper.php:110 single.php:75
 msgid "Tags"
 msgstr "Tags"
-
-#: single.php:95
-msgid ""
-"Amazon Underworld is a joint investigation by InfoAmazonia (Brazil), Armando."
-"Info (Venezuela), and La Liga Contra el Silencio (Colombia). The work is in "
-"collaboration with the Pulitzer Center`s Rainforest Research Network and is "
-"funded by the Open Society Foundation, the UK Foreign and Commonwealth "
-"Office, and the International Union for Conservation of Nature (IUCN NL)."
-msgstr ""
-"Amazon Underworld es una investigación conjunta de InfoAmazonia (Brasil), "
-"Armando.Info (Venezuela) y La Liga Contra el Silencio (Colombia). El trabajo "
-"se realiza en colaboración con la Red de Investigaciones de la Selva "
-"Tropical del Pulitzer Center y está financiado por la Open Society "
-"Foundation y la Oficina de Asuntos Exteriores y del Commonwealth del Reino "
-"Unido y por la International Union for Conservation of Nature (IUCN NL)."
-
-#: single.php:98
-msgid "Go to top"
-msgstr "Ir arriba"
 
 #. Template Name of the theme
 msgid "Component Inventory"
@@ -358,6 +344,16 @@ msgstr "Explora más contenido"
 msgid "Explore more "
 msgstr "Explorar más "
 
+#: template-parts/filter-posts.php:10
+#, fuzzy
+#| msgid "Filter posts by terms"
+msgid "Filter by"
+msgstr "Filtrar publicaciones por términos"
+
+#: template-parts/filter-posts.php:30
+msgid "FILTER BY"
+msgstr ""
+
 #: template-parts/search-form.php:3
 msgid "Search"
 msgstr "Buscar"
@@ -378,28 +374,36 @@ msgstr "sitio web por"
 msgid " Results Found"
 msgstr " Resultados encontrados"
 
-#: template-parts/title/author.php:6
-msgid "Author: %s"
-msgstr "Autor"
+#: template-parts/title/author.php:22
+msgid "Linkedin"
+msgstr ""
+
+#: template-parts/title/author.php:25
+msgid "Instagram"
+msgstr ""
+
+#: template-parts/title/author.php:31
+msgid " Articles"
+msgstr ""
 
 #: template-parts/title/post-header.php:31
 msgid "By "
 msgstr "Por "
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:35
+#: library/blocks/amazon-slider/editor.js:34
 #: dist/blocks/amazon-slider/editor.js:103
 msgid "Content Source Settings"
 msgstr "Configuración de fuente de contenido"
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:38
+#: library/blocks/amazon-slider/editor.js:37
 #: dist/blocks/amazon-slider/editor.js:106
 msgid "Category Slugs (comma-separated)"
 msgstr "Slugs de categoría (separados por comas)"
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:41
+#: library/blocks/amazon-slider/editor.js:40
 #: dist/blocks/amazon-slider/editor.js:109
 msgid ""
 "Enter one or more category slugs, separated by commas (e.g., \"news,"
@@ -409,77 +413,61 @@ msgstr ""
 "\"noticias, eventos\")."
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:46
+#: library/blocks/amazon-slider/editor.js:45
 #: dist/blocks/amazon-slider/editor.js:114
 msgid "Number of Posts"
 msgstr "Número de publicaciones"
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:55
+#: library/blocks/amazon-slider/editor.js:54
 #: dist/blocks/amazon-slider/editor.js:123
 msgid "Order By"
 msgstr "Ordenar por"
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:58
+#: library/blocks/amazon-slider/editor.js:57
 #: dist/blocks/amazon-slider/editor.js:126
 msgid "Date"
 msgstr "Fecha"
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:59
+#: library/blocks/amazon-slider/editor.js:58
 #: dist/blocks/amazon-slider/editor.js:127
 msgid "Title"
 msgstr "Título"
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:60
+#: library/blocks/amazon-slider/editor.js:59
 #: dist/blocks/amazon-slider/editor.js:128
 msgid "Random"
 msgstr "Aleatorio"
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:67
+#: library/blocks/amazon-slider/editor.js:66
 #: dist/blocks/amazon-slider/editor.js:135
 msgid "Order"
 msgstr "Orden"
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:70
+#: library/blocks/amazon-slider/editor.js:69
 #: dist/blocks/amazon-slider/editor.js:138
 msgid "Descending (DESC)"
 msgstr "Descendente (DESC)"
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:71
+#: library/blocks/amazon-slider/editor.js:70
 #: dist/blocks/amazon-slider/editor.js:139
 msgid "Ascending (ASC)"
 msgstr "Ascendente (ASC)"
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:78
-#: dist/blocks/amazon-slider/editor.js:146
-msgid "External Link Custom Field Name"
-msgstr "Nombre del campo personalizado de enlace externo"
-
-#: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:81
-#: dist/blocks/amazon-slider/editor.js:149
-msgid ""
-"E.g., infoamazonia_redirect_url. This field on each post must contain the "
-"full external URL."
-msgstr ""
-"Por ejemplo, infoamazonia_redirect_url. Este campo en cada publicación debe "
-"contener la URL externa completa."
-
-#: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:86
+#: library/blocks/amazon-slider/editor.js:77
 #: dist/blocks/amazon-slider/editor.js:154
 msgid "Display Author Meta Key"
 msgstr "Mostrar clave meta del autor"
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:89
+#: library/blocks/amazon-slider/editor.js:80
 #: dist/blocks/amazon-slider/editor.js:157
 msgid ""
 "E.g., displayed_author_name. This field on each post must contain the author "
@@ -489,31 +477,31 @@ msgstr ""
 "contener el nombre del autor para que se muestre."
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:94
+#: library/blocks/amazon-slider/editor.js:85
 #: dist/blocks/amazon-slider/editor.js:162
 msgid "Slider Layout Settings"
 msgstr "Configuración del diseño del slider"
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:97
+#: library/blocks/amazon-slider/editor.js:88
 #: dist/blocks/amazon-slider/editor.js:165
 msgid "Infinite Loop"
 msgstr "Bucle infinito"
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:104
+#: library/blocks/amazon-slider/editor.js:95
 #: dist/blocks/amazon-slider/editor.js:172
 msgid "Slides Per View (Desktop)"
 msgstr "Diapositivas por vista (Escritorio)"
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:112
+#: library/blocks/amazon-slider/editor.js:103
 #: dist/blocks/amazon-slider/editor.js:180
 msgid "Slides Per View (Tablet)"
 msgstr "Diapositivas por vista (tableta)"
 
 #: dist/blocks/amazon-slider/editor.js:19
-#: library/blocks/amazon-slider/editor.js:120
+#: library/blocks/amazon-slider/editor.js:111
 #: dist/blocks/amazon-slider/editor.js:188
 msgid "Slides Per View (Mobile)"
 msgstr "Diapositivas por vista (móvil)"
@@ -803,6 +791,14 @@ msgstr "Leer más"
 #: dist/js/functionalities/gutenberg.js:2510
 msgid "Iconify ID"
 msgstr "ID Iconify"
+
+#: dist/js/functionalities/main-slider.js:19
+msgid "Most featured"
+msgstr "Más destacados"
+
+#: dist/js/functionalities/main-slider.js:19
+msgid "Read More"
+msgstr "Leer más"
 
 #: library/blocks/v2/build/events-from-mapas-culturais/index.js:77
 #: library/blocks/v2/build/latest-horizontal-posts/index.js:489
@@ -1243,6 +1239,18 @@ msgstr "ID de lista de reproducción de YouTube"
 msgid "Opportunities to display"
 msgstr "Oportunidades para exhibir"
 
+#: dist/blocks/amazon-slider/editor.js:146
+msgid "External Link Custom Field Name"
+msgstr "Nombre del campo personalizado de enlace externo"
+
+#: dist/blocks/amazon-slider/editor.js:149
+msgid ""
+"E.g., infoamazonia_redirect_url. This field on each post must contain the "
+"full external URL."
+msgstr ""
+"Por ejemplo, infoamazonia_redirect_url. Este campo en cada publicación debe "
+"contener la URL externa completa."
+
 #: library/blocks/amazon-slider/block.json
 msgctxt "block title"
 msgid "Amazon Slider (InfoAmazônia Reports)"
@@ -1568,6 +1576,31 @@ msgstr "Ayudante"
 msgctxt "Font family name"
 msgid "Helper"
 msgstr "Ayudante"
+
+#~ msgid "hacklabr"
+#~ msgstr "hacklabr"
+
+#~ msgid ""
+#~ "Amazon Underworld is a joint investigation by InfoAmazonia (Brazil), "
+#~ "Armando.Info (Venezuela), and La Liga Contra el Silencio (Colombia). The "
+#~ "work is in collaboration with the Pulitzer Center`s Rainforest Research "
+#~ "Network and is funded by the Open Society Foundation, the UK Foreign and "
+#~ "Commonwealth Office, and the International Union for Conservation of "
+#~ "Nature (IUCN NL)."
+#~ msgstr ""
+#~ "Amazon Underworld es una investigación conjunta de InfoAmazonia (Brasil), "
+#~ "Armando.Info (Venezuela) y La Liga Contra el Silencio (Colombia). El "
+#~ "trabajo se realiza en colaboración con la Red de Investigaciones de la "
+#~ "Selva Tropical del Pulitzer Center y está financiado por la Open Society "
+#~ "Foundation y la Oficina de Asuntos Exteriores y del Commonwealth del "
+#~ "Reino Unido y por la International Union for Conservation of Nature (IUCN "
+#~ "NL)."
+
+#~ msgid "Go to top"
+#~ msgstr "Ir arriba"
+
+#~ msgid "Author: %s"
+#~ msgstr "Autor"
 
 #~ msgid "error"
 #~ msgstr "error"

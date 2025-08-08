@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         function applyDotsContent() {
             // Adiciona título à paginação
             const titlePagination = document.createElement('span');
-            titlePagination.innerText = 'Most featured';
+            titlePagination.innerText = __( 'Most featured', 'hacklabr' );
             titlePagination.classList.add('most-featured');
             pagination.prepend(titlePagination);
             const dots = pagination.querySelectorAll('button');
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const buttonLink = document.createElement('a');
             buttonLink.setAttribute('href', url);
             readMore.appendChild(buttonLink);
-            buttonLink.innerText = 'Read More';
+            buttonLink.innerText = __( 'Read More', 'hacklabr' );
 
             contentWrapper.appendChild(readMore);
 
