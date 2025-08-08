@@ -1,4 +1,5 @@
 import { waitUntil } from '../shared/wait';
+import { __ } from '@wordpress/i18n';
 
 document.addEventListener('DOMContentLoaded', function () {
 
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         function applyDotsContent() {
             // Adiciona título à paginação
             const titlePagination = document.createElement('span');
-            titlePagination.innerText = __( 'Most featured', 'hacklabr' );
+            titlePagination.innerText = 'Most featured';
             titlePagination.classList.add('most-featured');
             pagination.prepend(titlePagination);
             const dots = pagination.querySelectorAll('button');
