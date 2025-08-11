@@ -453,7 +453,7 @@ class Assets {
             'progress-bar' => [
 				'file'   => 'progress-bar.js',
 				'preload_callback' => function () {
-					return is_singular();
+					return !is_front_page() && is_singular();
 				}
 			],
  		];
