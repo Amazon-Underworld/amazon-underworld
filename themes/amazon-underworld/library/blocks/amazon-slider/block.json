@@ -2,11 +2,11 @@
     "$schema": "https://schemas.wp.org/trunk/block.json",
     "apiVersion": 3,
     "name": "hacklabr/amazon-slider",
-    "title": "Amazon Slider (InfoAmazônia Reports)",
+    "title": "Reports Slider - Multiple Sources",
     "category": "media",
     "description": "Displays a carousel of Infoamazônia reports from WordPress posts, linking externally.",
     "icon": "images-alt2",
-    "keywords": ["slider", "carousel", "reports", "infoamazonia", "amazon", "posts"],
+    "keywords": ["slider", "carousel", "reports", "amazon", "posts"],
     "version": "0.1.0",
     "textdomain": "hacklabr",
     "attributes": {
