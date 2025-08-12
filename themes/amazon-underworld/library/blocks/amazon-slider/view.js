@@ -52,8 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
             sliderOptions.controlsText = ['‹', '›'];
         }
 
-        console.log('Attempting to initialize Tiny Slider on:', sliderEl);
-        console.log('Tiny Slider Options:', sliderOptions);
         if (typeof tns === 'undefined') {
             console.error('FATAL: tns (tiny-slider) function is not defined! Ensure tiny-slider JS is loaded.');
             return;
@@ -61,7 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         try {
             const sliderInstance = tns(sliderOptions);
-            console.log('Tiny Slider initialized:', sliderInstance);
         } catch (e) {
             console.error("Error initializing Tiny Slider for amazon-slider:", e, sliderEl);
         }

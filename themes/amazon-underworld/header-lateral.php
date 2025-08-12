@@ -59,7 +59,6 @@
         <div class="main-header-lateral__mobile-content">
             <div class="main-header-lateral__mobile-content-main">
             <?php
-                get_template_part('template-parts/search-form');
                 wp_nav_menu(['theme_location' => 'main-menu', 'container' => 'nav', 'menu_class' => 'menu', 'container_class' => 'main-header-lateral__menu-mobile']); ?>
             </div>
             <div class="main-header-lateral__mobile-social">

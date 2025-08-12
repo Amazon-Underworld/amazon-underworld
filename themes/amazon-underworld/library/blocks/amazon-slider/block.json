@@ -2,17 +2,17 @@
     "$schema": "https://schemas.wp.org/trunk/block.json",
     "apiVersion": 3,
     "name": "hacklabr/amazon-slider",
-    "title": "Amazon Slider (InfoAmazônia Reports)",
+    "title": "Reports Slider - Multiple Sources",
     "category": "media",
     "description": "Displays a carousel of Infoamazônia reports from WordPress posts, linking externally.",
     "icon": "images-alt2",
-    "keywords": ["slider", "carousel", "reports", "infoamazonia", "amazon", "posts"],
+    "keywords": ["slider", "carousel", "reports", "amazon", "posts"],
     "version": "0.1.0",
     "textdomain": "hacklabr",
     "attributes": {
         "categorySlug": {
             "type": "string",
-            "default": "infoamazonia"
+            "default": ""
         },
         "numberOfPosts": {
             "type": "number",
@@ -26,10 +26,6 @@
             "type": "string",
             "default": "DESC"
         },
-        "externalLinkMetaKey": {
-            "type": "string",
-            "default": "infoamazonia_redirect_url"
-        },
         "displayAuthorMetaKey": {
             "type": "string",
             "default": "displayed_author_name"
@@ -37,7 +33,7 @@
         "slidesPerViewDesktop": { "type": "number", "default": 3 },
         "slidesPerViewTablet":  { "type": "number", "default": 2 },
         "slidesPerViewMobile":  { "type": "number", "default": 1 },
-        "loopSlides":         { "type": "boolean", "default": true }
+        "loopSlides":         { "type": "boolean", "default": false }
     },
     "editorScript": ["file:../../../dist/blocks/amazon-slider/editor.js"],
     "editorStyle": ["file:../../../dist/blocks/amazon-slider/editor.css"],

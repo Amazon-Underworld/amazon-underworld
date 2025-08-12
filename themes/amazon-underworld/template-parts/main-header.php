@@ -39,6 +39,7 @@
                     </svg>
                 </button>
         </div>
+        <div id="progress-bar"></div>
     </div>
 
     <div class="main-header-lateral__mobile-content main-header-lateral-secondary__mobile-content">

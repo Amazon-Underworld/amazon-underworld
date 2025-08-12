@@ -449,6 +449,13 @@ class Assets {
                     ];
                 },
 			],
+
+            'progress-bar' => [
+				'file'   => 'progress-bar.js',
+				'preload_callback' => function () {
+					return !is_front_page() && is_singular();
+				}
+			],
  		];
 
 		$js_files = apply_filters('js_files_before_output', $js_files);

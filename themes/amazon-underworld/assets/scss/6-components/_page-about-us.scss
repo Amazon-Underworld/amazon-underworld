@@ -146,6 +146,13 @@
             a{
                 text-decoration: none;
             }
+            @include mobile{
+                margin-top: 0;
+
+                >:last-child{
+                    margin-block-start: 1rem;
+                }
+            }
         }
 
         @include mobile{

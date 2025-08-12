@@ -13,7 +13,7 @@ $terms = get_the_terms($post_id, 'category');
 $intro = pods_field('intro');
 $close_text = pods_field('closing_text');
 $tags = get_tags();
-$post_url = get_permalink(get_the_ID());
+$post_url = get_custom_permalink(get_the_ID());
 
 echo do_shortcode('[main-header]');
 

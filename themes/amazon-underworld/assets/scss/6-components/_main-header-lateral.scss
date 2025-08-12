@@ -562,3 +562,14 @@
 .main-header-lateral__content {
     transition: opacity 0.3s ease;
 }
+
+#progress-bar {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 0px;
+    height: 3px;
+    z-index: 99;
+    background-color: $color--secondary-light;
+    transition: width 1s;
+  }

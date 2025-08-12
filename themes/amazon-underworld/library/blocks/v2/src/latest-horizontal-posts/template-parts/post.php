@@ -2,7 +2,7 @@
 >
 <?php $show_excerpt = isset( $args['attributes']['showExcerpt'] ) ? $args['attributes']['showExcerpt'] : false; ?>
 
-<a href="<?php echo get_permalink();?>">
+<a href="<?php echo get_custom_permalink();?>">
     <div class="post">
         <div class="post-thumbnail">
             <div class="post-thumbnail--image">
