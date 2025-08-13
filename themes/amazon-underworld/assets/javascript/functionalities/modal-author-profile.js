@@ -1,4 +1,4 @@
-import { waitUntil } from '../shared/wait';
+import { until } from '../shared/wait';
 
 document.addEventListener('DOMContentLoaded', function() {
 
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-        function openModal(link){
+        async function openModal(link){
             const url = getLocalizedAuthorUrl(link.getAttribute( 'href' ));
 
             modal.classList.add('open');
@@ -58,37 +58,23 @@ document.addEventListener('DOMContentLoaded', function() {
             iframe.setAttribute('src', url);
             iframe.setAttribute('allowFullscreen', 'true');
 
-            waitUntil(() =>  iframe.contentWindow.document.querySelector('.archive'), () => {
+            const [app, card, closeButton] = await Promise.all([
+                until(() =>  iframe.contentWindow.document.getElementById('app')),
+                until(() =>  iframe.contentWindow.document.getElementById('card-modal')),
+                until(() =>  iframe.contentWindow.document.querySelector('.close-modal'))
+            ])
 
-                const card = iframe.contentWindow.document.getElementById('card-modal');
-                const app = iframe.contentWindow.document.getElementById('app');
-                app.style.display = 'none';
-                card.style.display = 'block';
+            closeButton.classList.add('open');
+            closeButton.addEventListener('click', (e) => {
+                closeButton.classList.toggle('open', false);
+                iframe.classList.toggle('open', false);
+                iframe.setAttribute('src', 'about:blank');
+                modal.classList.toggle('open', false);
 
-            }, 50)
+            })
 
-            waitUntil(() =>  iframe.contentWindow.document.getElementById('modal-card-body'), () => {
-                const closeButton = iframe.contentWindow.document.querySelectorAll('.close-modal');
-                closeButton.forEach(closeBtn =>{
-                    setTimeout(function(){
-                        closeBtn.classList.add('open');
-                    }, 1000);
-                    closeBtn.addEventListener('click', (e) => {
-                        if(closeBtn.classList.contains('open')){
-                            closeBtn.classList.remove('open');
-                        }
-                        if(iframe.classList.contains('open')){
-                            iframe.classList.remove('open');
-                            iframe.setAttribute('src', 'about:blank');
-                        }
-                        if(modal.classList.contains('open')){
-                            modal.classList.remove('open');
-                        }
-
-                    })
-                })
-
-              }, 50, 5_000)
+            app.style.display = 'none';
+            card.style.display = 'block';
 
         }
 
