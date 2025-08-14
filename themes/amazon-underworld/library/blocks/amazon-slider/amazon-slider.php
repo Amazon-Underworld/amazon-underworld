@@ -26,7 +26,7 @@ function render_amazon_slider_callback( $attributes ) {
         'orderby'        => $order_by,
         'order'          => $order,
         'post_status'    => 'publish',
-        'post__not_in'    => array_keys($newspack_blocks_post_id),
+        // 'post__not_in'    => array_keys($newspack_blocks_post_id),
     ];
 
     if ( ! empty( $category_slugs_string ) ) {
