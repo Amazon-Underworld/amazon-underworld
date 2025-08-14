@@ -58,13 +58,13 @@ $locale = get_locale();
                 </p>
                 <span class="card-modal__social-network">
                     <?php if(!empty($linkedin)){ ?>
-                        <a href="<?= $linkedin ?>" target="_blank"> <?php _e('Linkedin, ', 'hacklabr');?></a>
+                        <a href="<?= $linkedin ?>" target="_blank"> <?php _e('Linkedin ', 'hacklabr');?></a>
                     <?php }
                     if(!empty($instagram)){ ?>
-                        <a href="<?= $instagram ?>" target="_blank"> <?php _e('Instagram, ', 'hacklabr');?></a>
+                        <a href="<?= $instagram ?>" target="_blank"> <?php _e('Instagram ', 'hacklabr');?></a>
                     <?php }
                     if(!empty($facebook)){ ?>
-                        <a href="<?= $facebook  ?>" target="_blank"> <?php _e('Facebook, ', 'hacklabr');?></a>
+                        <a href="<?= $facebook  ?>" target="_blank"> <?php _e('Facebook ', 'hacklabr');?></a>
                     <?php } ?>
                 </span>
             </div>
