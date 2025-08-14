@@ -31,6 +31,7 @@ $locale = get_locale();
 </div><!-- /.index-wrapper -->
 
 </div>
+
     <div id="card-modal" class="card-modal alignfull">
         <div class="card-modal__body" id="modal-card-body">
         <button type="button" class="close-modal">
@@ -56,9 +57,15 @@ $locale = get_locale();
                     _e($email, 'hacklabr');?>
                 </p>
                 <span class="card-modal__social-network">
-                    <a href="<?= $linkedin ?>"> <?php _e('Linkedin, ', 'hacklabr');?></a>
-                    <a href="<?= $instagram ?>"> <?php _e('Instagram, ', 'hacklabr');?></a>
-                    <a href="<?= $facebook ?>"> <?php _e('Facebook', 'hacklabr');?></a>
+                    <?php if(!empty($linkedin)){ ?>
+                        <a href="<?= $linkedin ?>" target="_blank"> <?php _e('Linkedin, ', 'hacklabr');?></a>
+                    <?php }
+                    if(!empty($instagram)){ ?>
+                        <a href="<?= $instagram ?>" target="_blank"> <?php _e('Instagram, ', 'hacklabr');?></a>
+                    <?php }
+                    if(!empty($facebook)){ ?>
+                        <a href="<?= $facebook  ?>" target="_blank"> <?php _e('Facebook, ', 'hacklabr');?></a>
+                    <?php } ?>
                 </span>
             </div>
 
