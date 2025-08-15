@@ -179,22 +179,24 @@
 
         }
 
-        .most-featured{
-            color: $color--high-pure;
-            font-size: $font-size--small;
-            text-transform: uppercase;
-            font-family: $font-family--secondary;
-            letter-spacing: -0.7px;
-            line-height: 1;
-            border: none;
-            position: absolute;
-            left: 2rem;
+    }
 
-            @include mobile{
-                display: none;
-            }
+    .most-featured{
+        color: $color--high-pure;
+        font-size: $font-size--small;
+        text-transform: uppercase;
+        font-family: $font-family--secondary;
+        letter-spacing: -0.7px;
+        line-height: 1;
+        border: none;
+        position: absolute;
+        left: 2rem;
+        z-index: 99;
+        bottom: 3rem;
+
+        @include mobile{
+            display: none;
         }
-
     }
 }
 

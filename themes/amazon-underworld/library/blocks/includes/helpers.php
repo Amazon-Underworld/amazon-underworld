@@ -223,6 +223,37 @@ function normalize_posts_query ($attributes) {
     return $normalized_attributes;
 }
 
+
+if ( function_exists( 'get_coauthors' ) && ! function_exists( 'get_list_coauthors' ) ) {
+    /**
+     * Get list of coauthors using Co Authors Plus plugin.
+     */
+    function get_list_coauthors( $post_id = 0 )
+    {
+        $all_authors = \get_coauthors( $post_id );
+
+        $output = '';
+
+        $count_authors = count($all_authors);
+        $i = 0;
+
+        foreach ($all_authors as $author) {
+            $i++;
+            if (is_a($author, 'WP_User')) {
+                $output .= '<span>' . $author->data->display_name . '</span>';
+            } else {
+                $output .= '<span>' . $author->display_name . '</span>';
+            }
+
+            if ($i < $count_authors) {
+                $output .= '<span class="comma">, </span>';
+            }
+        }
+
+        return $output;
+    }
+}
+
 /**
  * Sets/updates the value for the transient matching the namespace and attributes.
  *
