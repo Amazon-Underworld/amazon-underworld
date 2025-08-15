@@ -99,10 +99,12 @@ function render_amazon_slider_callback( $attributes ) {
                 }
 
                 $title        = get_the_title( $current_post_id );
-                $author = get_post_meta( $current_post_id, $display_author_meta_key, true );
-                if ( empty( $author ) ) {
-                    $author = get_the_author_meta( 'display_name', get_post_field( 'post_author', $current_post_id ) );
+                if (function_exists('coauthors_posts_links')) {
+                    $author = get_list_coauthors();
+                } else {
+                    $author = the_author();
                 }
+
                 ?>
                 <div class="amazon-slide-item <?php echo esc_attr( $category_css_class ); ?>">
                     <a href="<?php echo get_custom_permalink(); ?>" class="amazon-slide-link">
@@ -121,7 +123,7 @@ function render_amazon_slider_callback( $attributes ) {
                             <?php if ( $author ) :  ?>
                                 <p class="amazon-slide-author">
                                     <?php
-                                    printf( esc_html__( 'by %s', 'hacklabr' ), esc_html( $author ) );
+                                    echo $author;
                                     ?>
                                 </p>
                             <?php endif; ?>
