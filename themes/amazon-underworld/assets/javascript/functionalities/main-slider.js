@@ -9,7 +9,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const pagination = slider.querySelector('.swiper-pagination-bullets');
         const wrapper = slider.querySelector('.swiper-wrapper');
 
+        // Adiciona título à paginação
+            const titlePagination = document.createElement('span');
+            titlePagination.innerText = __( 'Most featured', 'hacklabr' );
+            titlePagination.classList.add('most-featured');
+            slider.appendChild(titlePagination);
+
         const articles = Array.from(wrapper.querySelectorAll('article'));
+
 
         function createThumbContent(article) {
             const thumb = article.querySelector('.post-thumbnail img');
@@ -38,11 +45,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         function applyDotsContent() {
-            // Adiciona título à paginação
-            const titlePagination = document.createElement('span');
-            titlePagination.innerText = __( 'Most featured', 'hacklabr' );
-            titlePagination.classList.add('most-featured');
-            pagination.prepend(titlePagination);
             const dots = pagination.querySelectorAll('button');
             dots.forEach((dot, index) => {
                 if (!dot.querySelector('img') && articles[index]) {
