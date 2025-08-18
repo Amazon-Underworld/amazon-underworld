@@ -26,6 +26,7 @@ function render_amazon_slider_callback( $attributes ) {
         'orderby'        => $order_by,
         'order'          => $order,
         'post_status'    => 'publish',
+        // Descomentar para excluir posts dos newspack blocks da query
         // 'post__not_in'    => array_keys($newspack_blocks_post_id),
     ];
 

@@ -4,10 +4,10 @@
     "name": "hacklabr/amazon-slider",
     "title": "Reports Slider - Multiple Sources",
     "category": "media",
-    "description": "Displays a carousel of Infoamazônia reports from WordPress posts, linking externally.",
+    "description": "Displays a carousel of latests and clipping posts.",
     "icon": "images-alt2",
     "keywords": ["slider", "carousel", "reports", "amazon", "posts"],
-    "version": "0.1.0",
+    "version": "0.1.1",
     "textdomain": "hacklabr",
     "attributes": {
         "categorySlug": {
@@ -15,8 +15,8 @@
             "default": ""
         },
         "numberOfPosts": {
-            "type": "number",
-            "default": 11
+            "type": "integer",
+            "default": 8
         },
         "orderBy": {
             "type": "string",

@@ -25,7 +25,7 @@ export default function Edit({ attributes, setAttributes }) {
         slidesPerViewMobile,
         loopSlides,
     } = attributes;
-
+    console.log(attributes);
     const blockProps = useBlockProps();
 
     return (
@@ -44,7 +44,7 @@ export default function Edit({ attributes, setAttributes }) {
                         <NumberControl
                             label={__('Number of Posts', 'hacklabr')}
                             value={numberOfPosts}
-                            onChange={(value) => setAttributes({ numberOfPosts: value })}
+                            onChange={(value) => setAttributes({ numberOfPosts: parseInt(value) })}
                             min={1}
                             max={20}
                         />
