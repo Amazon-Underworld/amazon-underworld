@@ -25,7 +25,7 @@ export default function Edit({ attributes, setAttributes }) {
         slidesPerViewMobile,
         loopSlides,
     } = attributes;
-    console.log(attributes);
+
     const blockProps = useBlockProps();
 
     return (
