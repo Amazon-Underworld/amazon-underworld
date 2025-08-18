@@ -9,14 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const pagination = slider.querySelector('.swiper-pagination-bullets');
         const wrapper = slider.querySelector('.swiper-wrapper');
 
-        // Adiciona título à paginação
-            const titlePagination = document.createElement('span');
-            titlePagination.innerText = __( 'Most featured', 'hacklabr' );
-            titlePagination.classList.add('most-featured');
-            slider.appendChild(titlePagination);
-
         const articles = Array.from(wrapper.querySelectorAll('article'));
-
 
         function createThumbContent(article) {
             const thumb = article.querySelector('.post-thumbnail img');
@@ -57,18 +50,28 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        // Aplicação inicial
-        applyDotsContent();
-
-        // Observer: reexecuta applyDotsContent sempre que os dots forem recriados
-        const observer = new MutationObserver(() => {
+        if(pagination){
+            // Aplicação inicial
             applyDotsContent();
-        });
 
-        observer.observe(pagination, { childList: true, subtree: true });
+            // Observer: reexecuta applyDotsContent sempre que os dots forem recriados
+            const observer = new MutationObserver(() => {
+                applyDotsContent();
+            });
+
+            observer.observe(pagination, { childList: true, subtree: true });
+
+            // Adiciona título à paginação
+            const titlePagination = document.createElement('span');
+            titlePagination.innerText = __( 'Most featured', 'hacklabr' );
+            titlePagination.classList.add('most-featured');
+            slider.appendChild(titlePagination);
+
+        }
 
         // Cria botão Read More com o link da matéria
         const contentWrappers = wrapper.querySelectorAll('.entry-wrapper');
+
         contentWrappers.forEach(contentWrapper =>{
             const readMore = document.createElement('button');
             readMore.classList.add('read-more');
