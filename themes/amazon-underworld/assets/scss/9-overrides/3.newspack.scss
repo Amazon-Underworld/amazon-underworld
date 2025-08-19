@@ -28,6 +28,9 @@
                         max-height: unset !important;
                         font-size: 50px;
                         line-height: 1;
+                        max-width: fit-content;
+                        margin-inline: auto;
+                        text-align: center;
                     }
 
                     @include mobile{
