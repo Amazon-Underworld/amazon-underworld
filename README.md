@@ -1,12 +1,7 @@
-# hacklabr
+# Amazon Underworld
 
-Este repositório contém os arquivos iniciais para se ter um projeto WordPress
-nos moldes do Hacklab. Isso significa que as ferramentas de desenvolvimento
-e deploy estão protegidas por um padrão.
+Este repositório contém os arquivos do projeto Wordpress Amazon Underworld nos moldes do tema base Hacklab. Isso significa que as ferramentas de desenvolvimento e deploy estão protegidas por um padrão.
 
-A ideia é que seja feito um fork deste repositório para começar um novo projeto
-WordPress. Os arquivos deverão ser modificados conforme as peculiaridades do
-projeto.
 
 ## Desenvolvimento
 
@@ -34,7 +29,7 @@ Para o desenvolvimento é requisito ter instaladas ao menos as seguintes ferramt
 Clone o repositório e seus submódulos recursivamente:
 
 ```bash
-git clone git@git.hacklab.com.br:open-source/base-wordpress-project.git --recursive
+git clone git@github.com:Amazon-Underworld/amazon-underworld.git --recursive
 ```
 
 ### Adicionando submódulos
@@ -59,15 +54,6 @@ Então, para sincronizar o tema base com seu fork, rode o seguinte comando no br
 git pull temaBase develop
 ```
 
-### Compilando os assets do tema
-
-Abra um terminal, vá até a a pasta `themes/amazon-underworld/` e execute os comandos abaixo:
-
-```bash
-npm install
-npm run watch # vai ficar observando as mudanças nos assets
-```
-
 ### Subindo o ambiente
 
 Abra outro terminal e na raíz do repositório execute o comando abaixo:
@@ -86,8 +72,23 @@ Há uma série de scripts úteis na pasta `dev-scripts`:
 - **mysql-root** - entra no shell do MySQL com o usuário `root`
 - **wp** - executa o comando WP-CLI dentro do container `wordpress`<br>
     exemplo de uso: `dev-scripts/$ ./wp search-replace https:// http://`
+- **producao** - compila e cria o zip do tema para atualizações manuais em ambientes de testes/desenvolvimento<br>
+    exemplo de uso: `dev-scripts/producao.sh`
 
 Acesse http://localhost para ver o site.
+
+## Release no ambiente de produção
+Para o release no ambiente de produção, utilizamos CI/CD através do plugin GitUpdater.
+Após fazer o commit de suas alterações e alterar a versão do tema no style.css, crie a tag correspondente na branch main.
+
+Observações: 
+- A tag e a versão do tema no style.css devem ser iguais
+- A tag deve ser feita na branch Main, lembre-se de fazer a mesclagem da branch de develop nela antes de iniciar o release.
+
+Comandos para criação da tag:
+- Exemplo: versão do tema 0.1.2
+`git tag -a 0.1.2 -m "v0.1.2"`
+`git push origin refs/tags/0.1.2`
 
 ### Importar um dump de banco de dados
 
@@ -97,10 +98,6 @@ Se você tem um dump de banco de dados `.sql` ou `.sql.gz`, para importá-lo em 
 docker-compose down -v # o parametro -v apaga os dados do mariadb
 docker-compose up
 ```
-
-### Substituir strings
-
-- Renomear o nome do tema no arquivo `style.css`
 
 ### Variáveis de ambiente
 
@@ -166,20 +163,6 @@ O conteúdo de `wp-content` está excluído do versionamento por padrão. Para a
 ## Traduções
 
 Quando utilizar o comando `wp i18n make-json languages/` para gerar as traduções de arquivos `.js` e as traduções não funcionarem, uma das possíveis soluções pode ser renomear o arquivo gerado de `{locale}-{hash}.json` para `{domain}-{locale}-{script-handle}.json`.
-
-## Github Workflow e plugin git-updater (v12.4.0)
-Para que o plugin funcione corretamente devemos ter o nome da pasta do tema, o nome do repositório no github e o a slug configurada no plugin sendo a mesma string. Por exemplo:
-pasta do tema no repo: themes/novo-nome
-endereço do repo: github.com/hacklabr/novo-nome
-Slug configurada no plugin: novo-nome
-
-Além disso precisamos ter um link simbolico na raiz do repo apontando para o arquivo style.css dentro da pasta do tema.
-
-Para que a estrutura dos arquivos do repositório siga esse padrão você deve executar, logo após clonar, o script dev-scripts/cria-tema.sh que faz as seguintes alterações:
-- altera a pasta do tema
-- substitui em massa a string amazon-underworld pelo novo nome
-- cria o link simbolico entre /themes/novo-nome/style.css e /style.css
-- altera a versão do tema para 0.1
 
 
 ### outras alterações:
