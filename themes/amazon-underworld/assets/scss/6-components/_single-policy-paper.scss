@@ -119,8 +119,9 @@
                 &__featured-image{
                     border-radius: 0;
                     margin-bottom: $margin--medium;
+                    max-width: fit-content;
                     img{
-                        object-fit: cover;
+                        object-fit: contain;
                         margin-inline: auto;
                         height: size(578);
 
@@ -132,7 +133,7 @@
                     }
                 }
                 &__download{
-                    max-width: 500px;
+                    max-width: 480px;
                     margin-inline: auto;
                     margin-bottom: $margin--medium;
                     p{
