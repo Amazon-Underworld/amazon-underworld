@@ -54,9 +54,14 @@
         }
     }
 
+    .wp-block-post-excerpt{
+        margin-block-start: 15px !important;
+    }
+
     .wp-block-heading,
     p {
         color: $color--primary-pure;
+        line-height: 1.25;
     }
 
     .wp-block-group.is-vertical {
