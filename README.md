@@ -32,28 +32,6 @@ Clone o repositório e seus submódulos recursivamente:
 git clone git@github.com:Amazon-Underworld/amazon-underworld.git --recursive
 ```
 
-### Adicionando submódulos
-
-Exemplo aplicando o plugin Hacklab Blocks como submódulo na pasta `/plugins`. O `-f` é necessário quando a pasta `plugins` está no `.gitignore`
-
-```bash
-git submodule add -f git@gitlab.hacklab.com.br:open-source/hacklab-blocks.git plugins/hacklab-blocks
-```
-
-### Acesso a atualizações do tema base
-
-Para receber novas funcionalidades do tema base diretamente no seu board, é pré-requisito inserir o repositório do tema base como um `remote` do Git:
-
-```bash
-git remote add temaBase git@git.hacklab.com.br:open-source/base-wordpress-project.git
-```
-
-Então, para sincronizar o tema base com seu fork, rode o seguinte comando no branch `develop` do seu fork:
-
-```bash
-git pull temaBase develop
-```
-
 ### Subindo o ambiente
 
 Abra outro terminal e na raíz do repositório execute o comando abaixo:
