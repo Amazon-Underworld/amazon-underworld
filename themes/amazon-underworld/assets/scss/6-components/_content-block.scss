@@ -25,5 +25,8 @@
         text-transform: uppercase;
         font-weight: 400;
         color: $color--primary-pure;
+        @include mobile{
+            border-width: 0 !important;
+        }
     }
 }
