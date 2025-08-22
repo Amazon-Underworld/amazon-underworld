@@ -362,6 +362,10 @@
                     @include mobile{
                         margin-inline-start: 0;
                     }
+
+                    >figcaption{
+                        padding-inline-start: .5rem !important;
+                    }
                 }
                 .alignwide{
                     max-width: $grid--wide;
