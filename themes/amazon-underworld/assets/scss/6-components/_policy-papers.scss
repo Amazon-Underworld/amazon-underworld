@@ -5,7 +5,9 @@
             padding-left: 1rem;
         }
         >.latest-horizontal-posts-block{
+           @include mobile{
             margin-left: 0 !important;
+           }
             >.container{
                 @include mobile{
                     padding-top: 0 !important;
