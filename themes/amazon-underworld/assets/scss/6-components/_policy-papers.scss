@@ -73,7 +73,8 @@
                 border-radius: 0 !important;
             }
             @include mobile{
-                height: 260px !important;
+                aspect-ratio: 213 / 259;
+                max-height: 260px !important;
             }
         }
         &-content{
