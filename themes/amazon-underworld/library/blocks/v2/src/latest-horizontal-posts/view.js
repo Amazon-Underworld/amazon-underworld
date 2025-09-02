@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const slidesToShow = slider.dataset.slidesToShow || 3
 
         // Mobile
-        const arrowsMobile = slider.querySelector('.medium-only .latest-horizontal-posts-block__arrows')
+        const arrowsMobile = slider.querySelector('.latest-horizontal-posts-block__arrows')
         const dotsMobile = slider.querySelector('.medium-only .latest-horizontal-posts-block__dots')
 
         let slidesToShowMobile = 1
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 {
                     breakpoint: 783,
                     settings: {
-                        appendArrows: arrowsMobile,
+                        infinite: true,
                         appendDots: dotsMobile,
                         slidesToShow: slidesToShowMobile,
                     }

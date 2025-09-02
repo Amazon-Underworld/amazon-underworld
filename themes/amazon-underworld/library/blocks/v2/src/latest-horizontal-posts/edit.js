@@ -445,9 +445,9 @@ export default function Edit( { attributes, setAttributes } ) {
                                     label={ __( 'Total number of posts to display', 'hacklabr' ) }
                                     value={ postsToShow }
                                     onChange={ ( value ) => setAttributes( { postsToShow: value } ) }
-                                    min={ 2 }
+                                    min={ 3 }
                                     max={ 20 }
-                                    step={ 2 }
+                                    step={ 1 }
                                 />
                             </PanelRow>
                             <PanelRow>
