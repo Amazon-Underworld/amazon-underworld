@@ -25,12 +25,6 @@ function blocks_init() {
     }
 
     $active_blocks = [
-        'events-from-mapas-culturais' => [
-            'render_callback' => 'hacklabr\v2\events_from_mapas_culturais_callback'
-        ],
-        'opportunities-from-mapas-culturais' => [
-            'render_callback' => 'hacklabr\v2\opportunities_callback'
-        ],
         'latest-horizontal-posts' => [
             'render_callback' => 'hacklabr\v2\latest_horizontal_posts_callback'
         ],
