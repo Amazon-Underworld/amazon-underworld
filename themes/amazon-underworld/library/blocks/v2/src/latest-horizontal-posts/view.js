@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
             appendDots: dots,
             dots: true,
             infinite: false,
+            cssEase: 'linear',
             slidesToShow: parseInt(slidesToShow),
             responsive: [
                 {

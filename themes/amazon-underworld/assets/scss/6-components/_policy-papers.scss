@@ -25,9 +25,16 @@
     }
     >.container{
         max-width: 100% !important;
+        flex-flow: column-reverse;
+    }
+    &__heading{
+        display: none !important;
     }
     &__content{
-        display: none !important;
+        min-height: 1px !important;
+        width: 100% !important;
+        position: absolute;
+        bottom: 50%;
         @include mobile{
             display: flex !important;
             position: absolute;
@@ -45,7 +52,12 @@
         }
 
     }
+    &__dots{
+        display: none !important;
+    }
     &__arrows{
+        width: 80% !important;
+        margin-inline: auto;
         @include mobile{
             width: 100% !important;
         }
