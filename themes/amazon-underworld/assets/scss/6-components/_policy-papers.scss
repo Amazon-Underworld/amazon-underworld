@@ -28,7 +28,12 @@
         flex-flow: column-reverse;
     }
     &__heading{
-        display: none !important;
+        max-width: 270px;
+        position: relative;
+        bottom: 3rem;
+        @include mobile{
+            display: none;
+        }
     }
     &__content{
         min-height: 1px !important;
